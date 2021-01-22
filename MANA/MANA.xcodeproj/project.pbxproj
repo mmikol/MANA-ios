@@ -16,7 +16,7 @@
 		BCE47B0025BA23BE000B6C7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE47AFE25BA23BE000B6C7D /* LaunchScreen.storyboard */; };
 		BCE47B0B25BA23BF000B6C7D /* MANATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B0A25BA23BF000B6C7D /* MANATests.swift */; };
 		BCE47B1625BA23BF000B6C7D /* MANAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B1525BA23BF000B6C7D /* MANAUITests.swift */; };
-		BCE47B2D25BA2B32000B6C7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE47B2C25BA2B32000B6C7D /* GoogleService-Info.plist */; };
+		BCE47B3825BB8064000B6C7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE47B3725BB8064000B6C7D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		BCE47B1125BA23BF000B6C7D /* MANAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MANAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE47B1525BA23BF000B6C7D /* MANAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANAUITests.swift; sourceTree = "<group>"; };
 		BCE47B1725BA23BF000B6C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCE47B2C25BA2B32000B6C7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCE47B3725BB8064000B6C7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 				BCE47AFE25BA23BE000B6C7D /* LaunchScreen.storyboard */,
 				BCE47B0125BA23BE000B6C7D /* Info.plist */,
 				BCE47AF925BA23BD000B6C7D /* MANA.xcdatamodeld */,
-				BCE47B2C25BA2B32000B6C7D /* GoogleService-Info.plist */,
+				BCE47B3725BB8064000B6C7D /* GoogleService-Info.plist */,
 			);
 			path = MANA;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE47B0025BA23BE000B6C7D /* LaunchScreen.storyboard in Resources */,
-				BCE47B2D25BA2B32000B6C7D /* GoogleService-Info.plist in Resources */,
+				BCE47B3825BB8064000B6C7D /* GoogleService-Info.plist in Resources */,
 				BCE47AFD25BA23BE000B6C7D /* Assets.xcassets in Resources */,
 				BCE47AF825BA23BD000B6C7D /* Main.storyboard in Resources */,
 			);
