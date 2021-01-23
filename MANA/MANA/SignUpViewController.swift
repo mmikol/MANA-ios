@@ -7,6 +7,6 @@
 
 import UIKit
 
-class SignUpViewController: NSObject {
+class SignUpViewController: UIViewController {
 
 }

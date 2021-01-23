@@ -7,6 +7,6 @@
 
 import UIKit
 
-class HomeViewController: NSObject {
+class HomeViewController: UIViewController {
 
 }

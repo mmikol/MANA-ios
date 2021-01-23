@@ -29,6 +29,9 @@
                                         <state key="normal" title="Log in" backgroundImage="PrimaryColor.002">
                                             <color key="titleColor" name="Color"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="3ey-Sc-ODy" kind="show" id="QIx-0H-INd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k56-9y-0XU">
                                         <rect key="frame" x="0.0" y="100" width="1920" height="75"/>
@@ -39,6 +42,9 @@
                                         <state key="normal" title="Sign up" backgroundImage="PrimaryColor.003">
                                             <color key="titleColor" name="Color"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="S6Z-JT-dkg" kind="show" id="Q7e-BV-L8u"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -72,7 +78,7 @@
         <!--SignUpViewController-->
         <scene sceneID="9Cf-45-cW2">
             <objects>
-                <viewController title="SignUpViewController" id="S6Z-JT-dkg" sceneMemberID="viewController">
+                <viewController title="SignUpViewController" id="S6Z-JT-dkg" customClass="SignUpViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MTH-Id-mS3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,6 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="GJV-Z6-mqS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OJN-sI-XlJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yz9-ua-T0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,7 +121,7 @@
         <!--LoginViewController-->
         <scene sceneID="T1i-Pg-I48">
             <objects>
-                <viewController title="LoginViewController" id="3ey-Sc-ODy" sceneMemberID="viewController">
+                <viewController title="LoginViewController" id="3ey-Sc-ODy" customClass="LoginViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c9h-FH-3NL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,25 +150,72 @@
                         <viewLayoutGuide key="safeArea" id="IbT-bi-yhT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="L4X-1o-uj9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znB-Sx-RsU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1842" y="-315"/>
         </scene>
+        <!--VerificationViewController-->
+        <scene sceneID="tEb-c8-oJC">
+            <objects>
+                <viewController title="VerificationViewController" id="64S-qg-DGV" customClass="VerificationViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dLL-gR-2zc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WGP-9Y-uxd">
+                                <rect key="frame" x="152" y="378" width="46" height="84.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6DW-j6-DRw">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auD-fz-d1Z">
+                                        <rect key="frame" x="0.0" y="34" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSo-Fu-OBS">
+                                        <rect key="frame" x="0.0" y="64" width="46" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dps-yq-Lyh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qd3-fU-qdk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2790" y="76"/>
+        </scene>
         <!--HomeViewController-->
         <scene sceneID="VKT-mj-eGT">
             <objects>
-                <viewController title="HomeViewController" id="SFc-sN-38i" sceneMemberID="viewController">
+                <viewController title="HomeViewController" id="SFc-sN-38i" customClass="HomeViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zfK-3l-UrB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZd-ZX-tpY">
+                                <rect key="frame" x="186" y="438" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9nx-Ra-ZbM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJe-Hc-79t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2723" y="76"/>
+            <point key="canvasLocation" x="3694" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="deT-nX-y72">

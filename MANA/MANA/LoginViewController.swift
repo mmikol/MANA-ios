@@ -7,6 +7,6 @@
 
 import UIKit
 
-class LoginViewController: NSObject {
+class LoginViewController: UIViewController {
 
 }
