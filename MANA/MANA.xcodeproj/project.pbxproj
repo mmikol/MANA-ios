@@ -17,6 +17,9 @@
 		BCE47B0B25BA23BF000B6C7D /* MANATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B0A25BA23BF000B6C7D /* MANATests.swift */; };
 		BCE47B1625BA23BF000B6C7D /* MANAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B1525BA23BF000B6C7D /* MANAUITests.swift */; };
 		BCE47B3825BB8064000B6C7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE47B3725BB8064000B6C7D /* GoogleService-Info.plist */; };
+		BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */; };
+		BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */; };
+		BCE47B4C25BB8B55000B6C7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4B25BB8B55000B6C7D /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		BCE47B1525BA23BF000B6C7D /* MANAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANAUITests.swift; sourceTree = "<group>"; };
 		BCE47B1725BA23BF000B6C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE47B3725BB8064000B6C7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BCE47B4B25BB8B55000B6C7D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +111,7 @@
 			children = (
 				BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */,
 				BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */,
-				BCE47AF425BA23BD000B6C7D /* ViewController.swift */,
+				BCE47B5025BB8B5B000B6C7D /* ViewControllers */,
 				BCE47AF625BA23BD000B6C7D /* Main.storyboard */,
 				BCE47AFC25BA23BE000B6C7D /* Assets.xcassets */,
 				BCE47AFE25BA23BE000B6C7D /* LaunchScreen.storyboard */,
@@ -132,6 +138,17 @@
 				BCE47B1725BA23BF000B6C7D /* Info.plist */,
 			);
 			path = MANAUITests;
+			sourceTree = "<group>";
+		};
+		BCE47B5025BB8B5B000B6C7D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCE47B4B25BB8B55000B6C7D /* HomeViewController.swift */,
+				BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */,
+				BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */,
+				BCE47AF425BA23BD000B6C7D /* ViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */,
 				BCE47AF525BA23BD000B6C7D /* ViewController.swift in Sources */,
 				BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */,
 				BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */,
 				BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */,
+				BCE47B4C25BB8B55000B6C7D /* HomeViewController.swift in Sources */,
+				BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
