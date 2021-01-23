@@ -25,7 +25,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="3ve-Fi-VrX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <state key="normal" title="Log in" backgroundImage="PrimaryColor.002">
                                             <color key="titleColor" name="Color"/>
                                         </state>
@@ -38,7 +38,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="J2e-LH-Yyf"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Sign up" backgroundImage="PrimaryColor.003">
                                             <color key="titleColor" name="Color"/>
                                         </state>
