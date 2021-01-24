@@ -30,8 +30,6 @@ class LoginViewController: UIViewController {
                 self.view.window?.makeKeyAndVisible()
             }
         }
-        
-        
     }
     
     override func viewDidLoad() {

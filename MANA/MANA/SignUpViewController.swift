@@ -28,7 +28,6 @@ class SignUpViewController: UIViewController {
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
-            // Create user
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                 if let error = error {
                     self.showError(error.localizedDescription)
@@ -61,9 +60,8 @@ class SignUpViewController: UIViewController {
         
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        // Password is secure
         if !Utilities.isAcceptedPassword(cleanedPassword) {
-            return "Password must contain: One capital; One number; 8 characters."
+            return "Password must contain 8 characters with one capital letter and one number."
         
         }
         
