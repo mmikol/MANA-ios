@@ -10,6 +10,7 @@
 		3651449347D97779108751E7 /* Pods_MANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012BCED32B14FD2FF32F35F0 /* Pods_MANA.framework */; };
 		51E6801C6E8D2ED07B7DCD6F /* Pods_MANA_MANAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95967FF3C26054D22FB718A7 /* Pods_MANA_MANAUITests.framework */; };
 		BC4755A425BBBCB7003D670C /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4755A325BBBCB7003D670C /* VerificationViewController.swift */; };
+		BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6670C725BDEB0A009224A1 /* Utilities.swift */; };
 		BCD17A4D25BD1D8C005F4302 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD17A4C25BD1D8C005F4302 /* GoogleService-Info.plist */; };
 		BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */; };
 		BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 		9F3454D0706757B562740A9C /* Pods_MANATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C90F1E15981EA9076656FD /* Pods-MANA-MANAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.release.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC4755A325BBBCB7003D670C /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		BC6670C725BDEB0A009224A1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BCD17A4C25BD1D8C005F4302 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCE47AED25BA23BD000B6C7D /* MANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC6670C625BDEAFD009224A1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BC6670C725BDEB0A009224A1 /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		BCE47AE425BA23BD000B6C7D = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 			children = (
 				BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */,
 				BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */,
+				BC6670C625BDEAFD009224A1 /* Helpers */,
 				BCE47B5025BB8B5B000B6C7D /* ViewControllers */,
 				BCE47AF625BA23BD000B6C7D /* Main.storyboard */,
 				BCE47AFC25BA23BE000B6C7D /* Assets.xcassets */,
@@ -439,6 +450,7 @@
 				BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */,
 				BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */,
 				BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */,
+				BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */,
 				BCE47B4C25BB8B55000B6C7D /* HomeViewController.swift in Sources */,
 				BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */,
 			);
