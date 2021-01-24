@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		662A3368E1B2E01FB6943457 /* Pods_MANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF37EBBD49F39B93630477D /* Pods_MANA.framework */; };
+		3651449347D97779108751E7 /* Pods_MANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012BCED32B14FD2FF32F35F0 /* Pods_MANA.framework */; };
+		51E6801C6E8D2ED07B7DCD6F /* Pods_MANA_MANAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95967FF3C26054D22FB718A7 /* Pods_MANA_MANAUITests.framework */; };
 		BC4755A425BBBCB7003D670C /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4755A325BBBCB7003D670C /* VerificationViewController.swift */; };
 		BCD17A4D25BD1D8C005F4302 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD17A4C25BD1D8C005F4302 /* GoogleService-Info.plist */; };
 		BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */; };
@@ -22,8 +23,7 @@
 		BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */; };
 		BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */; };
 		BCE47B4C25BB8B55000B6C7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4B25BB8B55000B6C7D /* HomeViewController.swift */; };
-		C3D8F171D7792312B136B0ED /* Pods_MANATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF51FE1EC9C6E8AFFFEE6D5 /* Pods_MANATests.framework */; };
-		ECD3C1F4C99F32CB012B465D /* Pods_MANA_MANAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712D4275CFA72F89B843FE70 /* Pods_MANA_MANAUITests.framework */; };
+		D1DA12F8D53A280E461FAAAE /* Pods_MANATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3454D0706757B562740A9C /* Pods_MANATests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,14 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AA742A2F5EA7F98B5E4A4A2 /* Pods-MANATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANATests.release.xcconfig"; path = "Target Support Files/Pods-MANATests/Pods-MANATests.release.xcconfig"; sourceTree = "<group>"; };
-		34AEFC4E63783FBF29946C6C /* Pods-MANATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANATests.debug.xcconfig"; path = "Target Support Files/Pods-MANATests/Pods-MANATests.debug.xcconfig"; sourceTree = "<group>"; };
-		5F854AB725609165A231B76A /* Pods-MANA-MANAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.debug.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		63BED9AE30E2166DA5DB3E9E /* Pods-MANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.debug.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.debug.xcconfig"; sourceTree = "<group>"; };
-		6DF37EBBD49F39B93630477D /* Pods_MANA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		712D4275CFA72F89B843FE70 /* Pods_MANA_MANAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANA_MANAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FF51FE1EC9C6E8AFFFEE6D5 /* Pods_MANATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DB8CEC8D24AB96F45A7F172 /* Pods-MANA-MANAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.release.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		012BCED32B14FD2FF32F35F0 /* Pods_MANA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EC6EB6815CE18731AB96D6F /* Pods-MANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.debug.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.debug.xcconfig"; sourceTree = "<group>"; };
+		66E8B8F455F5B3227F8A3742 /* Pods-MANATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANATests.debug.xcconfig"; path = "Target Support Files/Pods-MANATests/Pods-MANATests.debug.xcconfig"; sourceTree = "<group>"; };
+		95967FF3C26054D22FB718A7 /* Pods_MANA_MANAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANA_MANAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3454D0706757B562740A9C /* Pods_MANATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8C90F1E15981EA9076656FD /* Pods-MANA-MANAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.release.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC4755A325BBBCB7003D670C /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		BCD17A4C25BD1D8C005F4302 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCE47AED25BA23BD000B6C7D /* MANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +70,9 @@
 		BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BCE47B4B25BB8B55000B6C7D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F316CF882BF8960040FD7103 /* Pods-MANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.release.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.release.xcconfig"; sourceTree = "<group>"; };
+		BFFE6526F9B4CC5DBF275B64 /* Pods-MANA-MANAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.debug.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D406751BCAED3720E2257D4A /* Pods-MANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.release.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.release.xcconfig"; sourceTree = "<group>"; };
+		F5AB1D35FDE41C560A5908CB /* Pods-MANATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANATests.release.xcconfig"; path = "Target Support Files/Pods-MANATests/Pods-MANATests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				662A3368E1B2E01FB6943457 /* Pods_MANA.framework in Frameworks */,
+				3651449347D97779108751E7 /* Pods_MANA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3D8F171D7792312B136B0ED /* Pods_MANATests.framework in Frameworks */,
+				D1DA12F8D53A280E461FAAAE /* Pods_MANATests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,19 +96,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD3C1F4C99F32CB012B465D /* Pods_MANA_MANAUITests.framework in Frameworks */,
+				51E6801C6E8D2ED07B7DCD6F /* Pods_MANA_MANAUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C1DCC45BBB0376665D5753B /* Frameworks */ = {
+		A688165B9F34DB70EE2D9BBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6DF37EBBD49F39B93630477D /* Pods_MANA.framework */,
-				712D4275CFA72F89B843FE70 /* Pods_MANA_MANAUITests.framework */,
-				7FF51FE1EC9C6E8AFFFEE6D5 /* Pods_MANATests.framework */,
+				012BCED32B14FD2FF32F35F0 /* Pods_MANA.framework */,
+				95967FF3C26054D22FB718A7 /* Pods_MANA_MANAUITests.framework */,
+				9F3454D0706757B562740A9C /* Pods_MANATests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,14 +116,13 @@
 		B9D2698E28FE844EEC27FC34 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				63BED9AE30E2166DA5DB3E9E /* Pods-MANA.debug.xcconfig */,
-				F316CF882BF8960040FD7103 /* Pods-MANA.release.xcconfig */,
-				5F854AB725609165A231B76A /* Pods-MANA-MANAUITests.debug.xcconfig */,
-				8DB8CEC8D24AB96F45A7F172 /* Pods-MANA-MANAUITests.release.xcconfig */,
-				34AEFC4E63783FBF29946C6C /* Pods-MANATests.debug.xcconfig */,
-				0AA742A2F5EA7F98B5E4A4A2 /* Pods-MANATests.release.xcconfig */,
+				0EC6EB6815CE18731AB96D6F /* Pods-MANA.debug.xcconfig */,
+				D406751BCAED3720E2257D4A /* Pods-MANA.release.xcconfig */,
+				BFFE6526F9B4CC5DBF275B64 /* Pods-MANA-MANAUITests.debug.xcconfig */,
+				A8C90F1E15981EA9076656FD /* Pods-MANA-MANAUITests.release.xcconfig */,
+				66E8B8F455F5B3227F8A3742 /* Pods-MANATests.debug.xcconfig */,
+				F5AB1D35FDE41C560A5908CB /* Pods-MANATests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -135,7 +134,7 @@
 				BCE47B1425BA23BF000B6C7D /* MANAUITests */,
 				BCE47AEE25BA23BD000B6C7D /* Products */,
 				B9D2698E28FE844EEC27FC34 /* Pods */,
-				0C1DCC45BBB0376665D5753B /* Frameworks */,
+				A688165B9F34DB70EE2D9BBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,11 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCE47B1A25BA23BF000B6C7D /* Build configuration list for PBXNativeTarget "MANA" */;
 			buildPhases = (
-				88A5FE109BED23F1C52A464E /* [CP] Check Pods Manifest.lock */,
+				678037475CA12A2C09C2AAAB /* [CP] Check Pods Manifest.lock */,
 				BCE47AE925BA23BD000B6C7D /* Sources */,
 				BCE47AEA25BA23BD000B6C7D /* Frameworks */,
 				BCE47AEB25BA23BD000B6C7D /* Resources */,
-				3C99759C1C27BB130DB87F5E /* [CP] Embed Pods Frameworks */,
+				E57E3D143C71C1EEAC2C4A4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCE47B1D25BA23BF000B6C7D /* Build configuration list for PBXNativeTarget "MANATests" */;
 			buildPhases = (
-				98EFB37CA22E9F096909154F /* [CP] Check Pods Manifest.lock */,
+				65B3912E7393B9DDE2F17961 /* [CP] Check Pods Manifest.lock */,
 				BCE47B0225BA23BF000B6C7D /* Sources */,
 				BCE47B0325BA23BF000B6C7D /* Frameworks */,
 				BCE47B0425BA23BF000B6C7D /* Resources */,
@@ -240,11 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCE47B2025BA23BF000B6C7D /* Build configuration list for PBXNativeTarget "MANAUITests" */;
 			buildPhases = (
-				516E6799CBE50943AB94DACB /* [CP] Check Pods Manifest.lock */,
+				B474C62F2D8C7D2A74AB9014 /* [CP] Check Pods Manifest.lock */,
 				BCE47B0D25BA23BF000B6C7D /* Sources */,
 				BCE47B0E25BA23BF000B6C7D /* Frameworks */,
 				BCE47B0F25BA23BF000B6C7D /* Resources */,
-				E41995C3859054C9BAC53768 /* [CP] Embed Pods Frameworks */,
+				3DBF51599622FFDFD435C446 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -327,68 +326,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3C99759C1C27BB130DB87F5E /* [CP] Embed Pods Frameworks */ = {
+		3DBF51599622FFDFD435C446 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MANA/Pods-MANA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MANA/Pods-MANA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MANA/Pods-MANA-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		516E6799CBE50943AB94DACB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MANA-MANAUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88A5FE109BED23F1C52A464E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MANA-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		98EFB37CA22E9F096909154F /* [CP] Check Pods Manifest.lock */ = {
+		65B3912E7393B9DDE2F17961 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -410,21 +365,65 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E41995C3859054C9BAC53768 /* [CP] Embed Pods Frameworks */ = {
+		678037475CA12A2C09C2AAAB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MANA-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B474C62F2D8C7D2A74AB9014 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MANA-MANAUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E57E3D143C71C1EEAC2C4A4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MANA/Pods-MANA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MANA/Pods-MANA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MANA/Pods-MANA-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -614,17 +613,20 @@
 		};
 		BCE47B1B25BA23BF000B6C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63BED9AE30E2166DA5DB3E9E /* Pods-MANA.debug.xcconfig */;
+			baseConfigurationReference = 0EC6EB6815CE18731AB96D6F /* Pods-MANA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34BVC7L7HU;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = MANA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.milimikol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -634,17 +636,20 @@
 		};
 		BCE47B1C25BA23BF000B6C7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F316CF882BF8960040FD7103 /* Pods-MANA.release.xcconfig */;
+			baseConfigurationReference = D406751BCAED3720E2257D4A /* Pods-MANA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34BVC7L7HU;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = MANA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.milimikol;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -654,7 +659,7 @@
 		};
 		BCE47B1E25BA23BF000B6C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34AEFC4E63783FBF29946C6C /* Pods-MANATests.debug.xcconfig */;
+			baseConfigurationReference = 66E8B8F455F5B3227F8A3742 /* Pods-MANATests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -677,7 +682,7 @@
 		};
 		BCE47B1F25BA23BF000B6C7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AA742A2F5EA7F98B5E4A4A2 /* Pods-MANATests.release.xcconfig */;
+			baseConfigurationReference = F5AB1D35FDE41C560A5908CB /* Pods-MANATests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -700,7 +705,7 @@
 		};
 		BCE47B2125BA23BF000B6C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F854AB725609165A231B76A /* Pods-MANA-MANAUITests.debug.xcconfig */;
+			baseConfigurationReference = BFFE6526F9B4CC5DBF275B64 /* Pods-MANA-MANAUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -721,7 +726,7 @@
 		};
 		BCE47B2225BA23BF000B6C7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DB8CEC8D24AB96F45A7F172 /* Pods-MANA-MANAUITests.release.xcconfig */;
+			baseConfigurationReference = A8C90F1E15981EA9076656FD /* Pods-MANA-MANAUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
