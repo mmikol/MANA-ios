@@ -117,7 +117,7 @@
                                         <rect key="frame" x="0.0" y="176" width="250" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="signUpButtonTapped:" destination="S6Z-JT-dkg" eventType="touchUpInside" id="9wV-UT-xdr"/>
+                                            <action selector="signUpButtonTapped:" destination="S6Z-JT-dkg" eventType="touchUpInside" id="ZnR-PT-oVz"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJ3-5d-wnb">
@@ -151,7 +151,7 @@
                         <outlet property="firstNameTextField" destination="hZH-Yd-2Ee" id="4F3-5K-0Bv"/>
                         <outlet property="lastNameTextField" destination="vOy-yg-sU0" id="pcT-sS-Av4"/>
                         <outlet property="passwordTextField" destination="Uaz-LD-vZr" id="TIr-rb-80a"/>
-                        <outlet property="signUpButton" destination="V8A-Py-hex" id="0QO-UT-EhZ"/>
+                        <outlet property="signUpButton" destination="V8A-Py-hex" id="2YJ-TJ-bzN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yz9-ua-T0o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -228,7 +228,7 @@
         <!--HomeViewController-->
         <scene sceneID="VKT-mj-eGT">
             <objects>
-                <viewController title="HomeViewController" id="SFc-sN-38i" customClass="HomeViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" title="HomeViewController" id="SFc-sN-38i" customClass="HomeViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zfK-3l-UrB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJe-Hc-79t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3694" y="76"/>
+            <point key="canvasLocation" x="2754" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="deT-nX-y72">

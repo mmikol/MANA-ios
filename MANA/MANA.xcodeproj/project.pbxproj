@@ -24,6 +24,7 @@
 		BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */; };
 		BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */; };
 		BCE47B4C25BB8B55000B6C7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4B25BB8B55000B6C7D /* HomeViewController.swift */; };
+		BCEB4C5025BE1AF100A5E39C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB4C4F25BE1AF100A5E39C /* Constants.swift */; };
 		D1DA12F8D53A280E461FAAAE /* Pods_MANATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3454D0706757B562740A9C /* Pods_MANATests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BCE47B4B25BB8B55000B6C7D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BCEB4C4F25BE1AF100A5E39C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BFFE6526F9B4CC5DBF275B64 /* Pods-MANA-MANAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.debug.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D406751BCAED3720E2257D4A /* Pods-MANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.release.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.release.xcconfig"; sourceTree = "<group>"; };
 		F5AB1D35FDE41C560A5908CB /* Pods-MANATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANATests.release.xcconfig"; path = "Target Support Files/Pods-MANATests/Pods-MANATests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6670C725BDEB0A009224A1 /* Utilities.swift */,
+				BCEB4C4F25BE1AF100A5E39C /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				BC4755A425BBBCB7003D670C /* VerificationViewController.swift in Sources */,
 				BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */,
 				BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */,
+				BCEB4C5025BE1AF100A5E39C /* Constants.swift in Sources */,
 				BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */,
 				BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */,
 				BCE47B4C25BB8B55000B6C7D /* HomeViewController.swift in Sources */,

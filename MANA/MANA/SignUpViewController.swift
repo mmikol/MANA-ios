@@ -17,32 +17,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-    func validateFields() -> String? {
-        // All fields filled
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
-            return "All fields required."
-        }
-        
-        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        // Password is secure
-        if !Utilities.isAcceptedPassword(cleanedPassword) {
-            return "Password must contain: One capital; One number; 8 characters."
-        
-        }
-        
-        return nil
-    }
-    
     @IBAction func signUpButtonTapped(_ sender: Any) {
-        // Validate fields
         let error = validateFields()
         
         if error != nil {
-            showError(error!)
+            showError(error)
         } else {
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -68,12 +47,38 @@ class SignUpViewController: UIViewController {
                 }
             }
         }
-        //Transition to home screen
+
+        self.transitionToHome()
     }
     
-    func showError(_ error: String) {
+    func validateFields() -> String? {
+        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+            return "All fields required."
+        }
+        
+        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Password is secure
+        if !Utilities.isAcceptedPassword(cleanedPassword) {
+            return "Password must contain: One capital; One number; 8 characters."
+        
+        }
+        
+        return nil
+    }
+
+    func showError(_ error: String!) {
         errorLabel.text = error
         errorLabel.alpha = 1
+    }
+    
+    func transitionToHome() {
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.HOME_VIEW_CONTROLLER) as? HomeViewController
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
     
     override func viewDidLoad() {
