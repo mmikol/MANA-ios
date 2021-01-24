@@ -10,7 +10,8 @@ target 'MANA' do
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
- 
+  pod 'FirebaseFirestoreSwift'
+
   target 'MANATests' do
     inherit! :search_paths
     # Pods for testing
