@@ -9,14 +9,14 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     struct Stack {
-        var stack: [Double] = []
-        var isEmpty: get { return stack.isEmpty }
+        var stack: [Float] = []
+        var isEmpty: Bool { return stack.isEmpty }
         
-        mutating func push(_ element: Double) {
+        mutating func push(_ element: Float) {
           stack.append(element)
         }
 
-        mutating func pop() -> Double? {
+        mutating func pop() -> Float? {
           return stack.popLast()
         }
     }
@@ -33,7 +33,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
 
-    var currentComputation = 0.0
+    var currentComputation: Float = 0.0
     var computationStack = Stack()
 
     @IBAction func additionButtonTapped(_ sender: Any) {
@@ -42,8 +42,8 @@ class CalculatorViewController: UIViewController {
             if subtractionButton.isSelected {
                 subtractionButton.isSelected.toggle()
             }
+            return
         }
-        return
     }
     
     @IBAction func subtractionButtonTapped(_ sender: Any) {
@@ -52,15 +52,15 @@ class CalculatorViewController: UIViewController {
             if additionButton.isSelected {
                 additionButton.isSelected.toggle()
             }
+            return
         }
-        return
     }
     
     @IBAction func undoButtonTapped(_ sender: Any) {
         guard computationStack.isEmpty else {
             currentComputation -= computationStack.pop()!
+            return
         }
-        return
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
@@ -71,6 +71,7 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         additionButton.isSelected.toggle()
+        computationLabel.text = "\(currentComputation)"
         // Do any additional setup after loading the view.
     }
     
