@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  CalculatorViewController.swift
 //  MANA
 //
 //  Created by Miliano Mikol on 1/31/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class CalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
