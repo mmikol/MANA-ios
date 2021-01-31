@@ -13,4 +13,5 @@ class Utilities {
         let test = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}$")
         return test.evaluate(with: password)
     }
+    
 }

@@ -8,10 +8,45 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
+    struct Stack {
+        var stack: [Double] = []
+        
+        mutating func push(_ element: Double) {
+          stack.append(element)
+        }
 
+        mutating func pop() -> Double? {
+          return stack.popLast()
+        }
+    }
+    
+    @IBOutlet weak var computationLabel: UILabel!
+    @IBOutlet weak var plate45Button: UIButton!
+    @IBOutlet weak var plate35Button: UIButton!
+    @IBOutlet weak var plate25Button: UIButton!
+    @IBOutlet weak var plate10Button: UIButton!
+    @IBOutlet weak var plate5Button: UIButton!
+    @IBOutlet weak var plate2Button: UIButton!
+    @IBOutlet weak var additionButton: UIButton!
+    @IBOutlet weak var subtractionButton: UIButton!
+    @IBOutlet weak var undoButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
+
+    
+    @IBAction func additionButtonTapped(_ sender: Any) {
+        guard additionButton.isSelected else {
+            additionButton.isSelected.toggle()
+            return
+        }
+    }
+    
+    var currentComputation = 0
+    var computationStack = Stack()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        additionButton.isSelected.toggle()
         // Do any additional setup after loading the view.
     }
     
