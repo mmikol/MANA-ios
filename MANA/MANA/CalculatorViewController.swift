@@ -27,7 +27,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var plate25Button: UIButton!
     @IBOutlet weak var plate10Button: UIButton!
     @IBOutlet weak var plate5Button: UIButton!
-    @IBOutlet weak var plate2Button: UIButton!
+    @IBOutlet weak var plate2Button: UIButton! // Represents 2.5lbs
     @IBOutlet weak var additionButton: UIButton!
     @IBOutlet weak var subtractionButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
@@ -36,6 +36,15 @@ class CalculatorViewController: UIViewController {
     var currentComputation: Float
     var computationStack: Stack
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        currentComputation = 0.0
+        computationStack = Stack()
+        additionButton.isSelected.toggle()
+        computationLabel.text = "\(currentComputation)"
+        // Do any additional setup after loading the view.
+    }
+    
     @IBAction func additionButtonTapped(_ sender: Any) {
         guard additionButton.isSelected else {
             additionButton.isSelected.toggle()
@@ -58,7 +67,8 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func undoButtonTapped(_ sender: Any) {
         guard computationStack.isEmpty else {
-            currentComputation -= computationStack.pop()!
+            currentComputation += computationStack.pop()!
+            computationLabel.text = "\(currentComputation)"
             return
         }
     }
@@ -66,26 +76,46 @@ class CalculatorViewController: UIViewController {
     @IBAction func clearButtonTapped(_ sender: Any) {
         currentComputation = 0
         computationStack = Stack()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        currentComputation = 0.0
-        computationStack = Stack()
-        additionButton.isSelected.toggle()
         computationLabel.text = "\(currentComputation)"
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func plate45ButtonTapped(_ sender: Any) {
+        let TWO_PLATE_VALUE: Float = 90.0
+        incrementComputation(By: TWO_PLATE_VALUE)
     }
-    */
+    
+    @IBAction func plate35ButtonTapped(_ sender: Any) {
+        let TWO_PLATE_VALUE: Float = 70.0
+        incrementComputation(By: TWO_PLATE_VALUE)
+    }
+    
+    @IBAction func plate25ButtonTapped(_ sender: Any) {
+        let TWO_PLATE_VALUE: Float = 50.0
+        incrementComputation(By: TWO_PLATE_VALUE)
+    }
+    
+    @IBAction func plate10ButtonTapped(_ sender: Any) {
+        let TWO_PLATE_VALUE: Float = 20.0
+        incrementComputation(By: TWO_PLATE_VALUE)
+    }
+    
+    @IBAction func plate5ButtonTapped(_ sender: Any) {
+        let TWO_PLATE_VALUE: Float = 10.0
+        incrementComputation(By: TWO_PLATE_VALUE)
+    }
 
+    @IBAction func plate2ButtonTapped(_ sender: Any) {
+        let TWO_PLATE_VALUE: Float = 5.0
+        incrementComputation(By: TWO_PLATE_VALUE)
+    }
+    
+    func incrementComputation(By amount: Float) {
+        guard currentComputation.isZero else {
+            let increment = additionButton.isSelected ? amount : -amount
+            currentComputation += increment
+            computationStack.push(-increment)
+            computationLabel.text = "\(currentComputation)"
+            return
+        }
+    }
 }
