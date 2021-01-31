@@ -10,6 +10,7 @@ import UIKit
 class CalculatorViewController: UIViewController {
     struct Stack {
         var stack: [Double] = []
+        var isEmpty: get { return stack.isEmpty }
         
         mutating func push(_ element: Double) {
           stack.append(element)
@@ -32,17 +33,40 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
 
-    
+    var currentComputation = 0.0
+    var computationStack = Stack()
+
     @IBAction func additionButtonTapped(_ sender: Any) {
         guard additionButton.isSelected else {
             additionButton.isSelected.toggle()
-            return
+            if subtractionButton.isSelected {
+                subtractionButton.isSelected.toggle()
+            }
         }
+        return
     }
     
-    var currentComputation = 0
-    var computationStack = Stack()
+    @IBAction func subtractionButtonTapped(_ sender: Any) {
+        guard subtractionButton.isSelected else {
+            subtractionButton.isSelected.toggle()
+            if additionButton.isSelected {
+                additionButton.isSelected.toggle()
+            }
+        }
+        return
+    }
     
+    @IBAction func undoButtonTapped(_ sender: Any) {
+        guard computationStack.isEmpty else {
+            currentComputation -= computationStack.pop()!
+        }
+        return
+    }
+    
+    @IBAction func clearButtonTapped(_ sender: Any) {
+        currentComputation = 0
+        computationStack = Stack()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
