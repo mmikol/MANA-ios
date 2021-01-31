@@ -33,8 +33,8 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
 
-    var currentComputation: Float = 0.0
-    var computationStack = Stack()
+    var currentComputation: Float
+    var computationStack: Stack
 
     @IBAction func additionButtonTapped(_ sender: Any) {
         guard additionButton.isSelected else {
@@ -70,6 +70,8 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentComputation = 0.0
+        computationStack = Stack()
         additionButton.isSelected.toggle()
         computationLabel.text = "\(currentComputation)"
         // Do any additional setup after loading the view.
