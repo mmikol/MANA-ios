@@ -8,12 +8,6 @@
 import Foundation
 
 class Utilities {
-    static func isAcceptedPassword(_ password: String) -> Bool {
-        // One capital; One number; 8 characters
-        let test = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}$")
-        return test.evaluate(with: password)
-    }
-    
     struct Stack {
         var stack: [Float] = []
         var isEmpty: Bool { return stack.isEmpty }
@@ -25,6 +19,15 @@ class Utilities {
         mutating func pop() -> Float? {
           return stack.popLast()
         }
+        
+        mutating func clear() {
+            stack.removeAll()
+        }
     }
-
+    
+    static func isAcceptedPassword(_ password: String) -> Bool {
+        // One capital; One number; 8 characters
+        let test = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}$")
+        return test.evaluate(with: password)
+    }
 }

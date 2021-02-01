@@ -7,7 +7,7 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
-    var currentComputation: Float = 0.0
+    var currentComputation = 0
     var computationStack = Utilities.Stack()
     
     @IBOutlet weak var computationLabel: UILabel!
@@ -51,43 +51,43 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
-        currentComputation = 0
-        computationStack = Utilities.Stack()
+        currentComputation -= currentComputation
+        computationStack.clear()
         computationLabel.text = "\(currentComputation)"
     }
     
     @IBAction func plate45ButtonTapped(_ sender: Any) {
-        let TWO_PLATE_VALUE: Float = 90.0
-        adjustomputation(By: TWO_PLATE_VALUE)
+        let TWO_PLATE_VALUE = 90
+        adjustComputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate35ButtonTapped(_ sender: Any) {
-        let TWO_PLATE_VALUE: Float = 70.0
-        adjustomputation(By: TWO_PLATE_VALUE)
+        let TWO_PLATE_VALUE = 70
+        adjustComputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate25ButtonTapped(_ sender: Any) {
-        let TWO_PLATE_VALUE: Float = 50.0
-        adjustomputation(By: TWO_PLATE_VALUE)
+        let TWO_PLATE_VALUE = 50
+        adjustComputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate10ButtonTapped(_ sender: Any) {
-        let TWO_PLATE_VALUE: Float = 20.0
-        adjustomputation(By: TWO_PLATE_VALUE)
+        let TWO_PLATE_VALUE = 20
+        adjustComputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate5ButtonTapped(_ sender: Any) {
-        let TWO_PLATE_VALUE: Float = 10.0
-        adjustomputation(By: TWO_PLATE_VALUE)
+        let TWO_PLATE_VALUE = 10
+        adjustComputation(By: TWO_PLATE_VALUE)
     }
 
     @IBAction func plate2ButtonTapped(_ sender: Any) {
-        let TWO_PLATE_VALUE: Float = 5.0
-        adjustomputation(By: TWO_PLATE_VALUE)
+        let TWO_PLATE_VALUE = 5
+        adjustComputation(By: TWO_PLATE_VALUE)
     }
     
-    func adjustomputation(By amount: Float) {
-        guard currentComputation.isZero else {
+    func adjustComputation(By amount: Integer) {
+        guard currentComputation.isZero && subtractionButton.isSelected else {
             let increment = additionButton.isSelected ? amount : -amount
             currentComputation += increment
             computationStack.push(-increment)
