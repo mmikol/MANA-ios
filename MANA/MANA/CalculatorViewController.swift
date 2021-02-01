@@ -8,8 +8,29 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     var currentComputation = 0
-    var computationStack = Utilities.Stack()
+    var computationStack = CalculatorStack()
     
+    struct CalculatorStack {
+        var stack: [Any] = []
+        var isEmpty: Bool { return stack.isEmpty }
+        
+        mutating func push(_ element: Any) {
+            stack.append(element)
+            
+            if stack.count >= 50 {
+                stack.removeFirst()
+            }
+        }
+
+        mutating func pop() -> Any? {
+            return stack.popLast()
+        }
+        
+        mutating func clear() {
+            stack.removeAll()
+        }
+    }
+
     @IBOutlet weak var computationLabel: UILabel!
     @IBOutlet weak var plate45Button: UIButton!
     @IBOutlet weak var plate35Button: UIButton!
@@ -44,7 +65,7 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func undoButtonTapped(_ sender: Any) {
         guard computationStack.isEmpty else {
-            currentComputation += computationStack.pop()!
+            currentComputation += computationStack.pop() as! Int
             computationLabel.text = "\(currentComputation)"
             return
         }
@@ -86,12 +107,16 @@ class CalculatorViewController: UIViewController {
         adjustComputation(By: TWO_PLATE_VALUE)
     }
     
-    func adjustComputation(By amount: Integer) {
-        guard currentComputation.isZero && subtractionButton.isSelected else {
+    func adjustComputation(By amount: Int) {
+        guard currentComputation == 0 && subtractionButton.isSelected else {
             let increment = additionButton.isSelected ? amount : -amount
-            currentComputation += increment
-            computationStack.push(-increment)
-            computationLabel.text = "\(currentComputation)"
+            let newValue = currentComputation + increment
+            
+            if newValue >= 0 {
+                currentComputation += increment
+                computationStack.push(-increment)
+                computationLabel.text = "\(currentComputation)"
+            }
             return
         }
     }
