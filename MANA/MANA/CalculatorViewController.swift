@@ -14,7 +14,7 @@ class CalculatorViewController: UIViewController {
         mutating func push(_ element: Any) {
             stack.append(element)
             
-            if stack.count >= 50 {
+            if stack.count >= 25 {
                 stack.removeFirst()
             }
         }
@@ -112,11 +112,14 @@ class CalculatorViewController: UIViewController {
             let increment = additionButton.isSelected ? amount : -amount
             let newValue = currentComputation + increment
             
-            if newValue >= 0 {
+            if newValue >= 0 && newValue < 50000 {
                 currentComputation += increment
                 computationStack.push(-increment)
                 computationLabel.text = "\(currentComputation)"
+            } else if newValue >= 50000 {
+                computationLabel.text = "Godlike MANA"
             }
+            
             return
         }
     }
