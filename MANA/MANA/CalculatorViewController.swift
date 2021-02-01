@@ -128,6 +128,5 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
         additionButton.isSelected.toggle()
         computationLabel.text = "\(currentComputation) lbs"
-        // Do any additional setup after loading the view.
     }
 }

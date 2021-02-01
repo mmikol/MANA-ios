@@ -166,6 +166,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="opaqueSeparatorColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="8AQ-Iy-i1d" kind="relationship" relationship="viewControllers" id="hQy-yg-C68"/>
@@ -263,11 +264,11 @@
             </objects>
             <point key="canvasLocation" x="929" y="-745"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="NYI-Yh-qBp">
             <objects>
                 <navigationController id="8AQ-Iy-i1d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="TJB-bT-AnI"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="TJB-bT-AnI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kGe-33-MlJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -326,7 +327,7 @@
                                     <constraint firstAttribute="height" constant="75" id="CNS-rY-1f7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-aF-xGD">
@@ -421,7 +422,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dYx-jL-2Xl"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cnz-aF-xGD" firstAttribute="leading" secondItem="njP-q7-m7N" secondAttribute="trailing" constant="150" id="2GS-aO-k3Y"/>
                             <constraint firstItem="cnz-aF-xGD" firstAttribute="centerY" secondItem="v8N-q6-atO" secondAttribute="centerY" id="FpY-I8-2vu"/>
@@ -466,11 +467,11 @@
             </objects>
             <point key="canvasLocation" x="7322" y="828"/>
         </scene>
-        <!--Item-->
+        <!--Log-->
         <scene sceneID="Ygn-Uc-cch">
             <objects>
                 <navigationController id="YPf-R4-NOt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vB5-Zk-umm"/>
+                    <tabBarItem key="tabBarItem" title="Log" image="list.bullet.rectangle" catalog="system" id="vB5-Zk-umm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ddn-di-SWM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -483,12 +484,11 @@
             </objects>
             <point key="canvasLocation" x="5110" y="76"/>
         </scene>
-        <!--Item-->
+        <!--Calculator-->
         <scene sceneID="BPS-jb-q2z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jcJ-6s-ijA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="pTH-hj-78B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="byI-ZI-cYz"/>
+                    <tabBarItem key="tabBarItem" title="Calculator" image="number" catalog="system" selectedImage="number" id="byI-ZI-cYz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="THG-f3-wgm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -497,15 +497,15 @@
                         <segue destination="nhq-nB-JTO" kind="relationship" relationship="rootViewController" id="i1F-Jt-ZxR"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jcJ-6s-ijA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6178" y="76"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="wEI-af-sXk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7ft-A9-iI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="bxY-oc-hjf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zLB-Bv-m1z"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="zLB-Bv-m1z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zh3-1F-AJj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -514,6 +514,7 @@
                         <segue destination="Ua2-3h-GLx" kind="relationship" relationship="rootViewController" id="TuD-5L-hjX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ft-A9-iI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7323" y="76"/>
         </scene>
@@ -522,11 +523,15 @@
         <image name="Logo" width="1000" height="1080"/>
         <image name="WarriorRed" width="1920" height="1080"/>
         <image name="WarriorYellow" width="1920" height="1080"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="number" catalog="system" width="128" height="124"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
