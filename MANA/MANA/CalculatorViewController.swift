@@ -7,9 +7,6 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
-    var currentComputation = 0
-    var computationStack = CalculatorStack()
-    
     struct CalculatorStack {
         var stack: [Any] = []
         var isEmpty: Bool { return stack.isEmpty }
@@ -30,6 +27,9 @@ class CalculatorViewController: UIViewController {
             stack.removeAll()
         }
     }
+    
+    var currentComputation = 0
+    var computationStack = CalculatorStack()
 
     @IBOutlet weak var computationLabel: UILabel!
     @IBOutlet weak var plate45Button: UIButton!
