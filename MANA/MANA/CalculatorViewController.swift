@@ -115,7 +115,7 @@ class CalculatorViewController: UIViewController {
             if newValue >= 0 && newValue < 50000 {
                 currentComputation += increment
                 computationStack.push(-increment)
-                computationLabel.text = "\(currentComputation)"
+                computationLabel.text = "\(currentComputation) lbs"
             } else if newValue >= 50000 {
                 computationLabel.text = "Godlike MANA"
             }
@@ -127,7 +127,7 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         additionButton.isSelected.toggle()
-        computationLabel.text = "\(currentComputation)"
+        computationLabel.text = "\(currentComputation) lbs"
         // Do any additional setup after loading the view.
     }
 }
