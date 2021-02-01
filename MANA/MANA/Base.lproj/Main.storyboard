@@ -322,37 +322,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tD-7g-45b">
-                                <rect key="frame" x="0.0" y="88" width="414" height="75"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="7qN-9d-ISP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="7qN-9d-ISP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-aF-xGD">
-                                <rect key="frame" x="207" y="303" width="110" height="290"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="H9L-NB-uId">
+                                <rect key="frame" x="65.5" y="263" width="283" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVK-mC-WS6">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
+                                        <state key="normal" title="Undo"/>
+                                        <connections>
+                                            <action selector="undoButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="Wlq-yU-ahV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7n-He-T6I">
+                                        <rect key="frame" x="87" y="0.0" width="36" height="30"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="mD3-uu-RHW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-jQ-6cX">
+                                        <rect key="frame" x="173" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="additionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="YsM-kV-xQ1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLY-9K-ikf">
+                                        <rect key="frame" x="253" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="subtractionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="cXM-2Z-4tA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-aF-xGD">
+                                <rect key="frame" x="102" y="393" width="210" height="295"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="sOq-WF-0l0">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="290"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="295"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvw-Dy-u6P">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvw-Dy-u6P">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="35"/>
                                                 <state key="normal" title="45"/>
                                                 <connections>
                                                     <action selector="plate45ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="oyH-kG-f8U"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOW-cx-GMx">
-                                                <rect key="frame" x="0.0" y="130" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOW-cx-GMx">
+                                                <rect key="frame" x="0.0" y="135" width="30" height="30"/>
                                                 <state key="normal" title="25"/>
                                                 <connections>
                                                     <action selector="plate25ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="plI-Yt-9vl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esh-Ud-Oc4">
-                                                <rect key="frame" x="0.0" y="260" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esh-Ud-Oc4">
+                                                <rect key="frame" x="0.0" y="265" width="30" height="30"/>
                                                 <state key="normal" title="5"/>
                                                 <connections>
                                                     <action selector="plate5ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="zP4-RV-ZmB"/>
@@ -361,24 +394,24 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="67W-W0-ttf">
-                                        <rect key="frame" x="80" y="0.0" width="30" height="290"/>
+                                        <rect key="frame" x="180" y="0.0" width="30" height="295"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsT-gv-sqj">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsT-gv-sqj">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="35"/>
                                                 <state key="normal" title="35"/>
                                                 <connections>
                                                     <action selector="plate35ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="pln-sQ-z5Q"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTJ-Tt-xYh">
-                                                <rect key="frame" x="0.0" y="130" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTJ-Tt-xYh">
+                                                <rect key="frame" x="0.0" y="135" width="30" height="30"/>
                                                 <state key="normal" title="10"/>
                                                 <connections>
                                                     <action selector="plate10ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="Vph-KQ-1To"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmL-hN-kJK">
-                                                <rect key="frame" x="0.0" y="260" width="30" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmL-hN-kJK">
+                                                <rect key="frame" x="0.0" y="265" width="30" height="30"/>
                                                 <state key="normal" title="2.5"/>
                                                 <connections>
                                                     <action selector="plate2ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="a3O-Ty-tjO"/>
@@ -388,51 +421,19 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="njP-q7-m7N">
-                                <rect key="frame" x="20" y="350.5" width="37" height="195"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-jQ-6cX">
-                                        <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
-                                        <state key="normal" title="+"/>
-                                        <connections>
-                                            <action selector="additionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="YsM-kV-xQ1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLY-9K-ikf">
-                                        <rect key="frame" x="0.0" y="55" width="37" height="30"/>
-                                        <state key="normal" title="-"/>
-                                        <connections>
-                                            <action selector="subtractionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="cXM-2Z-4tA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVK-mC-WS6">
-                                        <rect key="frame" x="0.0" y="110" width="37" height="30"/>
-                                        <state key="normal" title="Undo"/>
-                                        <connections>
-                                            <action selector="undoButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="Wlq-yU-ahV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7n-He-T6I">
-                                        <rect key="frame" x="0.0" y="165" width="37" height="30"/>
-                                        <state key="normal" title="Clear"/>
-                                        <connections>
-                                            <action selector="clearButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="mD3-uu-RHW"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dYx-jL-2Xl"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cnz-aF-xGD" firstAttribute="leading" secondItem="njP-q7-m7N" secondAttribute="trailing" constant="150" id="2GS-aO-k3Y"/>
-                            <constraint firstItem="cnz-aF-xGD" firstAttribute="centerY" secondItem="v8N-q6-atO" secondAttribute="centerY" id="FpY-I8-2vu"/>
                             <constraint firstItem="6tD-7g-45b" firstAttribute="top" secondItem="dYx-jL-2Xl" secondAttribute="top" id="MVc-ff-gTl"/>
                             <constraint firstItem="6tD-7g-45b" firstAttribute="leading" secondItem="dYx-jL-2Xl" secondAttribute="leading" id="PXV-Na-AR3"/>
+                            <constraint firstItem="cnz-aF-xGD" firstAttribute="top" secondItem="H9L-NB-uId" secondAttribute="bottom" constant="100" id="PhX-Jj-GbH"/>
+                            <constraint firstItem="H9L-NB-uId" firstAttribute="centerX" secondItem="v8N-q6-atO" secondAttribute="centerX" id="Vda-4n-DDQ"/>
+                            <constraint firstItem="H9L-NB-uId" firstAttribute="top" secondItem="6tD-7g-45b" secondAttribute="bottom" constant="75" id="XTH-7u-uh5"/>
                             <constraint firstItem="6tD-7g-45b" firstAttribute="centerX" secondItem="v8N-q6-atO" secondAttribute="centerX" id="ck6-Xg-2Mq"/>
+                            <constraint firstItem="dYx-jL-2Xl" firstAttribute="bottom" secondItem="cnz-aF-xGD" secondAttribute="bottom" constant="125" id="eEx-cf-wPS"/>
+                            <constraint firstItem="cnz-aF-xGD" firstAttribute="centerX" secondItem="v8N-q6-atO" secondAttribute="centerX" id="goU-Fv-5hd"/>
                             <constraint firstItem="6tD-7g-45b" firstAttribute="trailing" secondItem="dYx-jL-2Xl" secondAttribute="trailing" id="jig-Sv-dv0"/>
-                            <constraint firstItem="njP-q7-m7N" firstAttribute="leading" secondItem="dYx-jL-2Xl" secondAttribute="leading" constant="20" id="y7V-Q7-y3b"/>
-                            <constraint firstItem="njP-q7-m7N" firstAttribute="centerY" secondItem="v8N-q6-atO" secondAttribute="centerY" id="yZK-5c-Fdi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Calculator" id="kqO-dd-jZZ"/>
@@ -495,6 +496,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="THG-f3-wgm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="opaqueSeparatorColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="nhq-nB-JTO" kind="relationship" relationship="rootViewController" id="i1F-Jt-ZxR"/>
