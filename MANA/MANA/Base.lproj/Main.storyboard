@@ -321,14 +321,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tD-7g-45b">
-                                <rect key="frame" x="177.5" y="138" width="59" height="75"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tD-7g-45b">
+                                <rect key="frame" x="0.0" y="88" width="414" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="CNS-rY-1f7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="7qN-9d-ISP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" name="Color"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-aF-xGD">
                                 <rect key="frame" x="207" y="303" width="110" height="290"/>
@@ -426,8 +427,10 @@
                         <constraints>
                             <constraint firstItem="cnz-aF-xGD" firstAttribute="leading" secondItem="njP-q7-m7N" secondAttribute="trailing" constant="150" id="2GS-aO-k3Y"/>
                             <constraint firstItem="cnz-aF-xGD" firstAttribute="centerY" secondItem="v8N-q6-atO" secondAttribute="centerY" id="FpY-I8-2vu"/>
-                            <constraint firstItem="6tD-7g-45b" firstAttribute="top" secondItem="dYx-jL-2Xl" secondAttribute="top" constant="50" id="MVc-ff-gTl"/>
+                            <constraint firstItem="6tD-7g-45b" firstAttribute="top" secondItem="dYx-jL-2Xl" secondAttribute="top" id="MVc-ff-gTl"/>
+                            <constraint firstItem="6tD-7g-45b" firstAttribute="leading" secondItem="dYx-jL-2Xl" secondAttribute="leading" id="PXV-Na-AR3"/>
                             <constraint firstItem="6tD-7g-45b" firstAttribute="centerX" secondItem="v8N-q6-atO" secondAttribute="centerX" id="ck6-Xg-2Mq"/>
+                            <constraint firstItem="6tD-7g-45b" firstAttribute="trailing" secondItem="dYx-jL-2Xl" secondAttribute="trailing" id="jig-Sv-dv0"/>
                             <constraint firstItem="njP-q7-m7N" firstAttribute="leading" secondItem="dYx-jL-2Xl" secondAttribute="leading" constant="20" id="y7V-Q7-y3b"/>
                             <constraint firstItem="njP-q7-m7N" firstAttribute="centerY" secondItem="v8N-q6-atO" secondAttribute="centerY" id="yZK-5c-Fdi"/>
                         </constraints>
