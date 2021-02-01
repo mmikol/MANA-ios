@@ -14,4 +14,17 @@ class Utilities {
         return test.evaluate(with: password)
     }
     
+    struct Stack {
+        var stack: [Float] = []
+        var isEmpty: Bool { return stack.isEmpty }
+        
+        mutating func push(_ element: Float) {
+          stack.append(element)
+        }
+
+        mutating func pop() -> Float? {
+          return stack.popLast()
+        }
+    }
+
 }

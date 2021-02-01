@@ -4,22 +4,11 @@
 //
 //  Created by Miliano Mikol on 1/31/21.
 //
-
 import UIKit
 
 class CalculatorViewController: UIViewController {
-    struct Stack {
-        var stack: [Float] = []
-        var isEmpty: Bool { return stack.isEmpty }
-        
-        mutating func push(_ element: Float) {
-          stack.append(element)
-        }
-
-        mutating func pop() -> Float? {
-          return stack.popLast()
-        }
-    }
+    var currentComputation: Float = 0.0
+    var computationStack = Utilities.Stack()
     
     @IBOutlet weak var computationLabel: UILabel!
     @IBOutlet weak var plate45Button: UIButton!
@@ -32,18 +21,6 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var subtractionButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
-
-    var currentComputation: Float
-    var computationStack: Stack
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        currentComputation = 0.0
-        computationStack = Stack()
-        additionButton.isSelected.toggle()
-        computationLabel.text = "\(currentComputation)"
-        // Do any additional setup after loading the view.
-    }
     
     @IBAction func additionButtonTapped(_ sender: Any) {
         guard additionButton.isSelected else {
@@ -75,41 +52,41 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func clearButtonTapped(_ sender: Any) {
         currentComputation = 0
-        computationStack = Stack()
+        computationStack = Utilities.Stack()
         computationLabel.text = "\(currentComputation)"
     }
     
     @IBAction func plate45ButtonTapped(_ sender: Any) {
         let TWO_PLATE_VALUE: Float = 90.0
-        incrementComputation(By: TWO_PLATE_VALUE)
+        adjustomputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate35ButtonTapped(_ sender: Any) {
         let TWO_PLATE_VALUE: Float = 70.0
-        incrementComputation(By: TWO_PLATE_VALUE)
+        adjustomputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate25ButtonTapped(_ sender: Any) {
         let TWO_PLATE_VALUE: Float = 50.0
-        incrementComputation(By: TWO_PLATE_VALUE)
+        adjustomputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate10ButtonTapped(_ sender: Any) {
         let TWO_PLATE_VALUE: Float = 20.0
-        incrementComputation(By: TWO_PLATE_VALUE)
+        adjustomputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate5ButtonTapped(_ sender: Any) {
         let TWO_PLATE_VALUE: Float = 10.0
-        incrementComputation(By: TWO_PLATE_VALUE)
+        adjustomputation(By: TWO_PLATE_VALUE)
     }
 
     @IBAction func plate2ButtonTapped(_ sender: Any) {
         let TWO_PLATE_VALUE: Float = 5.0
-        incrementComputation(By: TWO_PLATE_VALUE)
+        adjustomputation(By: TWO_PLATE_VALUE)
     }
     
-    func incrementComputation(By amount: Float) {
+    func adjustomputation(By amount: Float) {
         guard currentComputation.isZero else {
             let increment = additionButton.isSelected ? amount : -amount
             currentComputation += increment
@@ -117,5 +94,12 @@ class CalculatorViewController: UIViewController {
             computationLabel.text = "\(currentComputation)"
             return
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        additionButton.isSelected.toggle()
+        computationLabel.text = "\(currentComputation)"
+        // Do any additional setup after loading the view.
     }
 }
