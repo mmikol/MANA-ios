@@ -388,6 +388,7 @@
                             <outlet property="delegate" destination="kpv-sp-jDu" id="Gmy-tg-EWQ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="CM1-4e-SWX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Dy-A0-cpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -575,6 +576,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="kpv-sp-jDu" kind="relationship" relationship="rootViewController" id="ZBC-3c-qeW"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LBF-Jh-BzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

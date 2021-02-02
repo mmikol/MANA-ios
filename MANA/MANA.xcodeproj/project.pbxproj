@@ -14,6 +14,7 @@
 		BCBE339C25C75EDA00AE111F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE339B25C75EDA00AE111F /* HomeViewController.swift */; };
 		BCBE33A125C75EE100AE111F /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE33A025C75EE100AE111F /* LogViewController.swift */; };
 		BCD17A4D25BD1D8C005F4302 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD17A4C25BD1D8C005F4302 /* GoogleService-Info.plist */; };
+		BCE3A04425C9FE4F00521395 /* LogAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */; };
 		BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */; };
 		BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */; };
 		BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */; };
@@ -58,6 +59,7 @@
 		BCBE339B25C75EDA00AE111F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BCBE33A025C75EE100AE111F /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		BCD17A4C25BD1D8C005F4302 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAddViewController.swift; sourceTree = "<group>"; };
 		BCE47AED25BA23BD000B6C7D /* MANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				BCBE33A025C75EE100AE111F /* LogViewController.swift */,
 				BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */,
 				BCBE339B25C75EDA00AE111F /* HomeViewController.swift */,
+				BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */,
 				BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */,
 			);
 			name = ViewControllers;
@@ -453,6 +456,7 @@
 				BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */,
 				BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */,
 				BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */,
+				BCE3A04425C9FE4F00521395 /* LogAddViewController.swift in Sources */,
 				BCBE33A125C75EE100AE111F /* LogViewController.swift in Sources */,
 				BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */,
 				BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */,
