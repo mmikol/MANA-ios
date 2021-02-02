@@ -15,6 +15,7 @@
 		BCBE33A125C75EE100AE111F /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE33A025C75EE100AE111F /* LogViewController.swift */; };
 		BCD17A4D25BD1D8C005F4302 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD17A4C25BD1D8C005F4302 /* GoogleService-Info.plist */; };
 		BCE3A04425C9FE4F00521395 /* LogAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */; };
+		BCE3A04925CA132E00521395 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3A04825CA132E00521395 /* WorkoutTableViewCell.swift */; };
 		BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */; };
 		BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */; };
 		BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */; };
@@ -60,6 +61,7 @@
 		BCBE33A025C75EE100AE111F /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		BCD17A4C25BD1D8C005F4302 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAddViewController.swift; sourceTree = "<group>"; };
+		BCE3A04825CA132E00521395 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		BCE47AED25BA23BD000B6C7D /* MANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,28 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BCE3A05025CA137900521395 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */,
+				BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */,
+				BCBE33A025C75EE100AE111F /* LogViewController.swift */,
+				BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */,
+				BCBE339B25C75EDA00AE111F /* HomeViewController.swift */,
+				BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */,
+				BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BCE3A05125CA13A700521395 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				BCE3A04825CA132E00521395 /* WorkoutTableViewCell.swift */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
 		BCE47AE425BA23BD000B6C7D = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +194,9 @@
 			children = (
 				BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */,
 				BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */,
+				BCE3A05025CA137900521395 /* View Controllers */,
 				BC6670C625BDEAFD009224A1 /* Helpers */,
-				BCE47B5025BB8B5B000B6C7D /* ViewControllers */,
+				BCE3A05125CA13A700521395 /* Tables */,
 				BCE47AF625BA23BD000B6C7D /* Main.storyboard */,
 				BCE47AFC25BA23BE000B6C7D /* Assets.xcassets */,
 				BCE47AFE25BA23BE000B6C7D /* LaunchScreen.storyboard */,
@@ -198,20 +223,6 @@
 				BCE47B1725BA23BF000B6C7D /* Info.plist */,
 			);
 			path = MANAUITests;
-			sourceTree = "<group>";
-		};
-		BCE47B5025BB8B5B000B6C7D /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */,
-				BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */,
-				BCBE33A025C75EE100AE111F /* LogViewController.swift */,
-				BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */,
-				BCBE339B25C75EDA00AE111F /* HomeViewController.swift */,
-				BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */,
-				BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */,
-			);
-			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +472,7 @@
 				BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */,
 				BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */,
 				BCEB4C5025BE1AF100A5E39C /* Constants.swift in Sources */,
+				BCE3A04925CA132E00521395 /* WorkoutTableViewCell.swift in Sources */,
 				BCBE339C25C75EDA00AE111F /* HomeViewController.swift in Sources */,
 				BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */,
 				BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */,
