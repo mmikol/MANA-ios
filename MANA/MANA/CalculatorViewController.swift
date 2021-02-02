@@ -66,7 +66,7 @@ class CalculatorViewController: UIViewController {
     @IBAction func undoButtonTapped(_ sender: Any) {
         guard computationStack.isEmpty else {
             currentComputation += computationStack.pop() as! Int
-            computationLabel.text = "\(currentComputation)"
+            computationLabel.text = "\(currentComputation) lbs"
             return
         }
     }
