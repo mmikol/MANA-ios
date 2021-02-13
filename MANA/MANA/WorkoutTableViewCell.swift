@@ -2,7 +2,7 @@
 //  WorkoutTableViewCell.swift
 //  MANA
 //
-//  Created by Miliano Mikol on 2/2/21.
+//  Created by Miliano Mikol on 2/13/21.
 //
 
 import UIKit

@@ -7,28 +7,36 @@
 
 import UIKit
 
-class LogAddViewController: UIViewController {
+class LogAddViewController: UIViewController, UITextFieldDelegate {
+   
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var repsTextField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func submitButtonTapped(_ sender: Any) {
     }
     
     struct Exercise {
         let name: String
+        let date: Date
         let weight: Int
         let numberOfSets: Int
-        let numberOfRepsPerSet: Int
-        let image: UIImage // Could be wrong data type
-        
+        let numberOfRepsPerSet: Int        
     }
     
-    struct LogEntry {
-        let name: String?
-        let date: Date
-        let exercises: Array<Exercise>
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameTextField.delegate = self
+    }
+    
     /*
     // MARK: - Navigation
 
