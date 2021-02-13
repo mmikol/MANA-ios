@@ -1,3 +1,9 @@
+# Mac
+.DS_Store
+
+#Firebase
+GoogleService-Info.plist
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
