@@ -18,14 +18,6 @@ class LogAddViewController: UIViewController, UITextFieldDelegate {
     @IBAction func submitButtonTapped(_ sender: Any) {
     }
     
-    struct Exercise {
-        let name: String
-        let date: Date
-        let weight: Int
-        let numberOfSets: Int
-        let numberOfRepsPerSet: Int        
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
