@@ -431,16 +431,16 @@
             </objects>
             <point key="canvasLocation" x="4662" y="1580"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Workout Table View Controller-->
         <scene sceneID="8Ba-V6-mXH">
             <objects>
-                <tableViewController id="Vz4-Te-8nM" sceneMemberID="viewController">
+                <tableViewController id="Vz4-Te-8nM" customClass="WorkoutTableViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DYR-py-EqN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="6aM-w5-y4G" customClass="WorkoutTableViewCell" customModule="MANA" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WorkoutTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="90" id="6aM-w5-y4G" customClass="WorkoutTableViewCell" customModule="MANA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6aM-w5-y4G" id="JEz-gd-lMS">
@@ -474,6 +474,13 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="WorkoutTableViewCell"/>
+                                <connections>
+                                    <outlet property="dateLabel" destination="oP8-K9-K21" id="c2c-Zt-DHs"/>
+                                    <outlet property="nameLabel" destination="CVD-dd-XaE" id="E7w-u7-6DS"/>
+                                    <outlet property="photoImageView" destination="AdV-mW-6Kq" id="F7h-Lt-rFf"/>
+                                    <outlet property="weightLabel" destination="wlh-pP-ir4" id="Fjm-YL-tvI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
