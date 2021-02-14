@@ -368,7 +368,7 @@
         <!--LogAddViewController-->
         <scene sceneID="Wmg-fk-Pwd">
             <objects>
-                <viewController title="LogAddViewController" id="4yV-ZS-vma" customClass="LogAddViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LogAddViewController" id="4yV-ZS-vma" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjR-tI-BZP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -382,6 +382,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhE-Tc-jjC">
                                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="30"/>
                                                 <state key="normal" title="Bench"/>
+                                                <connections>
+                                                    <action selector="benchButton:" destination="ZzW-Y8-miK" eventType="touchUpInside" id="fZl-yG-wgj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Up-gJy">
                                                 <rect key="frame" x="106.5" y="0.0" width="107" height="30"/>
@@ -441,6 +444,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxD-bw-trK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZzW-Y8-miK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5622" y="2341"/>
         </scene>

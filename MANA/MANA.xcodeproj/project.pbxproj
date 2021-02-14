@@ -12,11 +12,11 @@
 		BC18481225D8D5F1005D40DE /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481125D8D5F1005D40DE /* Workout.swift */; };
 		BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */; };
 		BC18481C25D8DB58005D40DE /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */; };
+		BC4B03E825D8F5E2008BB531 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B03E725D8F5E2008BB531 /* AddWorkoutViewController.swift */; };
 		BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6670C725BDEB0A009224A1 /* Utilities.swift */; };
 		BCAFC8B725D899750095F560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAFC8B625D899750095F560 /* GoogleService-Info.plist */; };
 		BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */; };
 		BCBE339C25C75EDA00AE111F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE339B25C75EDA00AE111F /* HomeViewController.swift */; };
-		BCE3A04425C9FE4F00521395 /* LogAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */; };
 		BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */; };
 		BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */; };
 		BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */; };
@@ -57,11 +57,11 @@
 		BC18481125D8D5F1005D40DE /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
+		BC4B03E725D8F5E2008BB531 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		BC6670C725BDEB0A009224A1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BCAFC8B625D899750095F560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		BCBE339B25C75EDA00AE111F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAddViewController.swift; sourceTree = "<group>"; };
 		BCE47AED25BA23BD000B6C7D /* MANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +132,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC4B03E125D8F4D9008BB531 /* LogComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BC18481125D8D5F1005D40DE /* Workout.swift */,
+				BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */,
+				BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */,
+				BC4B03E725D8F5E2008BB531 /* AddWorkoutViewController.swift */,
+			);
+			path = LogComponent;
+			sourceTree = "<group>";
+		};
+		BC4B03E225D8F511008BB531 /* AuthenticationComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */,
+				BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */,
+				BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */,
+			);
+			path = AuthenticationComponent;
+			sourceTree = "<group>";
+		};
+		BC4B03E325D8F52A008BB531 /* CalculatorComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */,
+			);
+			path = CalculatorComponent;
+			sourceTree = "<group>";
+		};
 		BC6670C625BDEAFD009224A1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,20 +170,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		BCE3A05025CA137900521395 /* View Controllers */ = {
+		BCE3A05025CA137900521395 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */,
-				BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */,
-				BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */,
-				BC18481125D8D5F1005D40DE /* Workout.swift */,
+				BC4B03E225D8F511008BB531 /* AuthenticationComponent */,
+				BC4B03E125D8F4D9008BB531 /* LogComponent */,
+				BC4B03E325D8F52A008BB531 /* CalculatorComponent */,
 				BCBE339B25C75EDA00AE111F /* HomeViewController.swift */,
-				BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */,
-				BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */,
-				BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */,
-				BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */,
 			);
-			path = "View Controllers";
+			path = Components;
 			sourceTree = "<group>";
 		};
 		BCE47AE425BA23BD000B6C7D = {
@@ -182,7 +206,7 @@
 			children = (
 				BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */,
 				BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */,
-				BCE3A05025CA137900521395 /* View Controllers */,
+				BCE3A05025CA137900521395 /* Components */,
 				BC6670C625BDEAFD009224A1 /* Helpers */,
 				BCE47AF625BA23BD000B6C7D /* Main.storyboard */,
 				BCE47AFC25BA23BE000B6C7D /* Assets.xcassets */,
@@ -435,9 +459,9 @@
 			files = (
 				BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */,
 				BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */,
+				BC4B03E825D8F5E2008BB531 /* AddWorkoutViewController.swift in Sources */,
 				BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */,
 				BC18481225D8D5F1005D40DE /* Workout.swift in Sources */,
-				BCE3A04425C9FE4F00521395 /* LogAddViewController.swift in Sources */,
 				BC18481C25D8DB58005D40DE /* WorkoutTableViewController.swift in Sources */,
 				BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */,
 				BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */,
