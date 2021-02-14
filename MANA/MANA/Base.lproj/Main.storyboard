@@ -370,38 +370,50 @@
             <objects>
                 <viewController title="LogAddViewController" id="4yV-ZS-vma" customClass="LogAddViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjR-tI-BZP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4R-yk-Bhw">
-                                <rect key="frame" x="162.5" y="119" width="89.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-bR-WqD">
-                                <rect key="frame" x="47" y="274" width="320" height="348"/>
+                                <rect key="frame" x="47" y="249" width="320" height="344"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-cJ-9r6">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
-                                    </datePicker>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Xx-Be-4Un">
-                                        <rect key="frame" x="0.0" y="216" width="320" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LFL-7O-auk">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhE-Tc-jjC">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="30"/>
+                                                <state key="normal" title="Bench"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Up-gJy">
+                                                <rect key="frame" x="106.5" y="0.0" width="107" height="30"/>
+                                                <state key="normal" title="Squat"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-bP-KGf">
+                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="30"/>
+                                                <state key="normal" title="Deadlift"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idt-re-emN">
-                                        <rect key="frame" x="0.0" y="250" width="320" height="34"/>
+                                        <rect key="frame" x="0.0" y="30" width="320" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I02-Rn-Oq7">
-                                        <rect key="frame" x="0.0" y="284" width="320" height="34"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-cJ-9r6">
+                                        <rect key="frame" x="0.0" y="98" width="320" height="216"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
+                                            <!--2020-01-01 11:00:00 +0000-->
+                                        </date>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                            <!--2037-12-31 11:00:00 +0000-->
+                                        </date>
+                                    </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbu-ga-Ign">
-                                        <rect key="frame" x="0.0" y="318" width="320" height="30"/>
+                                        <rect key="frame" x="0.0" y="314" width="320" height="30"/>
                                         <state key="normal" title="Add"/>
                                         <connections>
                                             <action selector="submitButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="7xB-ax-UKU"/>
@@ -413,15 +425,16 @@
                         <viewLayoutGuide key="safeArea" id="dfe-ee-RcE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="p4R-yk-Bhw" firstAttribute="top" secondItem="dfe-ee-RcE" secondAttribute="top" constant="75" id="BsZ-vg-Sg2"/>
-                            <constraint firstItem="p4R-yk-Bhw" firstAttribute="centerX" secondItem="gjR-tI-BZP" secondAttribute="centerX" id="NHS-l3-cf7"/>
                             <constraint firstItem="Lx2-bR-WqD" firstAttribute="centerX" secondItem="gjR-tI-BZP" secondAttribute="centerX" id="lh8-uE-sOg"/>
                             <constraint firstItem="Lx2-bR-WqD" firstAttribute="centerY" secondItem="gjR-tI-BZP" secondAttribute="centerY" id="npV-8a-hhw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Workout" id="aE9-gq-dlQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="go4-Ii-eCr"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="FA6-cJ-9r6" id="yuB-rd-CYa"/>
-                        <outlet property="nameTextField" destination="9Xx-Be-4Un" id="7B4-9f-1xq"/>
                         <outlet property="repsTextField" destination="I02-Rn-Oq7" id="lhd-wf-WTn"/>
                         <outlet property="submitButton" destination="kbu-ga-Ign" id="TxP-tP-5zC"/>
                         <outlet property="weightTextField" destination="Idt-re-emN" id="0X1-Y6-HGo"/>
@@ -429,9 +442,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxD-bw-trK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4662" y="1580"/>
+            <point key="canvasLocation" x="5622" y="2341"/>
         </scene>
-        <!--Workout Table View Controller-->
+        <!--Workout Log-->
         <scene sceneID="8Ba-V6-mXH">
             <objects>
                 <tableViewController id="Vz4-Te-8nM" customClass="WorkoutTableViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
@@ -508,7 +521,13 @@
                             <outlet property="delegate" destination="Vz4-Te-8nM" id="4md-kw-pSN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="m8z-vT-9oI"/>
+                    <navigationItem key="navigationItem" title="Workout Log" id="m8z-vT-9oI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="p66-YH-dsN">
+                            <connections>
+                                <segue destination="f8G-h5-tlk" kind="presentation" identifier="AddItem" id="Hh5-Lh-fYh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eg9-zZ-40f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -723,6 +742,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ft-A9-iI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7323" y="76"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GWh-at-236">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f8G-h5-tlk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nUE-Zh-4X0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4yV-ZS-vma" kind="relationship" relationship="rootViewController" id="FKB-Ws-Dvm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtc-iC-is2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5621.739130434783" y="1567.6339285714284"/>
         </scene>
     </scenes>
     <resources>
