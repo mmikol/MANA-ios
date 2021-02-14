@@ -127,6 +127,8 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         navigationItem.title = textField.text
     }
 
+    //MARK: Private Methods
+    
     private func updateSaveButtonState() {
         // Disable the Save button if the text field is empty.
         let weightText = weightTextField.text ?? ""

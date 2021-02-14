@@ -39,6 +39,11 @@ class Workout : NSObject, NSCoding {
         self.date = date
     }
     
+    //MARK: Archiving Paths
+     
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("workouts")
+
     //MARK: NSCoding
     
     func encode(with coder: NSCoder) {

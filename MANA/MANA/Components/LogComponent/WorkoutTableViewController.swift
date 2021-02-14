@@ -16,18 +16,23 @@ class WorkoutTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = editButtonItem
 
-        guard let workout1 = Workout(name: "Bench", weight: "225", date: Date(), photo: nil) else {
-            fatalError("Unable to instnatiate workout1")
+        // Load any saved workouts, otherwise load sample data.
+        if let savedWorkouts = loadWorkouts() {
+            workouts += savedWorkouts
+        } else {
+            guard let workout1 = Workout(name: "Bench", weight: "225", date: Date(), photo: nil) else {
+                fatalError("Unable to instnatiate workout1")
+            }
+            
+            guard let workout2 = Workout(name: "Deadlift", weight: "315", date: Date(), photo: nil) else {
+                fatalError("Unable to instnatiate workout1")
+            }
+            guard let workout3 = Workout(name: "Squat", weight: "315", date: Date(), photo: nil) else {
+                fatalError("Unable to instnatiate workout1")
+            }
+            
+            workouts += [workout1, workout2, workout3]
         }
-        
-        guard let workout2 = Workout(name: "Deadlift", weight: "315", date: Date(), photo: nil) else {
-            fatalError("Unable to instnatiate workout1")
-        }
-        guard let workout3 = Workout(name: "Squat", weight: "315", date: Date(), photo: nil) else {
-            fatalError("Unable to instnatiate workout1")
-        }
-        
-        workouts += [workout1, workout2, workout3]
     }
 
     // MARK: - Table view data source
@@ -68,14 +73,9 @@ class WorkoutTableViewController: UITableViewController {
                 workouts.append(workout)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
-
-
-            let newIndexPath = IndexPath(row: workouts.count, section: 0)
-            workouts.append(workout)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
-
+            
+            saveWorkouts()
         }
-
     }
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -88,6 +88,7 @@ class WorkoutTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             workouts.remove(at: indexPath.row)
+            saveWorkouts()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -140,6 +141,41 @@ class WorkoutTableViewController: UITableViewController {
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
 
         }
+    }
+    
+    //MARK: Private Methods
+    
+    private func saveWorkouts() {
+        let fullPath = getDocumentsDirectory().appendingPathComponent("workouts")
 
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: workouts, requiringSecureCoding: false)
+            try data.write(to: fullPath)
+            os_log("Workouts successfully saved.", log: OSLog.default, type: .debug)
+        } catch {
+            os_log("Failed to save workouts...", log: OSLog.default, type: .error)
+        }
+    }
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+
+    private func loadWorkouts() -> [Workout]? {
+        let fullPath = getDocumentsDirectory().appendingPathComponent("workouts")
+        if let nsData = NSData(contentsOf: fullPath) {
+            do {
+
+                let data = Data(referencing:nsData)
+
+                if let loadedWorkouts = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? Array<Workout> {
+                    return loadedWorkouts
+                }
+            } catch {
+                print("Couldn't read file.")
+                return nil
+            }
+        }
+        return nil
     }
 }
