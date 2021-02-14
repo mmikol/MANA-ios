@@ -21,8 +21,23 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Handle the text field’s user input through delegate callbacks.
         weightTextField.delegate = self
+        
+        // Set up views if editing an existing Workout.
+        if let workout = workout {
+            navigationItem.title = workout.name
+            benchButton.isSelected = workout.name == "Bench Press"
+            squatButton.isSelected = workout.name == "Squat"
+            deadliftButton.isSelected = workout.name == "Deadlift"
+            weightTextField.text = workout.weight
+            datePicker.date = workout.date
+        }
+
         benchButton.isSelected = true
+        
+        // Enable the Save button only if inputs are given.
         updateSaveButtonState()
     }
     

@@ -48,7 +48,7 @@ class WorkoutTableViewController: UITableViewController {
         let workout = workouts[indexPath.row]
         cell.nameLabel.text = workout.name
         cell.weightLabel.text = "\(workout.weight) lbs"
-        cell.dateLabel.text = workout.date
+        cell.dateLabel.text = workout.dateString
         
         return cell
     }
