@@ -28,14 +28,23 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         // Set up views if editing an existing Workout.
         if let workout = workout {
             navigationItem.title = workout.name
-            benchButton.isSelected = workout.name == "Bench Press"
-            squatButton.isSelected = workout.name == "Squat"
-            deadliftButton.isSelected = workout.name == "Deadlift"
             weightTextField.text = workout.weight
             datePicker.date = workout.date
+            
+            switch(workout.name) {
+            case "Bench Press":
+                benchButton.isSelected = true
+            case "Squat":
+                squatButton.isSelected = true
+            case "Deadlift":
+                deadliftButton.isSelected = true
+            default:
+                break
+            }
+        } else {
+            benchButton.isSelected = true
         }
-
-        benchButton.isSelected = true
+        
         
         // Enable the Save button only if inputs are given.
         updateSaveButtonState()
