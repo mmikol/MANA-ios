@@ -55,8 +55,20 @@ class WorkoutTableViewController: UITableViewController {
     
 
     @IBAction func unwindToWorkoutList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? AddWorkoutViewController,
-           let workout = sourceViewController.workout {
+        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout {
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                workouts[selectedIndexPath.row] = workout
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            } else {
+                // Add a new workout.
+                let newIndexPath = IndexPath(row: workouts.count, section: 0)
+                
+                workouts.append(workout)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+
+
             let newIndexPath = IndexPath(row: workouts.count, section: 0)
             workouts.append(workout)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
