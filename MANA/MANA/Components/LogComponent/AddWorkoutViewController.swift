@@ -42,7 +42,15 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        let isPresentingInAddWorkoutMode = presentingViewController is UINavigationController
+        
+        if isPresentingInAddWorkoutMode {
+            dismiss(animated: true, completion: nil)
+        } else if let owningNavigationController = navigationController{
+            owningNavigationController.popViewController(animated: true)
+        } else {
+            fatalError("The AddWorkoutViewController is not inside a navigation controller.")
+        }
     }
     
     @IBAction func benchButtonTapped(_ sender: Any) {
