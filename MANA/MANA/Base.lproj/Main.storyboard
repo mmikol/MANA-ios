@@ -408,7 +408,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration" identifier="WorkoutTableViewCell"/>
+                                <accessibility key="accessibilityConfiguration" identifier="WorkoutPrototypeCell"/>
                                 <connections>
                                     <outlet property="dateLabel" destination="YAX-ta-Ynk" id="qz6-ut-p19"/>
                                     <outlet property="nameLabel" destination="pRR-r9-Avv" id="LTP-jC-qTE"/>
