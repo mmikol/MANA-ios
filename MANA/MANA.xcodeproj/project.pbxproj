@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3651449347D97779108751E7 /* Pods_MANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012BCED32B14FD2FF32F35F0 /* Pods_MANA.framework */; };
 		51E6801C6E8D2ED07B7DCD6F /* Pods_MANA_MANAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95967FF3C26054D22FB718A7 /* Pods_MANA_MANAUITests.framework */; };
+		BC18481225D8D5F1005D40DE /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481125D8D5F1005D40DE /* Workout.swift */; };
+		BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */; };
 		BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6670C725BDEB0A009224A1 /* Utilities.swift */; };
 		BCAFC8B725D899750095F560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAFC8B625D899750095F560 /* GoogleService-Info.plist */; };
 		BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */; };
@@ -54,6 +56,8 @@
 		95967FF3C26054D22FB718A7 /* Pods_MANA_MANAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANA_MANAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3454D0706757B562740A9C /* Pods_MANATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C90F1E15981EA9076656FD /* Pods-MANA-MANAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.release.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BC18481125D8D5F1005D40DE /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		BC6670C725BDEB0A009224A1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BCAFC8B625D899750095F560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -150,7 +154,9 @@
 				BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */,
 				BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */,
 				BCBE33A025C75EE100AE111F /* LogViewController.swift */,
+				BC18481125D8D5F1005D40DE /* Workout.swift */,
 				BCBE339B25C75EDA00AE111F /* HomeViewController.swift */,
+				BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */,
 				BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */,
 				BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */,
 			);
@@ -456,7 +462,9 @@
 				BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */,
 				BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */,
 				BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */,
+				BC18481225D8D5F1005D40DE /* Workout.swift in Sources */,
 				BCE3A04425C9FE4F00521395 /* LogAddViewController.swift in Sources */,
+				BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */,
 				BCBE33A125C75EE100AE111F /* LogViewController.swift in Sources */,
 				BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */,
 				BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */,
