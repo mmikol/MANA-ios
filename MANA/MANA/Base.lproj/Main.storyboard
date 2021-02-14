@@ -368,13 +368,13 @@
         <!--LogAddViewController-->
         <scene sceneID="Wmg-fk-Pwd">
             <objects>
-                <viewController title="LogAddViewController" id="4yV-ZS-vma" sceneMemberID="viewController">
+                <viewController title="LogAddViewController" id="4yV-ZS-vma" customClass="AddWorkoutViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjR-tI-BZP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-bR-WqD">
-                                <rect key="frame" x="47" y="249" width="320" height="344"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-bR-WqD">
+                                <rect key="frame" x="47" y="249" width="320" height="310"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LFL-7O-auk">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
@@ -396,18 +396,34 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idt-re-emN">
-                                        <rect key="frame" x="0.0" y="30" width="320" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I02-Rn-Oq7">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-cJ-9r6">
-                                        <rect key="frame" x="0.0" y="98" width="320" height="216"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YC5-Tc-DZp">
+                                        <rect key="frame" x="0.0" y="30" width="320" height="32"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idt-re-emN">
+                                                <rect key="frame" x="0.0" y="0.0" width="226" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="f9b-Io-EoL">
+                                                <rect key="frame" x="226" y="0.0" width="94" height="32"/>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mJ-9D-0Lw">
+                                        <rect key="frame" x="0.0" y="62" width="320" height="32"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I02-Rn-Oq7">
+                                                <rect key="frame" x="0.0" y="0.0" width="226" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yMh-4X-V23">
+                                                <rect key="frame" x="226" y="0.0" width="94" height="32"/>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                    <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-cJ-9r6">
+                                        <rect key="frame" x="0.0" y="94" width="320" height="216"/>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
                                             <!--2020-01-01 11:00:00 +0000-->
                                         </date>
@@ -415,21 +431,14 @@
                                             <!--2037-12-31 11:00:00 +0000-->
                                         </date>
                                     </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbu-ga-Ign">
-                                        <rect key="frame" x="0.0" y="314" width="320" height="30"/>
-                                        <state key="normal" title="Add"/>
-                                        <connections>
-                                            <action selector="submitButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="7xB-ax-UKU"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dfe-ee-RcE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Lx2-bR-WqD" firstAttribute="centerX" secondItem="gjR-tI-BZP" secondAttribute="centerX" id="lh8-uE-sOg"/>
-                            <constraint firstItem="Lx2-bR-WqD" firstAttribute="centerY" secondItem="gjR-tI-BZP" secondAttribute="centerY" id="npV-8a-hhw"/>
+                            <constraint firstItem="Lx2-bR-WqD" firstAttribute="centerY" secondItem="gjR-tI-BZP" secondAttribute="centerY" id="CMf-Fm-shZ"/>
+                            <constraint firstItem="Lx2-bR-WqD" firstAttribute="centerX" secondItem="gjR-tI-BZP" secondAttribute="centerX" id="RZp-Xf-a99"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Workout" id="aE9-gq-dlQ">
@@ -437,10 +446,12 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="datePicker" destination="FA6-cJ-9r6" id="yuB-rd-CYa"/>
-                        <outlet property="repsTextField" destination="I02-Rn-Oq7" id="lhd-wf-WTn"/>
-                        <outlet property="submitButton" destination="kbu-ga-Ign" id="TxP-tP-5zC"/>
-                        <outlet property="weightTextField" destination="Idt-re-emN" id="0X1-Y6-HGo"/>
+                        <outlet property="benchButton" destination="MhE-Tc-jjC" id="ogc-bF-IF7"/>
+                        <outlet property="datePicker" destination="Lx2-bR-WqD" id="j4R-ht-Cnb"/>
+                        <outlet property="deadliftButton" destination="IY8-bP-KGf" id="2c8-ME-cQZ"/>
+                        <outlet property="repsTextField" destination="I02-Rn-Oq7" id="4XP-64-OXZ"/>
+                        <outlet property="squatButton" destination="cqA-Up-gJy" id="Rk9-7P-avG"/>
+                        <outlet property="weightTextField" destination="Idt-re-emN" id="YuH-5T-fkR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxD-bw-trK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

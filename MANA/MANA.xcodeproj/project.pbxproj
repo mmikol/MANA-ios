@@ -12,8 +12,8 @@
 		BC18481225D8D5F1005D40DE /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481125D8D5F1005D40DE /* Workout.swift */; };
 		BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */; };
 		BC18481C25D8DB58005D40DE /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */; };
-		BC4B03E825D8F5E2008BB531 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B03E725D8F5E2008BB531 /* AddWorkoutViewController.swift */; };
 		BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6670C725BDEB0A009224A1 /* Utilities.swift */; };
+		BCA6062D25D8FB0500E72F3A /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */; };
 		BCAFC8B725D899750095F560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAFC8B625D899750095F560 /* GoogleService-Info.plist */; };
 		BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */; };
 		BCBE339C25C75EDA00AE111F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE339B25C75EDA00AE111F /* HomeViewController.swift */; };
@@ -57,8 +57,8 @@
 		BC18481125D8D5F1005D40DE /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
-		BC4B03E725D8F5E2008BB531 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		BC6670C725BDEB0A009224A1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		BCAFC8B625D899750095F560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		BCBE339B25C75EDA00AE111F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -137,8 +137,8 @@
 			children = (
 				BC18481125D8D5F1005D40DE /* Workout.swift */,
 				BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */,
+				BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */,
 				BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */,
-				BC4B03E725D8F5E2008BB531 /* AddWorkoutViewController.swift */,
 			);
 			path = LogComponent;
 			sourceTree = "<group>";
@@ -459,7 +459,7 @@
 			files = (
 				BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */,
 				BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */,
-				BC4B03E825D8F5E2008BB531 /* AddWorkoutViewController.swift in Sources */,
+				BCA6062D25D8FB0500E72F3A /* AddWorkoutViewController.swift in Sources */,
 				BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */,
 				BC18481225D8D5F1005D40DE /* Workout.swift in Sources */,
 				BC18481C25D8DB58005D40DE /* WorkoutTableViewController.swift in Sources */,

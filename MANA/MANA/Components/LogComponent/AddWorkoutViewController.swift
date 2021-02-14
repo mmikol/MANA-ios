@@ -9,6 +9,13 @@ import UIKit
 
 class AddWorkoutViewController: UIViewController {
 
+    @IBOutlet weak var benchButton: UIButton!
+    @IBOutlet weak var squatButton: UIButton!
+    @IBOutlet weak var deadliftButton: UIButton!
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var repsTextField: UITextField!
+    @IBOutlet weak var datePicker: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
