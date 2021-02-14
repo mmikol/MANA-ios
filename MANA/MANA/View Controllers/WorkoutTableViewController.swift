@@ -50,8 +50,8 @@ class WorkoutTableViewController: UITableViewController {
         df.dateFormat = "yyyy-MM-dd"
 
         cell.nameLabel.text = workout.name
-        cell.weightLabel.text = "\(workout.weight)"
-        cell.weightLabel.text = df.string(from: workout.date)
+        cell.weightLabel.text = "\(workout.weight) lbs"
+        cell.dateLabel.text = df.string(from: workout.date)
 
         
         return cell

@@ -25,8 +25,6 @@
 		BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF925BA23BD000B6C7D /* MANA.xcdatamodeld */; };
 		BCE47AFD25BA23BE000B6C7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE47AFC25BA23BE000B6C7D /* Assets.xcassets */; };
 		BCE47B0025BA23BE000B6C7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE47AFE25BA23BE000B6C7D /* LaunchScreen.storyboard */; };
-		BCE47B0B25BA23BF000B6C7D /* MANATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B0A25BA23BF000B6C7D /* MANATests.swift */; };
-		BCE47B1625BA23BF000B6C7D /* MANAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B1525BA23BF000B6C7D /* MANAUITests.swift */; };
 		BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */; };
 		BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */; };
 		BCEB4C5025BE1AF100A5E39C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB4C4F25BE1AF100A5E39C /* Constants.swift */; };
@@ -76,11 +74,7 @@
 		BCE47AFF25BA23BE000B6C7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCE47B0125BA23BE000B6C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE47B0625BA23BF000B6C7D /* MANATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MANATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCE47B0A25BA23BF000B6C7D /* MANATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANATests.swift; sourceTree = "<group>"; };
-		BCE47B0C25BA23BF000B6C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE47B1125BA23BF000B6C7D /* MANAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MANAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCE47B1525BA23BF000B6C7D /* MANAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANAUITests.swift; sourceTree = "<group>"; };
-		BCE47B1725BA23BF000B6C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BCEB4C4F25BE1AF100A5E39C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -170,8 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				BCE47AEF25BA23BD000B6C7D /* MANA */,
-				BCE47B0925BA23BF000B6C7D /* MANATests */,
-				BCE47B1425BA23BF000B6C7D /* MANAUITests */,
 				BCE47AEE25BA23BD000B6C7D /* Products */,
 				B9D2698E28FE844EEC27FC34 /* Pods */,
 				A688165B9F34DB70EE2D9BBD /* Frameworks */,
@@ -203,24 +195,6 @@
 				BCE47AF925BA23BD000B6C7D /* MANA.xcdatamodeld */,
 			);
 			path = MANA;
-			sourceTree = "<group>";
-		};
-		BCE47B0925BA23BF000B6C7D /* MANATests */ = {
-			isa = PBXGroup;
-			children = (
-				BCE47B0A25BA23BF000B6C7D /* MANATests.swift */,
-				BCE47B0C25BA23BF000B6C7D /* Info.plist */,
-			);
-			path = MANATests;
-			sourceTree = "<group>";
-		};
-		BCE47B1425BA23BF000B6C7D /* MANAUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BCE47B1525BA23BF000B6C7D /* MANAUITests.swift */,
-				BCE47B1725BA23BF000B6C7D /* Info.plist */,
-			);
-			path = MANAUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,7 +458,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCE47B0B25BA23BF000B6C7D /* MANATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +465,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCE47B1625BA23BF000B6C7D /* MANAUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
