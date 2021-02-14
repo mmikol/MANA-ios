@@ -26,6 +26,10 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         updateSaveButtonState()
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func benchButtonTapped(_ sender: Any) {
         guard benchButton.isSelected else {
             benchButton.isSelected.toggle()

@@ -370,7 +370,7 @@
             <objects>
                 <viewController title="LogAddViewController" id="4yV-ZS-vma" customClass="AddWorkoutViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjR-tI-BZP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-bR-WqD">
@@ -442,7 +442,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Workout" id="aE9-gq-dlQ">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="go4-Ii-eCr"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="go4-Ii-eCr">
+                            <connections>
+                                <action selector="cancel:" destination="4yV-ZS-vma" id="yxc-UC-P5j"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE">
                             <connections>
                                 <segue destination="ZzW-Y8-miK" kind="unwind" unwindAction="unwindToWorkoutListWithSender:" id="9eF-3B-eZX"/>
@@ -461,7 +465,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxD-bw-trK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ZzW-Y8-miK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5622" y="2341"/>
+            <point key="canvasLocation" x="5599" y="1560"/>
         </scene>
         <!--Workout Log-->
         <scene sceneID="8Ba-V6-mXH">
@@ -532,6 +536,7 @@
                                     <outlet property="nameLabel" destination="CVD-dd-XaE" id="E7w-u7-6DS"/>
                                     <outlet property="photoImageView" destination="AdV-mW-6Kq" id="F7h-Lt-rFf"/>
                                     <outlet property="weightLabel" destination="wlh-pP-ir4" id="Fjm-YL-tvI"/>
+                                    <segue destination="4yV-ZS-vma" kind="show" identifier="ShowDetail" id="QLy-vt-Lnx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -778,9 +783,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtc-iC-is2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5621.739130434783" y="1567.6339285714284"/>
+            <point key="canvasLocation" x="4614" y="1560"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QLy-vt-Lnx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="1000" height="1080"/>
         <image name="WarriorRed" width="1920" height="1080"/>

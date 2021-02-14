@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import os.log
 
 class WorkoutTableViewController: UITableViewController {
 
@@ -99,14 +100,37 @@ class WorkoutTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
+    //MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        super.prepare(for: segue, sender: sender)
+      
+        switch(segue.identifier ?? "") {
+        
+        case "AddItem":
+        os_log("Adding a new workout.", log: OSLog.default, type: .debug)
+        
+        case "ShowDetail":
+        guard let workoutDetailViewController = segue.destination as? AddWorkoutViewController else {
+            fatalError("Unexpected destination: \(segue.destination)")
+        }
+         
+        guard let selectedWorkoutCell = sender as? WorkoutTableViewCell else {
+            fatalError("Unexpected sender: \(String(describing: sender))")
+        }
+         
+        guard let indexPath = tableView.indexPath(for: selectedWorkoutCell) else {
+            fatalError("The selected cell is not being displayed by the table")
+        }
+         
+        let selectedWorkout = workouts[indexPath.row]
+        
+        workoutDetailViewController.workout = selectedWorkout
+        
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
 
+        }
+
+    }
 }
