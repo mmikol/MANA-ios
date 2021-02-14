@@ -9,5 +9,5 @@ import Foundation
 
 struct Constants {
     static let HOME_VIEW_CONTROLLER = "HomeViewController"
-    static let WORKOUT_CELL_IDENTIFIER = "WorkoutPrototypeCell"
+    static let WORKOUT_CELL_IDENTIFIER = "WorkoutTableViewCell"
 }
