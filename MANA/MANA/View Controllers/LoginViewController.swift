@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
             } else {
-                let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.HOME_VIEW_CONTROLLER) as? HomeViewController
+                let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.HOME_VIEW_CONTROLLER) as? HomeViewController
                 self.view.window?.rootViewController = homeViewController
                 self.view.window?.makeKeyAndVisible()
             }

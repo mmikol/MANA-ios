@@ -11,8 +11,8 @@
 		51E6801C6E8D2ED07B7DCD6F /* Pods_MANA_MANAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95967FF3C26054D22FB718A7 /* Pods_MANA_MANAUITests.framework */; };
 		BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6670C725BDEB0A009224A1 /* Utilities.swift */; };
 		BCAFC8AC25D86F9C0095F560 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFC8AA25D86F9C0095F560 /* WorkoutTableViewController.swift */; };
-		BCAFC8AD25D86F9C0095F560 /* WorkoutTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAFC8AB25D86F9C0095F560 /* WorkoutTableViewController.xib */; };
 		BCAFC8B225D870010095F560 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFC8B125D870010095F560 /* Workout.swift */; };
+		BCAFC8B725D899750095F560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAFC8B625D899750095F560 /* GoogleService-Info.plist */; };
 		BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */; };
 		BCBE339C25C75EDA00AE111F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE339B25C75EDA00AE111F /* HomeViewController.swift */; };
 		BCBE33A125C75EE100AE111F /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE33A025C75EE100AE111F /* LogViewController.swift */; };
@@ -59,8 +59,8 @@
 		A8C90F1E15981EA9076656FD /* Pods-MANA-MANAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.release.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC6670C725BDEB0A009224A1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BCAFC8AA25D86F9C0095F560 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
-		BCAFC8AB25D86F9C0095F560 /* WorkoutTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutTableViewController.xib; sourceTree = "<group>"; };
 		BCAFC8B125D870010095F560 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		BCAFC8B625D899750095F560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		BCBE339B25C75EDA00AE111F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BCBE33A025C75EE100AE111F /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
@@ -160,7 +160,6 @@
 				BCE3A04325C9FE4F00521395 /* LogAddViewController.swift */,
 				BCAFC8AA25D86F9C0095F560 /* WorkoutTableViewController.swift */,
 				BCAFC8B125D870010095F560 /* Workout.swift */,
-				BCAFC8AB25D86F9C0095F560 /* WorkoutTableViewController.xib */,
 				BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */,
 				BCC357A325D8687D00BE3C27 /* WorkoutTableViewCell.swift */,
 			);
@@ -198,6 +197,7 @@
 				BC6670C625BDEAFD009224A1 /* Helpers */,
 				BCE47AF625BA23BD000B6C7D /* Main.storyboard */,
 				BCE47AFC25BA23BE000B6C7D /* Assets.xcassets */,
+				BCAFC8B625D899750095F560 /* GoogleService-Info.plist */,
 				BCE47AFE25BA23BE000B6C7D /* LaunchScreen.storyboard */,
 				BCE47B0125BA23BE000B6C7D /* Info.plist */,
 				BCE47AF925BA23BD000B6C7D /* MANA.xcdatamodeld */,
@@ -332,7 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE47B0025BA23BE000B6C7D /* LaunchScreen.storyboard in Resources */,
-				BCAFC8AD25D86F9C0095F560 /* WorkoutTableViewController.xib in Resources */,
+				BCAFC8B725D899750095F560 /* GoogleService-Info.plist in Resources */,
 				BCE47AFD25BA23BE000B6C7D /* Assets.xcassets in Resources */,
 				BCE47AF825BA23BD000B6C7D /* Main.storyboard in Resources */,
 			);

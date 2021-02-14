@@ -8,7 +8,6 @@
 import Foundation
 
 struct Constants {
-    struct Storyboard {
-        static let HOME_VIEW_CONTROLLER = "HomeViewController"
-    }
+    static let HOME_VIEW_CONTROLLER = "HomeViewController"
+    static let WORKOUT_CELL_IDENTIFIER = "WorkoutTableViewCell"
 }

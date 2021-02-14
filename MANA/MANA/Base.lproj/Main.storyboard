@@ -365,10 +365,10 @@
             </objects>
             <point key="canvasLocation" x="4034.7826086956525" y="827.67857142857144"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Workout Table View Controller-->
         <scene sceneID="oDV-PX-v55">
             <objects>
-                <tableViewController id="kpv-sp-jDu" sceneMemberID="viewController">
+                <tableViewController id="kpv-sp-jDu" customClass="WorkoutTableViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y2A-Yo-J1l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -377,7 +377,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="epj-Ah-ecc" customClass="WorkoutTableViewCell" customModule="MANA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="epj-Ah-ecc" id="271-PK-2MO">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="epj-Ah-ecc" id="271-PK-2MO" customClass="WorkoutTableViewCell" customModule="MANA" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -408,10 +408,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="WorkoutTableViewCell"/>
                                 <connections>
-                                    <outlet property="dateLabel" destination="YAX-ta-Ynk" id="ee8-Wf-gMr"/>
-                                    <outlet property="nameLabel" destination="pRR-r9-Avv" id="SrW-zT-40v"/>
-                                    <outlet property="weightLabel" destination="ZpQ-4I-8kx" id="rTk-ha-HAY"/>
+                                    <outlet property="dateLabel" destination="YAX-ta-Ynk" id="qz6-ut-p19"/>
+                                    <outlet property="nameLabel" destination="pRR-r9-Avv" id="LTP-jC-qTE"/>
+                                    <outlet property="weightLabel" destination="ZpQ-4I-8kx" id="uPM-hC-mpy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

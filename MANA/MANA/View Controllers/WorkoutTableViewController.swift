@@ -13,11 +13,24 @@ class WorkoutTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let workout1 = Workout(name: "Bench", date: Date(), weight: 225, reps: 1, photo: nil) else {
+            fatalError("Unable to instantiate workout1")
+        }
+        
+        guard let workout2 = Workout(name: "Squat", date: Date(), weight: 315, reps: 1, photo: nil) else {
+            fatalError("Unable to instantiate workout1")
+        }
+        
+        guard let workout3 = Workout(name: "Deadlift", date: Date(), weight: 315, reps: 1, photo: nil) else {
+            fatalError("Unable to instantiate workout1")
+        }
+        
+
+        workouts += [workout1, workout2, workout3]
 
     }
-
-    // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -26,15 +39,26 @@ class WorkoutTableViewController: UITableViewController {
         return workouts.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.WORKOUT_CELL_IDENTIFIER, for: indexPath) as? WorkoutTableViewCell else {
+            fatalError("The dequeued cell is not an instance of WorkoutTableViewCell.")
+        }
+        
+        let workout = workouts[indexPath.row]
 
-        // Configure the cell...
+        cell.nameLabel.text = workout.name
+        cell.weightLabel.text = "\(workout.weight) lbs"
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        cell.dateLabel.text = formatter.string(from: workout.date)
+
+       // cell.photoImageView.image = workout.photo
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
