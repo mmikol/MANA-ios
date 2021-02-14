@@ -8,12 +8,11 @@
 import UIKit
 import os.log
 
-class AddWorkoutViewController: UIViewController {
+class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var benchButton: UIButton!
     @IBOutlet weak var squatButton: UIButton!
     @IBOutlet weak var deadliftButton: UIButton!
     @IBOutlet weak var weightTextField: UITextField!
-    @IBOutlet weak var repsTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
@@ -22,6 +21,9 @@ class AddWorkoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        weightTextField.delegate = self
+        benchButton.isSelected = true
+        updateSaveButtonState()
     }
     
     @IBAction func benchButtonTapped(_ sender: Any) {
@@ -76,22 +78,22 @@ class AddWorkoutViewController: UIViewController {
                     squatButton.isSelected ? "Squat" :
                     deadliftButton.isSelected ? "Deadlift" : "")
         let weightInput = weightTextField.text ?? ""
-        let repsInput = repsTextField.text ?? ""
 
-        self.workout = Workout(name: nameInput, weight: weightInput, reps: repsInput, date: self.dateInput, photo: nil)
-        
+        self.workout = Workout(name: nameInput, weight: weightInput, date: self.dateInput, photo: nil)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
+        navigationItem.title = textField.text
     }
 
-    // Add implementation to only enable one button
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func updateSaveButtonState() {
+        // Disable the Save button if the text field is empty.
+        let weightText = weightTextField.text ?? ""
+        saveButton.isEnabled = !weightText.isEmpty
     }
-    */
-
 }

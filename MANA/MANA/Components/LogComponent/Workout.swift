@@ -10,11 +10,10 @@ import UIKit
 class Workout {
     var name: String
     var weight: String
-    var reps: String
     var date: String
     var photo: UIImage?
     
-    init?(name: String, weight: String, reps: String, date: Date, photo: UIImage?) {
+    init?(name: String, weight: String, date: Date, photo: UIImage?) {
         
         guard !name.isEmpty else {
             return nil
@@ -22,7 +21,6 @@ class Workout {
 
         self.name = name
         self.weight = weight
-        self.reps = reps
         self.photo = photo
         
         let df = DateFormatter()

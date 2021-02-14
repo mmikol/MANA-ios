@@ -374,7 +374,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-bR-WqD">
-                                <rect key="frame" x="47" y="249" width="320" height="310"/>
+                                <rect key="frame" x="47" y="249" width="320" height="278"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LFL-7O-auk">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
@@ -406,31 +406,21 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YC5-Tc-DZp">
                                         <rect key="frame" x="0.0" y="30" width="320" height="32"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idt-re-emN">
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idt-re-emN">
                                                 <rect key="frame" x="0.0" y="0.0" width="226" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="f9b-Io-EoL">
                                                 <rect key="frame" x="226" y="0.0" width="94" height="32"/>
                                             </stepper>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mJ-9D-0Lw">
-                                        <rect key="frame" x="0.0" y="62" width="320" height="32"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I02-Rn-Oq7">
-                                                <rect key="frame" x="0.0" y="0.0" width="226" height="32"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                            </textField>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yMh-4X-V23">
-                                                <rect key="frame" x="226" y="0.0" width="94" height="32"/>
-                                            </stepper>
-                                        </subviews>
-                                    </stackView>
                                     <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-cJ-9r6">
-                                        <rect key="frame" x="0.0" y="94" width="320" height="216"/>
+                                        <rect key="frame" x="0.0" y="62" width="320" height="216"/>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
                                             <!--2020-01-01 11:00:00 +0000-->
                                         </date>
@@ -455,7 +445,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="go4-Ii-eCr"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE">
                             <connections>
-                                <segue destination="ZzW-Y8-miK" kind="unwind" unwindAction="unwindToMealListWithSender:" id="zDi-SM-Sqv"/>
+                                <segue destination="ZzW-Y8-miK" kind="unwind" unwindAction="unwindToWorkoutListWithSender:" id="9eF-3B-eZX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -463,7 +453,6 @@
                         <outlet property="benchButton" destination="MhE-Tc-jjC" id="ogc-bF-IF7"/>
                         <outlet property="datePicker" destination="FA6-cJ-9r6" id="oi3-gO-bXu"/>
                         <outlet property="deadliftButton" destination="IY8-bP-KGf" id="2c8-ME-cQZ"/>
-                        <outlet property="repsTextField" destination="I02-Rn-Oq7" id="4XP-64-OXZ"/>
                         <outlet property="saveButton" destination="228-Us-lBE" id="WnR-kd-6SK"/>
                         <outlet property="squatButton" destination="cqA-Up-gJy" id="Rk9-7P-avG"/>
                         <outlet property="weightTextField" destination="Idt-re-emN" id="YuH-5T-fkR"/>
