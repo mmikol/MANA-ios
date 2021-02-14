@@ -384,15 +384,22 @@
                                                 <state key="normal" title="Bench"/>
                                                 <connections>
                                                     <action selector="benchButton:" destination="ZzW-Y8-miK" eventType="touchUpInside" id="fZl-yG-wgj"/>
+                                                    <action selector="benchButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="of5-Q1-64o"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Up-gJy">
                                                 <rect key="frame" x="106.5" y="0.0" width="107" height="30"/>
                                                 <state key="normal" title="Squat"/>
+                                                <connections>
+                                                    <action selector="squatButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="ZiP-ZM-pJD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-bP-KGf">
                                                 <rect key="frame" x="213.5" y="0.0" width="106.5" height="30"/>
                                                 <state key="normal" title="Deadlift"/>
+                                                <connections>
+                                                    <action selector="deadliftButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="DI9-UK-nP5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -430,6 +437,9 @@
                                         <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
                                             <!--2037-12-31 11:00:00 +0000-->
                                         </date>
+                                        <connections>
+                                            <action selector="datePickerValueChanged:" destination="4yV-ZS-vma" eventType="valueChanged" id="0Di-lR-X3U"/>
+                                        </connections>
                                     </datePicker>
                                 </subviews>
                             </stackView>
@@ -443,13 +453,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Workout" id="aE9-gq-dlQ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="go4-Ii-eCr"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE">
+                            <connections>
+                                <segue destination="ZzW-Y8-miK" kind="unwind" unwindAction="unwindToMealListWithSender:" id="zDi-SM-Sqv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="benchButton" destination="MhE-Tc-jjC" id="ogc-bF-IF7"/>
                         <outlet property="datePicker" destination="Lx2-bR-WqD" id="j4R-ht-Cnb"/>
                         <outlet property="deadliftButton" destination="IY8-bP-KGf" id="2c8-ME-cQZ"/>
                         <outlet property="repsTextField" destination="I02-Rn-Oq7" id="4XP-64-OXZ"/>
+                        <outlet property="saveButton" destination="228-Us-lBE" id="WnR-kd-6SK"/>
                         <outlet property="squatButton" destination="cqA-Up-gJy" id="Rk9-7P-avG"/>
                         <outlet property="weightTextField" destination="Idt-re-emN" id="YuH-5T-fkR"/>
                     </connections>

@@ -14,14 +14,14 @@ class WorkoutTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let workout1 = Workout(name: "Bench", date: Date(), weight: 225, reps: 1, photo: nil) else {
+        guard let workout1 = Workout(name: "Bench", weight: 225, reps: 1, date: Date(), photo: nil) else {
             fatalError("Unable to instnatiate workout1")
         }
         
-        guard let workout2 = Workout(name: "Deadlift", date: Date(), weight: 315, reps: 1, photo: nil) else {
+        guard let workout2 = Workout(name: "Deadlift", weight: 315, reps: 1, date: Date(), photo: nil) else {
             fatalError("Unable to instnatiate workout1")
         }
-        guard let workout3 = Workout(name: "Squat", date: Date(), weight: 315, reps: 1, photo: nil) else {
+        guard let workout3 = Workout(name: "Squat", weight: 315, reps: 1, date: Date(), photo: nil) else {
             fatalError("Unable to instnatiate workout1")
         }
         
@@ -45,18 +45,24 @@ class WorkoutTableViewController: UITableViewController {
         }
 
         let workout = workouts[indexPath.row]
-        let df = DateFormatter()
-       
-        df.dateFormat = "yyyy-MM-dd"
-
         cell.nameLabel.text = workout.name
         cell.weightLabel.text = "\(workout.weight) lbs"
-        cell.dateLabel.text = df.string(from: workout.date)
-
+        cell.dateLabel.text = workout.date
         
         return cell
     }
     
+
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? AddWorkoutViewController,
+           let workout = sourceViewController.workout {
+            let newIndexPath = IndexPath(row: workouts.count, section: 0)
+            workouts.append(workout)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+
+        }
+
+    }
 
     /*
     // Override to support conditional editing of the table view.
