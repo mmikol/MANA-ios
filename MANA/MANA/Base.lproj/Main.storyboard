@@ -438,7 +438,7 @@
                                             <!--2037-12-31 11:00:00 +0000-->
                                         </date>
                                         <connections>
-                                            <action selector="datePickerValueChanged:" destination="4yV-ZS-vma" eventType="valueChanged" id="0Di-lR-X3U"/>
+                                            <action selector="datePickerValueChanged:" destination="4yV-ZS-vma" eventType="valueChanged" id="e49-TT-9vs"/>
                                         </connections>
                                     </datePicker>
                                 </subviews>
@@ -461,7 +461,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="benchButton" destination="MhE-Tc-jjC" id="ogc-bF-IF7"/>
-                        <outlet property="datePicker" destination="Lx2-bR-WqD" id="j4R-ht-Cnb"/>
+                        <outlet property="datePicker" destination="FA6-cJ-9r6" id="oi3-gO-bXu"/>
                         <outlet property="deadliftButton" destination="IY8-bP-KGf" id="2c8-ME-cQZ"/>
                         <outlet property="repsTextField" destination="I02-Rn-Oq7" id="4XP-64-OXZ"/>
                         <outlet property="saveButton" destination="228-Us-lBE" id="WnR-kd-6SK"/>

@@ -9,16 +9,16 @@ import UIKit
 import os.log
 
 class AddWorkoutViewController: UIViewController {
-    var dateInput = Date()
-    var workout: Workout?
-    
     @IBOutlet weak var benchButton: UIButton!
     @IBOutlet weak var squatButton: UIButton!
     @IBOutlet weak var deadliftButton: UIButton!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var repsTextField: UITextField!
-    @IBOutlet weak var datePicker: UIStackView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var workout: Workout?
+    var dateInput = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +60,7 @@ class AddWorkoutViewController: UIViewController {
         }
     }
     
+ 
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         self.dateInput = sender.date
     }
@@ -71,12 +72,12 @@ class AddWorkoutViewController: UIViewController {
             return
         }
         
-        var nameInput = (benchButton.isSelected ? "Bench Press" :
+        let nameInput = (benchButton.isSelected ? "Bench Press" :
                     squatButton.isSelected ? "Squat" :
                     deadliftButton.isSelected ? "Deadlift" : "")
-        var weightInput = weightTextField.text
-        var repsInput = repsTextField.text
-        
+        let weightInput = weightTextField.text ?? ""
+        let repsInput = repsTextField.text ?? ""
+
         self.workout = Workout(name: nameInput, weight: weightInput, reps: repsInput, date: self.dateInput, photo: nil)
         
     }

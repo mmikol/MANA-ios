@@ -9,12 +9,12 @@ import UIKit
 
 class Workout {
     var name: String
-    var weight: Int
-    var reps: Int
+    var weight: String
+    var reps: String
     var date: String
     var photo: UIImage?
     
-    init?(name: String, weight: Int, reps: Int, date: Date, photo: UIImage?) {
+    init?(name: String, weight: String, reps: String, date: Date, photo: UIImage?) {
         
         guard !name.isEmpty else {
             return nil
