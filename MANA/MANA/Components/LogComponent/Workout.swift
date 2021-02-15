@@ -8,7 +8,23 @@
 import UIKit
 import os.log
 
-class Workout {
+class Workout  {
+    //MARK: Types
+     
+    enum CodingKeys: String, CodingKey {
+        case name
+        case weight
+        case date
+        case location
+    }
+
+    struct PropertyKey {
+        static let name = "name"
+        static let weight = "weight"
+        static let date = "date"
+        static let photo = "photo"
+    }
+
     //MARK: Properties
     var name: String
     var weight: String
