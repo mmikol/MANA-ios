@@ -115,7 +115,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
                     deadliftButton.isSelected ? "Deadlift" : "")
         let weightInput = weightTextField.text ?? ""
 
-        self.workout = Workout(name: nameInput, weight: weightInput, date: self.dateInput, photo: nil)
+        self.workout = Workout(name: nameInput, weight: weightInput, date: self.dateInput)
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

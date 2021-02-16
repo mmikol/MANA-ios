@@ -534,7 +534,6 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="oP8-K9-K21" id="c2c-Zt-DHs"/>
                                     <outlet property="nameLabel" destination="CVD-dd-XaE" id="E7w-u7-6DS"/>
-                                    <outlet property="photoImageView" destination="AdV-mW-6Kq" id="F7h-Lt-rFf"/>
                                     <outlet property="weightLabel" destination="wlh-pP-ir4" id="Fjm-YL-tvI"/>
                                     <segue destination="4yV-ZS-vma" kind="show" identifier="ShowDetail" id="QLy-vt-Lnx"/>
                                 </connections>
