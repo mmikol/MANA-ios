@@ -6,16 +6,25 @@
 //
 
 import UIKit
-import os.log
+import OSLog
+import CoreData
 
 class WorkoutTableViewController: UITableViewController {
-    
+    var container: NSPersistentContainer!
     var workouts = [Workout]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = editButtonItem
         
+        container = NSPersistentContainer(name: "MANA")
+
+        container.loadPersistentStores { storeDescription, error in
+            if let error = error {
+                print("Unresolved error. \(error)")
+            }
+        }
+
+        navigationItem.leftBarButtonItem = editButtonItem
         
         guard let workout1 = Workout(name: "Bench", weight: "225", date: Date()) else {
             fatalError("Unable to instnatiate workout1")
@@ -29,6 +38,16 @@ class WorkoutTableViewController: UITableViewController {
         }
         
         workouts += [workout1, workout2, workout3]
+    }
+    
+    func saveContext() {
+        if container.viewContext.hasChanges {
+            do {
+                try container.viewContext.save()
+            } catch {
+                print("An error occurred while saving: \(error)")
+            }
+        }
     }
     
     // MARK: - Table view data source
@@ -67,6 +86,7 @@ class WorkoutTableViewController: UITableViewController {
                 let newIndexPath = IndexPath(row: workouts.count, section: 0)
                 
                 workouts.append(workout)
+                
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }

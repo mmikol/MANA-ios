@@ -28,7 +28,7 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    var currentComputation = 0
+    var currentComputation = 45
     var computationStack = CalculatorStack()
 
     @IBOutlet weak var computationLabel: UILabel!
@@ -127,6 +127,6 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         additionButton.isSelected.toggle()
-        computationLabel.text = "\(currentComputation) lbs"
+        computationLabel.text = "\(currentComputation) lbs (the bar)"
     }
 }
