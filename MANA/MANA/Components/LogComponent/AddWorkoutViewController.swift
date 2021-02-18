@@ -16,6 +16,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    var workoutData: WorkoutData?
     var workout: Workout?
     var dateInput = Date()
     
@@ -26,10 +27,10 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         weightTextField.delegate = self
         
         // Set up views if editing an existing Workout.
-        if let workout = workout {
-            navigationItem.title = workout.name
-            weightTextField.text = workout.weight
-            datePicker.date = workout.date
+        if let workout = self.workout {
+            navigationItem.title = workout.name ?? "N/A"
+            weightTextField.text = workout.weight ?? "0"
+            datePicker.date = workout.date ?? Date()
             
             switch(workout.name) {
             case "Bench Press":
@@ -116,7 +117,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
                     deadliftButton.isSelected ? "Deadlift" : "")
         let weightInput = weightTextField.text ?? ""
 
-        self.workout = Workout(name: nameInput, weight: weightInput, date: self.dateInput)
+        self.workoutData = WorkoutData(name: nameInput, weight: weightInput, date: self.dateInput)
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

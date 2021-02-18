@@ -10,46 +10,69 @@ import OSLog
 import CoreData
 
 class WorkoutTableViewController: UITableViewController {
-    var container: NSPersistentContainer!
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var workouts = [Workout]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        container = NSPersistentContainer(name: "MANA")
-
-        container.loadPersistentStores { storeDescription, error in
-            if let error = error {
-                print("Unresolved error. \(error)")
-            }
-        }
-
+        getAllWorkouts()
         navigationItem.leftBarButtonItem = editButtonItem
-        
-        guard let workout1 = Workout(name: "Bench", weight: "225", date: Date()) else {
-            fatalError("Unable to instnatiate workout1")
-        }
-        
-        guard let workout2 = Workout(name: "Deadlift", weight: "315", date: Date()) else {
-            fatalError("Unable to instnatiate workout1")
-        }
-        guard let workout3 = Workout(name: "Squat", weight: "315", date: Date()) else {
-            fatalError("Unable to instnatiate workout1")
-        }
-        
-        workouts += [workout1, workout2, workout3]
     }
     
-    func saveContext() {
-        if container.viewContext.hasChanges {
-            do {
-                try container.viewContext.save()
-            } catch {
-                print("An error occurred while saving: \(error)")
+    func getAllWorkouts() {
+        do {
+            workouts = try context.fetch(Workout.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
+        catch let error {
+            print("\(error)")
+        }
     }
     
+    func store(workout: Workout) {
+        let newWorkout = Workout(context: context)
+           
+        newWorkout.name = workout.name
+        newWorkout.weight = workout.weight
+        newWorkout.date = workout.date
+            
+        do {
+            try context.save()
+            getAllWorkouts()
+        }
+        catch let error {
+            print("\(error)")
+        }
+    }
+    
+    func delete(workout: Workout) {
+        context.delete(workout)
+        
+        do {
+            try context.save()
+            getAllWorkouts()
+        }
+        catch let error {
+            print("\(error)")
+        }
+    }
+    
+    func update(workout: Workout, name: String, weight: String, date: Date) {
+        workout.name = name
+        workout.weight = weight
+        workout.date = date
+        
+        do {
+            try context.save()
+            getAllWorkouts()
+        }
+        catch let error {
+            print("\(error)")
+        }
+    }
+        
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -67,8 +90,9 @@ class WorkoutTableViewController: UITableViewController {
         }
         
         let workout = workouts[indexPath.row]
+        
         cell.nameLabel.text = workout.name
-        cell.weightLabel.text = "\(workout.weight) lbs"
+        cell.weightLabel.text = "\(workout.weight!) lbs"
         cell.dateLabel.text = workout.dateString
         
         return cell
@@ -85,9 +109,9 @@ class WorkoutTableViewController: UITableViewController {
                 // Add a new workout.
                 let newIndexPath = IndexPath(row: workouts.count, section: 0)
                 
-                workouts.append(workout)
-                
+                store(workout: workout)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
+                
             }
         }
     }
@@ -101,7 +125,8 @@ class WorkoutTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            workouts.remove(at: indexPath.row)
+            delete(workout: workouts[indexPath.row])
+//            workouts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */; };
 		BC18481C25D8DB58005D40DE /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */; };
-		BC388DA525DD9BEC00A3032A /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC388DA425DD9BEC00A3032A /* Workout.swift */; };
 		BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6670C725BDEB0A009224A1 /* Utilities.swift */; };
 		BC8E2EFC25D9ADB600ABCA5C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E2EFB25D9ADB600ABCA5C /* Extensions.swift */; };
 		BCA6062D25D8FB0500E72F3A /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */; };
@@ -26,6 +25,9 @@
 		BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */; };
 		BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */; };
 		BCEB4C5025BE1AF100A5E39C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB4C4F25BE1AF100A5E39C /* Constants.swift */; };
+		BCFC838B25DF1C400007CBE6 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC838A25DF1C400007CBE6 /* Workout+CoreDataClass.swift */; };
+		BCFC839025DF1C430007CBE6 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC838F25DF1C430007CBE6 /* Workout+CoreDataProperties.swift */; };
+		BCFC839525DF23640007CBE6 /* WorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC839425DF23640007CBE6 /* WorkoutData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +53,6 @@
 		A8C90F1E15981EA9076656FD /* Pods-MANA-MANAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.release.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
-		BC388DA425DD9BEC00A3032A /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		BC6670C725BDEB0A009224A1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BC8E2EFB25D9ADB600ABCA5C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +73,9 @@
 		BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BCEB4C4F25BE1AF100A5E39C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BCFC838A25DF1C400007CBE6 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataClass.swift"; path = "/Users/miliano/Documents/GitHub/MANA/MANA/MANA/Workout+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		BCFC838F25DF1C430007CBE6 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataProperties.swift"; path = "/Users/miliano/Documents/GitHub/MANA/MANA/MANA/Workout+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		BCFC839425DF23640007CBE6 /* WorkoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutData.swift; sourceTree = "<group>"; };
 		BFFE6526F9B4CC5DBF275B64 /* Pods-MANA-MANAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.debug.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D406751BCAED3720E2257D4A /* Pods-MANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.release.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.release.xcconfig"; sourceTree = "<group>"; };
 		F5AB1D35FDE41C560A5908CB /* Pods-MANATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANATests.release.xcconfig"; path = "Target Support Files/Pods-MANATests/Pods-MANATests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,8 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */,
-				BC388DA425DD9BEC00A3032A /* Workout.swift */,
 				BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */,
+				BCFC839425DF23640007CBE6 /* WorkoutData.swift */,
 				BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */,
 			);
 			path = LogComponent;
@@ -187,6 +191,8 @@
 		BCE47AEF25BA23BD000B6C7D /* MANA */ = {
 			isa = PBXGroup;
 			children = (
+				BCFC838F25DF1C430007CBE6 /* Workout+CoreDataProperties.swift */,
+				BCFC838A25DF1C400007CBE6 /* Workout+CoreDataClass.swift */,
 				BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */,
 				BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */,
 				BCE3A05025CA137900521395 /* Components */,
@@ -440,7 +446,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCFC839525DF23640007CBE6 /* WorkoutData.swift in Sources */,
 				BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */,
+				BCFC838B25DF1C400007CBE6 /* Workout+CoreDataClass.swift in Sources */,
+				BCFC839025DF1C430007CBE6 /* Workout+CoreDataProperties.swift in Sources */,
 				BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */,
 				BCA6062D25D8FB0500E72F3A /* AddWorkoutViewController.swift in Sources */,
 				BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */,
@@ -448,7 +457,6 @@
 				BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */,
 				BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */,
 				BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */,
-				BC388DA525DD9BEC00A3032A /* Workout.swift in Sources */,
 				BCEB4C5025BE1AF100A5E39C /* Constants.swift in Sources */,
 				BC8E2EFC25D9ADB600ABCA5C /* Extensions.swift in Sources */,
 				BCBE339C25C75EDA00AE111F /* HomeViewController.swift in Sources */,
