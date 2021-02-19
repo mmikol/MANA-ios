@@ -27,23 +27,6 @@ class WorkoutTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        }
-        catch let error {
-            print("\(error)")
-        }
-    }
-    
-    /// TODO: FIX 
-    func store(data: WorkoutData) {
-        let newWorkout = Workout(context: context)
-           
-        newWorkout.name = data.name
-        newWorkout.weight = data.weight
-        newWorkout.date = data.date
-            
-        do {
-            try context.save()
-            getAllWorkouts()
         } catch let error {
             print("\(error)")
         }
@@ -51,20 +34,17 @@ class WorkoutTableViewController: UITableViewController {
     
     func delete(workout: Workout) {
         context.delete(workout)
-        
-        do {
-            try context.save()
-            getAllWorkouts()
-        } catch let error {
-            print("\(error)")
-        }
+        store()
     }
     
     func update(workout: Workout, name: String, weight: String, date: Date) {
         workout.name = name
         workout.weight = weight
         workout.date = date
-        
+        store()
+    }
+    
+    func store() {
         do {
             try context.save()
             getAllWorkouts()
@@ -100,16 +80,15 @@ class WorkoutTableViewController: UITableViewController {
     
     
     @IBAction func unwindToWorkoutList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout, let workoutData = sourceViewController.workoutData {
+        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout {
             
-            /// DOESNT SEEM TO RUN BLOCK HERE
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                update(workout: workout, name: workoutData.name, weight: workoutData.weight, date: workoutData.date)
+                update(workout: workout, name: workout.name!, weight: workout.weight!, date: workout.date!)
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             } else {
                 // Add a new workout.
                 let newIndexPath = IndexPath(row: workouts.count, section: 0)
-                store(data: workoutData)
+                store()
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }
