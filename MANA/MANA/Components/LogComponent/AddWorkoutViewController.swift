@@ -16,8 +16,8 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    var workoutData: WorkoutData?
     var workout: Workout?
+    var workoutData: WorkoutData?
     var dateInput = Date()
     
     override func viewDidLoad() {
@@ -51,16 +51,17 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func cancel(_ sender: Any) {
+        /// TODO: FIX Always FALSE
         let isPresentingInAddWorkoutMode = presentingViewController is UINavigationController
-        
+
         if isPresentingInAddWorkoutMode {
             dismiss(animated: true, completion: nil)
-        } else if let owningNavigationController = navigationController{
+        } else if let owningNavigationController = navigationController {
             owningNavigationController.popViewController(animated: true)
         } else {
             fatalError("The AddWorkoutViewController is not inside a navigation controller.")
         }
-    }
+}
     
     @IBAction func benchButtonTapped(_ sender: Any) {
         guard benchButton.isSelected else {
@@ -110,9 +111,9 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let nameInput = (benchButton.isSelected ? "Bench Press" :
+        let nameInput = benchButton.isSelected ? "Bench Press" :
                     squatButton.isSelected ? "Squat" :
-                    deadliftButton.isSelected ? "Deadlift" : "")
+                    deadliftButton.isSelected ? "Deadlift" : ""
         let weightInput = weightTextField.text ?? ""
 
         self.workoutData = WorkoutData(name: nameInput, weight: weightInput, date: self.dateInput)

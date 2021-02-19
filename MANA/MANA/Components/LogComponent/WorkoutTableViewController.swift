@@ -33,6 +33,7 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     
+    /// TODO: FIX 
     func store(data: WorkoutData) {
         let newWorkout = Workout(context: context)
            
@@ -43,8 +44,7 @@ class WorkoutTableViewController: UITableViewController {
         do {
             try context.save()
             getAllWorkouts()
-        }
-        catch let error {
+        } catch let error {
             print("\(error)")
         }
     }
@@ -55,8 +55,7 @@ class WorkoutTableViewController: UITableViewController {
         do {
             try context.save()
             getAllWorkouts()
-        }
-        catch let error {
+        } catch let error {
             print("\(error)")
         }
     }
@@ -69,8 +68,7 @@ class WorkoutTableViewController: UITableViewController {
         do {
             try context.save()
             getAllWorkouts()
-        }
-        catch let error {
+        } catch let error {
             print("\(error)")
         }
     }
@@ -104,6 +102,7 @@ class WorkoutTableViewController: UITableViewController {
     @IBAction func unwindToWorkoutList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout, let workoutData = sourceViewController.workoutData {
             
+            /// DOESNT SEEM TO RUN BLOCK HERE
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 update(workout: workout, name: workoutData.name, weight: workoutData.weight, date: workoutData.date)
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
@@ -128,16 +127,14 @@ class WorkoutTableViewController: UITableViewController {
             delete(workout: workouts[indexPath.row])
 //            workouts.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     
     //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        
+
         switch(segue.identifier ?? "") {
         
         case "AddItem":

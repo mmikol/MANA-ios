@@ -348,7 +348,7 @@
             <objects>
                 <viewController title="LogAddViewController" id="4yV-ZS-vma" customClass="AddWorkoutViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjR-tI-BZP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-bR-WqD">
@@ -422,7 +422,7 @@
                     <navigationItem key="navigationItem" title="New Workout" id="aE9-gq-dlQ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="go4-Ii-eCr">
                             <connections>
-                                <action selector="cancel:" destination="4yV-ZS-vma" id="yxc-UC-P5j"/>
+                                <action selector="cancel:" destination="4yV-ZS-vma" id="iLq-qc-FAS"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE">
@@ -764,7 +764,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QLy-vt-Lnx"/>
+        <segue reference="FKB-Ws-Dvm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="1000" height="1080"/>
