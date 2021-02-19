@@ -28,9 +28,9 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         
         // Set up views if editing an existing Workout.
         if let workout = self.workout {
-            navigationItem.title = workout.name ?? "N/A"
-            weightTextField.text = workout.weight ?? "0"
-            datePicker.date = workout.date ?? Date()
+            navigationItem.title = workout.name!
+            weightTextField.text = workout.weight!
+            datePicker.date = workout.date!
             
             switch(workout.name) {
             case "Bench Press":
@@ -45,7 +45,6 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         } else {
             benchButton.isSelected = true
         }
-        
         
         // Enable the Save button only if inputs are given.
         updateSaveButtonState()
@@ -99,7 +98,6 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
- 
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         self.dateInput = sender.date
     }

@@ -19,6 +19,8 @@ class WorkoutTableViewController: UITableViewController {
         navigationItem.leftBarButtonItem = editButtonItem
     }
     
+    // MARK: - Core Data CRUD
+    
     func getAllWorkouts() {
         do {
             workouts = try context.fetch(Workout.fetchRequest())
@@ -31,12 +33,12 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     
-    func store(workout: Workout) {
+    func store(data: WorkoutData) {
         let newWorkout = Workout(context: context)
            
-        newWorkout.name = workout.name
-        newWorkout.weight = workout.weight
-        newWorkout.date = workout.date
+        newWorkout.name = data.name
+        newWorkout.weight = data.weight
+        newWorkout.date = data.date
             
         do {
             try context.save()
@@ -100,16 +102,15 @@ class WorkoutTableViewController: UITableViewController {
     
     
     @IBAction func unwindToWorkoutList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout {
+        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout, let workoutData = sourceViewController.workoutData {
             
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                workouts[selectedIndexPath.row] = workout
+                update(workout: workout, name: workoutData.name, weight: workoutData.weight, date: workoutData.date)
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             } else {
                 // Add a new workout.
                 let newIndexPath = IndexPath(row: workouts.count, section: 0)
-                
-                store(workout: workout)
+                store(data: workoutData)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
                 
             }
@@ -132,21 +133,6 @@ class WorkoutTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
     
     //MARK: - Navigation
     
