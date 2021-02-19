@@ -32,15 +32,22 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     
-    func delete(workout: Workout) {
-        context.delete(workout)
+    func create(data: WorkoutData) {
+        let newWorkout = Workout(context: context)
+        newWorkout.name = data.name
+        newWorkout.weight = data.weight
+        newWorkout.date = data.date
         store()
     }
     
-    func update(workout: Workout, name: String, weight: String, date: Date) {
-        workout.name = name
-        workout.weight = weight
-        workout.date = date
+    func update(workout: Workout, data: WorkoutData) {
+        workout.name = data.name
+        workout.weight = data.weight
+        workout.date = data.date
+        store()
+    }
+    func delete(workout: Workout) {
+        context.delete(workout)
         store()
     }
     
@@ -80,15 +87,17 @@ class WorkoutTableViewController: UITableViewController {
     
     
     @IBAction func unwindToWorkoutList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout {
+        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout, let workoutData = sourceViewController.workoutData{
             
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                update(workout: workout, name: workout.name!, weight: workout.weight!, date: workout.date!)
+                // Update an existing workout
+                update(workout: workout, data: workoutData)
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             } else {
                 // Add a new workout.
                 let newIndexPath = IndexPath(row: workouts.count, section: 0)
-                store()
+                create(data: workoutData)
+                // DOESN'T SHOW WHAT'S CREATED
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }

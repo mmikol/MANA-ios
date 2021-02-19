@@ -19,6 +19,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     var workout: Workout?
+    var workoutData: WorkoutData?
     var dateInput = Date()
     
     override func viewDidLoad() {
@@ -52,7 +53,6 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func cancel(_ sender: Any) {
-        /// TODO: FIX Always FALSE
         let isPresentingInAddWorkoutMode = presentingViewController is UINavigationController
 
         if isPresentingInAddWorkoutMode {
@@ -117,11 +117,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
                     deadliftButton.isSelected ? "Deadlift" : ""
         let weightInput = weightTextField.text ?? ""
         
-        self.workout = Workout(context: context)
-        
-        self.workout!.name = nameInput
-        self.workout!.weight = weightInput
-        self.workout!.date = dateInput
+        self.workoutData = WorkoutData(name: nameInput, weight: weightInput, date: dateInput)
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
