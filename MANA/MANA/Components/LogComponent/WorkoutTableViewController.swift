@@ -112,7 +112,6 @@ class WorkoutTableViewController: UITableViewController {
                 let newIndexPath = IndexPath(row: workouts.count, section: 0)
                 store(data: workoutData)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
-                
             }
         }
     }
