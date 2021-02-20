@@ -96,7 +96,6 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
             return
         }
     }
-    
  
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         self.dateInput = sender.date

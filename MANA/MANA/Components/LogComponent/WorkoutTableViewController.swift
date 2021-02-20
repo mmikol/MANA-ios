@@ -26,10 +26,8 @@ class WorkoutTableViewController: UITableViewController {
         newWorkout.name = data.name
         newWorkout.weight = data.weight
         newWorkout.date = data.date
-
         do {
             try context.save()
-            getAllWorkouts()
         } catch let error {
             print("\(error)")
         }
@@ -53,7 +51,6 @@ class WorkoutTableViewController: UITableViewController {
         
         do {
             try context.save()
-            getAllWorkouts()
         } catch let error {
             print("\(error)")
         }
@@ -64,7 +61,6 @@ class WorkoutTableViewController: UITableViewController {
         
         do {
             try context.save()
-            getAllWorkouts()
         } catch let error {
             print("\(error)")
         }
@@ -97,14 +93,15 @@ class WorkoutTableViewController: UITableViewController {
     
     
     @IBAction func unwindToWorkoutList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout, let workoutData = sourceViewController.workoutData {
-            
-            if tableView.indexPathForSelectedRow != nil {
+        if let sourceViewController = sender.source as? AddWorkoutViewController, let workoutData = sourceViewController.workoutData {
+            if let workout = sourceViewController.workout {
                 // Update an existing workout
                 update(workout: workout, data: workoutData)
+                getAllWorkouts()
             } else {
                 // Add a new workout.
                 create(data: workoutData)
+                getAllWorkouts()
             }
         }
     }
@@ -119,7 +116,7 @@ class WorkoutTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             delete(workout: workouts[indexPath.row])
-//            workouts.remove(at: indexPath.row)
+            getAllWorkouts()
         }
     }
     
@@ -146,9 +143,7 @@ class WorkoutTableViewController: UITableViewController {
                 fatalError("The selected cell is not being displayed by the table")
             }
             
-            let selectedWorkout = workouts[indexPath.row]
-            
-            workoutDetailViewController.workout = selectedWorkout
+            workoutDetailViewController.workout = workouts[indexPath.row]
             
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")

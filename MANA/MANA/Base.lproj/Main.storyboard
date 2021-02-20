@@ -427,7 +427,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE">
                             <connections>
-                                <segue destination="ZzW-Y8-miK" kind="unwind" unwindAction="unwindToWorkoutListWithSender:" id="wrk-hq-hLA"/>
+                                <segue destination="ZzW-Y8-miK" kind="unwind" unwindAction="unwindToWorkoutListWithSender:" id="MaZ-fX-TOU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
