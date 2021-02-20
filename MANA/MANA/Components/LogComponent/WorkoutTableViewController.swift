@@ -120,7 +120,6 @@ class WorkoutTableViewController: UITableViewController {
             // Delete the row from the data source
             delete(workout: workouts[indexPath.row])
 //            workouts.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     

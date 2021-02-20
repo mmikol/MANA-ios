@@ -125,7 +125,6 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         updateSaveButtonState()
-        navigationItem.title = textField.text
     }
 
     //MARK: Private Methods

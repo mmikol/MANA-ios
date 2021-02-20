@@ -348,7 +348,7 @@
             <objects>
                 <viewController title="LogAddViewController" id="4yV-ZS-vma" customClass="AddWorkoutViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjR-tI-BZP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-bR-WqD">
@@ -422,12 +422,12 @@
                     <navigationItem key="navigationItem" title="New Workout" id="aE9-gq-dlQ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="go4-Ii-eCr">
                             <connections>
-                                <action selector="cancel:" destination="4yV-ZS-vma" id="iLq-qc-FAS"/>
+                                <action selector="cancel:" destination="4yV-ZS-vma" id="twg-3O-ZhB"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE">
                             <connections>
-                                <segue destination="ZzW-Y8-miK" kind="unwind" unwindAction="unwindToWorkoutListWithSender:" id="9eF-3B-eZX"/>
+                                <segue destination="ZzW-Y8-miK" kind="unwind" unwindAction="unwindToWorkoutListWithSender:" id="wrk-hq-hLA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -435,7 +435,7 @@
                         <outlet property="benchButton" destination="MhE-Tc-jjC" id="ogc-bF-IF7"/>
                         <outlet property="datePicker" destination="FA6-cJ-9r6" id="oi3-gO-bXu"/>
                         <outlet property="deadliftButton" destination="IY8-bP-KGf" id="2c8-ME-cQZ"/>
-                        <outlet property="saveButton" destination="228-Us-lBE" id="WnR-kd-6SK"/>
+                        <outlet property="saveButton" destination="228-Us-lBE" id="DeB-0z-7Kr"/>
                         <outlet property="squatButton" destination="cqA-Up-gJy" id="Rk9-7P-avG"/>
                         <outlet property="weightTextField" destination="Idt-re-emN" id="YuH-5T-fkR"/>
                     </connections>
@@ -764,7 +764,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="siM-81-7SA"/>
+        <segue reference="QLy-vt-Lnx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="1000" height="1080"/>

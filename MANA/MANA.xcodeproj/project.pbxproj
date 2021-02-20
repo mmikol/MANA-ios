@@ -123,8 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */,
-				BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */,
 				BCFC839425DF23640007CBE6 /* WorkoutData.swift */,
+				BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */,
 				BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */,
 			);
 			path = LogComponent;
