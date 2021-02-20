@@ -45,13 +45,12 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
             benchButton.isSelected = true
         }
         
-        
         // Enable the Save button only if inputs are given.
         updateSaveButtonState()
     }
     
     @IBAction func cancel(_ sender: Any) {
-        let isPresentingInAddWorkoutMode = presentingViewController is UINavigationController
+        let isPresentingInAddWorkoutMode = self.presentingViewController != nil
         
         if isPresentingInAddWorkoutMode {
             dismiss(animated: true, completion: nil)

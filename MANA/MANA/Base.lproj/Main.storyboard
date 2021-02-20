@@ -513,7 +513,7 @@
                                     <outlet property="dateLabel" destination="oP8-K9-K21" id="c2c-Zt-DHs"/>
                                     <outlet property="nameLabel" destination="CVD-dd-XaE" id="E7w-u7-6DS"/>
                                     <outlet property="weightLabel" destination="wlh-pP-ir4" id="Fjm-YL-tvI"/>
-                                    <segue destination="4yV-ZS-vma" kind="show" identifier="ShowDetail" id="QLy-vt-Lnx"/>
+                                    <segue destination="4yV-ZS-vma" kind="show" identifier="ShowDetail" id="jOz-nx-Tx2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -525,7 +525,7 @@
                     <navigationItem key="navigationItem" title="Workout Log" id="m8z-vT-9oI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="p66-YH-dsN">
                             <connections>
-                                <segue destination="f8G-h5-tlk" kind="presentation" identifier="AddItem" id="OQM-MU-fzX"/>
+                                <segue destination="uOa-q2-i9D" kind="presentation" identifier="AddItem" id="1WB-YN-u0d"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -745,26 +745,26 @@
             <point key="canvasLocation" x="7323" y="76"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="GWh-at-236">
+        <scene sceneID="YPz-7k-dVU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f8G-h5-tlk" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uOa-q2-i9D" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nUE-Zh-4X0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="epa-5n-TBy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="4yV-ZS-vma" kind="relationship" relationship="rootViewController" id="siM-81-7SA"/>
+                        <segue destination="4yV-ZS-vma" kind="relationship" relationship="rootViewController" id="m4u-bb-hBz"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dtc-iC-is2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ope-v3-OZl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4614" y="1560"/>
+            <point key="canvasLocation" x="4688" y="1560"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QLy-vt-Lnx"/>
+        <segue reference="jOz-nx-Tx2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="1000" height="1080"/>
