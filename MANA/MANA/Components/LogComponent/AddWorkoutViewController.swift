@@ -4,7 +4,6 @@
 //
 //  Created by Miliano Mikol on 2/14/21.
 //
-
 import UIKit
 import OSLog
 
@@ -16,8 +15,6 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
     var workout: Workout?
     var workoutData: WorkoutData?
     var dateInput = Date()
@@ -29,7 +26,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         weightTextField.delegate = self
         
         // Set up views if editing an existing Workout.
-        if let workout = self.workout {
+        if let workout = workout {
             navigationItem.title = workout.name!
             weightTextField.text = workout.weight!
             datePicker.date = workout.date!
@@ -48,21 +45,22 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
             benchButton.isSelected = true
         }
         
+        
         // Enable the Save button only if inputs are given.
         updateSaveButtonState()
     }
     
     @IBAction func cancel(_ sender: Any) {
         let isPresentingInAddWorkoutMode = presentingViewController is UINavigationController
-
+        
         if isPresentingInAddWorkoutMode {
             dismiss(animated: true, completion: nil)
-        } else if let owningNavigationController = navigationController {
+        } else if let owningNavigationController = navigationController{
             owningNavigationController.popViewController(animated: true)
         } else {
             fatalError("The AddWorkoutViewController is not inside a navigation controller.")
         }
-}
+    }
     
     @IBAction func benchButtonTapped(_ sender: Any) {
         guard benchButton.isSelected else {
@@ -100,6 +98,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+ 
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
         self.dateInput = sender.date
     }
@@ -112,11 +111,11 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let nameInput = benchButton.isSelected ? "Bench Press" :
+        let nameInput = (benchButton.isSelected ? "Bench Press" :
                     squatButton.isSelected ? "Squat" :
-                    deadliftButton.isSelected ? "Deadlift" : ""
+                    deadliftButton.isSelected ? "Deadlift" : "")
         let weightInput = weightTextField.text ?? ""
-        
+
         self.workoutData = WorkoutData(name: nameInput, weight: weightInput, date: dateInput)
     }
     
@@ -126,6 +125,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         updateSaveButtonState()
+        navigationItem.title = textField.text
     }
 
     //MARK: Private Methods

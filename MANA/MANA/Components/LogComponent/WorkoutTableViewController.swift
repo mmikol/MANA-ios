@@ -20,6 +20,20 @@ class WorkoutTableViewController: UITableViewController {
     }
     
     // MARK: - Core Data CRUD
+        
+    func create(data: WorkoutData) {
+        let newWorkout = Workout(context: context)
+        newWorkout.name = data.name
+        newWorkout.weight = data.weight
+        newWorkout.date = data.date
+
+        do {
+            try context.save()
+            getAllWorkouts()
+        } catch let error {
+            print("\(error)")
+        }
+    }
     
     func getAllWorkouts() {
         do {
@@ -32,26 +46,11 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     
-    func create(data: WorkoutData) {
-        let newWorkout = Workout(context: context)
-        newWorkout.name = data.name
-        newWorkout.weight = data.weight
-        newWorkout.date = data.date
-        store()
-    }
-    
     func update(workout: Workout, data: WorkoutData) {
         workout.name = data.name
         workout.weight = data.weight
         workout.date = data.date
-        store()
-    }
-    func delete(workout: Workout) {
-        context.delete(workout)
-        store()
-    }
-    
-    func store() {
+        
         do {
             try context.save()
             getAllWorkouts()
@@ -59,7 +58,18 @@ class WorkoutTableViewController: UITableViewController {
             print("\(error)")
         }
     }
+    
+    func delete(workout: Workout) {
+        context.delete(workout)
         
+        do {
+            try context.save()
+            getAllWorkouts()
+        } catch let error {
+            print("\(error)")
+        }
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,18 +97,14 @@ class WorkoutTableViewController: UITableViewController {
     
     
     @IBAction func unwindToWorkoutList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout, let workoutData = sourceViewController.workoutData{
+        if let sourceViewController = sender.source as? AddWorkoutViewController, let workout = sourceViewController.workout, let workoutData = sourceViewController.workoutData {
             
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            if tableView.indexPathForSelectedRow != nil {
                 // Update an existing workout
                 update(workout: workout, data: workoutData)
-                tableView.reloadRows(at: [selectedIndexPath], with: .none)
             } else {
                 // Add a new workout.
-                let newIndexPath = IndexPath(row: workouts.count, section: 0)
                 create(data: workoutData)
-                // DOESN'T SHOW WHAT'S CREATED
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }
     }

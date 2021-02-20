@@ -525,7 +525,7 @@
                     <navigationItem key="navigationItem" title="Workout Log" id="m8z-vT-9oI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="p66-YH-dsN">
                             <connections>
-                                <segue destination="f8G-h5-tlk" kind="presentation" identifier="AddItem" id="Hh5-Lh-fYh"/>
+                                <segue destination="f8G-h5-tlk" kind="presentation" identifier="AddItem" id="OQM-MU-fzX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
