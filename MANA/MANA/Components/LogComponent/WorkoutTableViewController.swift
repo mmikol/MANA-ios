@@ -21,7 +21,7 @@ class WorkoutTableViewController: UITableViewController {
     
     // MARK: - Core Data CRUD
         
-    func create(data: WorkoutData) {
+    private func create(data: WorkoutData) {
         let newWorkout = Workout(context: context)
         newWorkout.name = data.name
         newWorkout.weight = data.weight
@@ -33,7 +33,7 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     
-    func getAllWorkouts() {
+    private func getAllWorkouts() {
         do {
             workouts = try context.fetch(Workout.fetchRequest())
             DispatchQueue.main.async {
@@ -44,7 +44,7 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     
-    func update(workout: Workout, data: WorkoutData) {
+    private func update(workout: Workout, data: WorkoutData) {
         workout.name = data.name
         workout.weight = data.weight
         workout.date = data.date
@@ -56,6 +56,7 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     
+    private
     func delete(workout: Workout) {
         context.delete(workout)
         

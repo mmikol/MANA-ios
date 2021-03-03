@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */; };
 		BC18481C25D8DB58005D40DE /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */; };
-		BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6670C725BDEB0A009224A1 /* Utilities.swift */; };
+		BC54A6AE25F0531300CD8800 /* AchievementProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54A6AD25F0531300CD8800 /* AchievementProperty.swift */; };
+		BC54A6B325F0540400CD8800 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54A6B225F0540400CD8800 /* Achievement.swift */; };
+		BC54A6B825F0561C00CD8800 /* AchievementBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54A6B725F0561C00CD8800 /* AchievementBlackBox.swift */; };
 		BC8E2EFC25D9ADB600ABCA5C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E2EFB25D9ADB600ABCA5C /* Extensions.swift */; };
 		BCA6062D25D8FB0500E72F3A /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */; };
 		BCAFC8B725D899750095F560 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCAFC8B625D899750095F560 /* GoogleService-Info.plist */; };
@@ -53,7 +55,9 @@
 		A8C90F1E15981EA9076656FD /* Pods-MANA-MANAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA-MANAUITests.release.xcconfig"; path = "Target Support Files/Pods-MANA-MANAUITests/Pods-MANA-MANAUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
-		BC6670C725BDEB0A009224A1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		BC54A6AD25F0531300CD8800 /* AchievementProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementProperty.swift; sourceTree = "<group>"; };
+		BC54A6B225F0540400CD8800 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		BC54A6B725F0561C00CD8800 /* AchievementBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementBlackBox.swift; sourceTree = "<group>"; };
 		BC8E2EFB25D9ADB600ABCA5C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BCA6062C25D8FB0500E72F3A /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		BCAFC8B625D899750095F560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -148,10 +152,19 @@
 			path = CalculatorComponent;
 			sourceTree = "<group>";
 		};
+		BC54A6AC25F052EC00CD8800 /* AchievementSystem */ = {
+			isa = PBXGroup;
+			children = (
+				BC54A6AD25F0531300CD8800 /* AchievementProperty.swift */,
+				BC54A6B725F0561C00CD8800 /* AchievementBlackBox.swift */,
+				BC54A6B225F0540400CD8800 /* Achievement.swift */,
+			);
+			path = AchievementSystem;
+			sourceTree = "<group>";
+		};
 		BC6670C625BDEAFD009224A1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				BC6670C725BDEB0A009224A1 /* Utilities.swift */,
 				BCEB4C4F25BE1AF100A5E39C /* Constants.swift */,
 				BC8E2EFB25D9ADB600ABCA5C /* Extensions.swift */,
 			);
@@ -165,6 +178,7 @@
 				BC4B03E125D8F4D9008BB531 /* LogComponent */,
 				BC4B03E325D8F52A008BB531 /* CalculatorComponent */,
 				BCBE339B25C75EDA00AE111F /* HomeViewController.swift */,
+				BC54A6AC25F052EC00CD8800 /* AchievementSystem */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -456,13 +470,15 @@
 				BC18481C25D8DB58005D40DE /* WorkoutTableViewController.swift in Sources */,
 				BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */,
 				BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */,
+				BC54A6AE25F0531300CD8800 /* AchievementProperty.swift in Sources */,
+				BC54A6B825F0561C00CD8800 /* AchievementBlackBox.swift in Sources */,
 				BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */,
 				BCEB4C5025BE1AF100A5E39C /* Constants.swift in Sources */,
 				BC8E2EFC25D9ADB600ABCA5C /* Extensions.swift in Sources */,
 				BCBE339C25C75EDA00AE111F /* HomeViewController.swift in Sources */,
 				BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */,
-				BC6670C825BDEB0A009224A1 /* Utilities.swift in Sources */,
 				BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */,
+				BC54A6B325F0540400CD8800 /* Achievement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

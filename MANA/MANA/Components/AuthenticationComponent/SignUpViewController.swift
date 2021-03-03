@@ -60,7 +60,7 @@ class SignUpViewController: UIViewController {
         
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        if !Utilities.isAcceptedPassword(cleanedPassword) {
+        if !isAcceptedPassword(cleanedPassword) {
             return "Password must contain 8 characters with one capital letter and one number."
         
         }
@@ -86,7 +86,11 @@ class SignUpViewController: UIViewController {
     
     func setUpElements() {
         errorLabel.alpha = 0
-        
-        // Add styles for tapping the button
+    }
+    
+    private func isAcceptedPassword(_ password: String) -> Bool {
+        // One capital; One number; 8 characters
+        let test = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}$")
+        return test.evaluate(with: password)
     }
 }
