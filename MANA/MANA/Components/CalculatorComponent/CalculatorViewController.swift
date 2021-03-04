@@ -72,9 +72,9 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
-        currentComputation -= currentComputation
+        currentComputation = 45
         computationStack.clear()
-        computationLabel.text = "\(currentComputation)"
+        computationLabel.text = "\(currentComputation) lbs (standard bar weight)"
     }
     
     @IBAction func plate45ButtonTapped(_ sender: Any) {
@@ -127,6 +127,6 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         additionButton.isSelected.toggle()
-        computationLabel.text = "\(currentComputation) lbs (the bar)"
+        computationLabel.text = "\(currentComputation) lbs (standard bar weight)"
     }
 }
