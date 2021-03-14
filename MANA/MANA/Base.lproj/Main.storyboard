@@ -553,31 +553,31 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="H9L-NB-uId">
-                                <rect key="frame" x="65.5" y="263" width="283" height="30"/>
+                                <rect key="frame" x="65.5" y="263" width="283" height="0.0"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVK-mC-WS6">
-                                        <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="0.0"/>
                                         <state key="normal" title="Undo"/>
                                         <connections>
                                             <action selector="undoButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="Wlq-yU-ahV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7n-He-T6I">
-                                        <rect key="frame" x="87" y="0.0" width="36" height="30"/>
+                                        <rect key="frame" x="87" y="0.0" width="36" height="0.0"/>
                                         <state key="normal" title="Clear"/>
                                         <connections>
                                             <action selector="clearButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="mD3-uu-RHW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-jQ-6cX">
-                                        <rect key="frame" x="173" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="173" y="0.0" width="30" height="0.0"/>
                                         <state key="normal" title="+"/>
                                         <connections>
                                             <action selector="additionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="YsM-kV-xQ1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLY-9K-ikf">
-                                        <rect key="frame" x="253" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="253" y="0.0" width="30" height="0.0"/>
                                         <state key="normal" title="-"/>
                                         <connections>
                                             <action selector="subtractionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="cXM-2Z-4tA"/>
@@ -586,28 +586,40 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-aF-xGD">
-                                <rect key="frame" x="127" y="393" width="160" height="295"/>
+                                <rect key="frame" x="77" y="363" width="260" height="325"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="sOq-WF-0l0">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="295"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="325"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvw-Dy-u6P">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="65"/>
-                                                <state key="normal" title="45"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvw-Dy-u6P">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="Xh9-6N-Kou"/>
+                                                    <constraint firstAttribute="width" constant="80" id="r8r-vj-gIQ"/>
+                                                </constraints>
+                                                <state key="normal" image="45lbButton"/>
                                                 <connections>
                                                     <action selector="plate45ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="oyH-kG-f8U"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOW-cx-GMx">
-                                                <rect key="frame" x="0.0" y="115" width="30" height="65"/>
-                                                <state key="normal" title="25"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOW-cx-GMx">
+                                                <rect key="frame" x="0.0" y="125" width="80" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="Yls-m4-kWJ"/>
+                                                    <constraint firstAttribute="width" constant="80" id="dUs-gm-UU8"/>
+                                                </constraints>
+                                                <state key="normal" image="25lbButton"/>
                                                 <connections>
                                                     <action selector="plate25ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="plI-Yt-9vl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esh-Ud-Oc4">
-                                                <rect key="frame" x="0.0" y="230" width="30" height="65"/>
-                                                <state key="normal" title="5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esh-Ud-Oc4">
+                                                <rect key="frame" x="0.0" y="250" width="80" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="a0S-t0-85B"/>
+                                                    <constraint firstAttribute="width" constant="80" id="wTZ-bn-YP0"/>
+                                                </constraints>
+                                                <state key="normal" image="5lbButton"/>
                                                 <connections>
                                                     <action selector="plate5ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="zP4-RV-ZmB"/>
                                                 </connections>
@@ -615,25 +627,37 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="67W-W0-ttf">
-                                        <rect key="frame" x="130" y="0.0" width="30" height="295"/>
+                                        <rect key="frame" x="180" y="0.0" width="80" height="325"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsT-gv-sqj">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="65"/>
-                                                <state key="normal" title="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsT-gv-sqj">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="3Uk-IT-Y5r"/>
+                                                    <constraint firstAttribute="width" constant="80" id="BjB-kx-90G"/>
+                                                </constraints>
+                                                <state key="normal" image="35lbButton"/>
                                                 <connections>
                                                     <action selector="plate35ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="pln-sQ-z5Q"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTJ-Tt-xYh">
-                                                <rect key="frame" x="0.0" y="115" width="30" height="65"/>
-                                                <state key="normal" title="10"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTJ-Tt-xYh">
+                                                <rect key="frame" x="0.0" y="125" width="80" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="2xZ-Jz-9fZ"/>
+                                                    <constraint firstAttribute="width" constant="80" id="mVN-ym-Jme"/>
+                                                </constraints>
+                                                <state key="normal" image="10lbButton"/>
                                                 <connections>
                                                     <action selector="plate10ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="Vph-KQ-1To"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmL-hN-kJK">
-                                                <rect key="frame" x="0.0" y="230" width="30" height="65"/>
-                                                <state key="normal" title="2.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmL-hN-kJK">
+                                                <rect key="frame" x="0.0" y="250" width="80" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="TvM-Ld-iP4"/>
+                                                    <constraint firstAttribute="height" constant="75" id="lD1-pN-rAg"/>
+                                                </constraints>
+                                                <state key="normal" image="2.5lbButton"/>
                                                 <connections>
                                                     <action selector="plate2ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="a3O-Ty-tjO"/>
                                                 </connections>
@@ -767,6 +791,12 @@
         <segue reference="jOz-nx-Tx2"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="10lbButton" width="500" height="499"/>
+        <image name="2.5lbButton" width="512" height="487"/>
+        <image name="25lbButton" width="496" height="503"/>
+        <image name="35lbButton" width="563" height="443"/>
+        <image name="45lbButton" width="514" height="486"/>
+        <image name="5lbButton" width="496" height="503"/>
         <image name="Logo" width="1000" height="1080"/>
         <image name="WarriorRed" width="1920" height="1080"/>
         <image name="WarriorYellow" width="1920" height="1080"/>
