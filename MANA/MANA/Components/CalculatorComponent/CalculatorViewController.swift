@@ -27,7 +27,8 @@ class CalculatorViewController: UIViewController {
             stack.removeAll()
         }
     }
-    
+
+    let numberFormatter = NumberFormatter();
     var currentComputation = 45
     var computationStack = CalculatorStack()
 
@@ -74,7 +75,7 @@ class CalculatorViewController: UIViewController {
     @IBAction func clearButtonTapped(_ sender: Any) {
         currentComputation = 45
         computationStack.clear()
-        computationLabel.text = "\(currentComputation) lbS (standard bar weight)"
+        computationLabel.text = "\(currentComputation) lbs"
     }
     
     @IBAction func plate45ButtonTapped(_ sender: Any) {
@@ -115,7 +116,10 @@ class CalculatorViewController: UIViewController {
             if newValue >= 0 && newValue < 50000 {
                 currentComputation += increment
                 computationStack.push(-increment)
-                computationLabel.text = "\(currentComputation) lbs"
+
+                let formattedNumber = numberFormatter.string(from: NSNumber(value:currentComputation))
+                
+                computationLabel.text = "\(formattedNumber!) lbs"
             } else if newValue >= 50000 {
                 computationLabel.text = "Godlike MANA"
             }
@@ -127,6 +131,7 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         additionButton.isSelected.toggle()
-        computationLabel.text = "\(currentComputation) lbs (standard bar weight)"
+        computationLabel.text = "\(currentComputation) lbs"
+        numberFormatter.numberStyle = .decimal
     }
 }
