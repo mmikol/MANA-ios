@@ -82,7 +82,6 @@ class SignUpViewController: UIViewController {
     
     func transitionToHome() {
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.HOME_VIEW_CONTROLLER) as? HomeViewController
-        homeViewController?.uid = self.uid
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }

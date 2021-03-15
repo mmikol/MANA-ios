@@ -12,7 +12,7 @@ import Firebase
 
 class WorkoutTableViewController: UITableViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let database = Firebase.firestore()
+    let database = Firestore.firestore()
     var workouts = [Workout]()
     
     override func viewDidLoad() {
@@ -69,35 +69,34 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     
-    
-    // Firestore CRUD
+    // MARK: Firestore CRUD
     
     func update(name: String, weight: String) {
         let workoutRecordName = (name == "Bench Press" ? "best_bench" :
                                 name == "Squat" ? "best_squat" :
                                 name == "Deadlift" ?  "best_deadlift" : "")
         
-        let documentReference = database.collection("users").document(HomeViewController.uid)
+        //let documentReference = database.collection("users").document(UID goes here!)
         
-            documentReference.getDocument { (document, error) in
-                if let document = document, document.exists {
-
-                } else {
-                    print("Document does not exist")
-                }
-            }
-
-            let currentRecord = 0
-
-            if currentRecord < Int(weight)! {
-                database.collection("users").document(HomeViewController.uid).updateData([
-                    workoutRecordName: weight
-                ]) { (error) in
-                    if error != nil {
-                        self.showError(error!.localizedDescription)
-                    }
-                }
-            }
+//            documentReference.getDocument { (document, error) in
+//                if let document = document, document.exists {
+//                    print(document)
+//                } else {
+//                    print("Document does not exist")
+//                }
+//            }
+//
+//            let currentRecord = 1231231231
+//
+//            if currentRecord < Int(weight)! {
+//                database.collection("users").document(HomeViewController.uid).updateData([
+//                    workoutRecordName: weight
+//                ]) { (error) in
+//                    if error != nil {
+//                        print(error!.localizedDescription)
+//                    }
+//                }
+//            }
     }
     
     // MARK: - Table view data source

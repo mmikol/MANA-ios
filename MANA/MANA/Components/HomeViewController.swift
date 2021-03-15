@@ -7,9 +7,11 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    public static var uid = ""
-    
+class HomeViewController: UIViewController {    
+    @IBOutlet weak var bestBenchLabel: UILabel!
+    @IBOutlet weak var bestSquatLabel: UILabel!
+    @IBOutlet weak var bestDeadliftLabel: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
     }
