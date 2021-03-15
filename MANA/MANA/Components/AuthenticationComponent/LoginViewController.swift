@@ -15,8 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
  
     @IBAction func loginButtonTapped(_ sender: Any) {
-        // TODO: Validate fields same as sign up
-
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
@@ -39,7 +37,5 @@ class LoginViewController: UIViewController {
     
     func setUpElements() {
         errorLabel.alpha = 0
-        
-        // Add styles for tapping the button
     }
 }

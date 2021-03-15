@@ -19,7 +19,6 @@
 		BCBE339C25C75EDA00AE111F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBE339B25C75EDA00AE111F /* HomeViewController.swift */; };
 		BCE47AF125BA23BD000B6C7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */; };
 		BCE47AF325BA23BD000B6C7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */; };
-		BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */; };
 		BCE47AF825BA23BD000B6C7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE47AF625BA23BD000B6C7D /* Main.storyboard */; };
 		BCE47AFB25BA23BD000B6C7D /* MANA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BCE47AF925BA23BD000B6C7D /* MANA.xcdatamodeld */; };
 		BCE47AFD25BA23BE000B6C7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE47AFC25BA23BE000B6C7D /* Assets.xcassets */; };
@@ -66,7 +65,6 @@
 		BCE47AED25BA23BD000B6C7D /* MANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		BCE47AF725BA23BD000B6C7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCE47AFA25BA23BD000B6C7D /* MANA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MANA.xcdatamodel; sourceTree = "<group>"; };
 		BCE47AFC25BA23BE000B6C7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		BC4B03E225D8F511008BB531 /* AuthenticationComponent */ = {
 			isa = PBXGroup;
 			children = (
-				BCE47AF425BA23BD000B6C7D /* EntryViewController.swift */,
 				BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */,
 				BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */,
 			);
@@ -464,7 +461,6 @@
 				BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */,
 				BCFC838B25DF1C400007CBE6 /* Workout+CoreDataClass.swift in Sources */,
 				BCFC839025DF1C430007CBE6 /* Workout+CoreDataProperties.swift in Sources */,
-				BCE47AF525BA23BD000B6C7D /* EntryViewController.swift in Sources */,
 				BCA6062D25D8FB0500E72F3A /* AddWorkoutViewController.swift in Sources */,
 				BCBE339425C75ECA00AE111F /* CalculatorViewController.swift in Sources */,
 				BC18481C25D8DB58005D40DE /* WorkoutTableViewController.swift in Sources */,

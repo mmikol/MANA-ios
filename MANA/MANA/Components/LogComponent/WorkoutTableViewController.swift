@@ -11,6 +11,7 @@ import CoreData
 
 class WorkoutTableViewController: UITableViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     var workouts = [Workout]()
     
     override func viewDidLoad() {
