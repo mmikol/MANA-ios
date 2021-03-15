@@ -8,7 +8,6 @@
 import UIKit
 
 class WorkoutTableViewCell: UITableViewCell {
-
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!

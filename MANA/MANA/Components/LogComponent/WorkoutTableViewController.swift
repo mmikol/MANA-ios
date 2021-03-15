@@ -8,10 +8,11 @@
 import UIKit
 import OSLog
 import CoreData
+import Firebase
 
 class WorkoutTableViewController: UITableViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+    let database = Firebase.firestore()
     var workouts = [Workout]()
     
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class WorkoutTableViewController: UITableViewController {
         newWorkout.name = data.name
         newWorkout.weight = data.weight
         newWorkout.date = data.date
+        
         do {
             try context.save()
         } catch let error {
@@ -57,8 +59,7 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     
-    private
-    func delete(workout: Workout) {
+    private func delete(workout: Workout) {
         context.delete(workout)
         
         do {
@@ -66,6 +67,37 @@ class WorkoutTableViewController: UITableViewController {
         } catch let error {
             print("\(error)")
         }
+    }
+    
+    
+    // Firestore CRUD
+    
+    func update(name: String, weight: String) {
+        let workoutRecordName = (name == "Bench Press" ? "best_bench" :
+                                name == "Squat" ? "best_squat" :
+                                name == "Deadlift" ?  "best_deadlift" : "")
+        
+        let documentReference = database.collection("users").document(HomeViewController.uid)
+        
+            documentReference.getDocument { (document, error) in
+                if let document = document, document.exists {
+
+                } else {
+                    print("Document does not exist")
+                }
+            }
+
+            let currentRecord = 0
+
+            if currentRecord < Int(weight)! {
+                database.collection("users").document(HomeViewController.uid).updateData([
+                    workoutRecordName: weight
+                ]) { (error) in
+                    if error != nil {
+                        self.showError(error!.localizedDescription)
+                    }
+                }
+            }
     }
     
     // MARK: - Table view data source
