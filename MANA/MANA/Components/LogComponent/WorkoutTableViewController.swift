@@ -98,28 +98,6 @@ class WorkoutTableViewController: UITableViewController {
                 documentReference.updateData([workoutRecordName : weight])
             }
         }
-
-        //let documentReference = database.collection("users").document(UID goes here!)
-        
-//            documentReference.getDocument { (document, error) in
-//                if let document = document, document.exists {
-//                    print(document)
-//                } else {
-//                    print("Document does not exist")
-//                }
-//            }
-//
-//            let currentRecord = 1231231231
-//
-//            if currentRecord < Int(weight)! {
-//                database.collection("users").document(HomeViewController.uid).updateData([
-//                    workoutRecordName: weight
-//                ]) { (error) in
-//                    if error != nil {
-//                        print(error!.localizedDescription)
-//                    }
-//                }
-//            }
     }
     
     // MARK: - Table view data source
