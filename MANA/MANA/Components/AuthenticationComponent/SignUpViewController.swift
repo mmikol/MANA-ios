@@ -10,8 +10,6 @@ import FirebaseAuth
 import Firebase
 
 class SignUpViewController: UIViewController {
-    var uid = ""
-
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -34,17 +32,14 @@ class SignUpViewController: UIViewController {
                     self.showError(error.localizedDescription)
                 } else {
                     let database = Firestore.firestore()
-                    
-                    self.uid = result!.user.uid
-                    
+            
                     database.collection("users").addDocument(
                         data: [
                             "firstname": firstName,
                             "lastname": lastName,
-                            "uid": self.uid,
-                            "best_squat": 0,
-                            "best_deadlift": 0,
-                            "best_bench": 0
+                            "best_squat": "0",
+                            "best_deadlift": "0",
+                            "best_bench": "0"
                         ]) { (error) in
                         if error != nil {
                             self.showError(error!.localizedDescription)

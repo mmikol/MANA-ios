@@ -185,7 +185,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Ehq-oS-2a5">
             <objects>
-                <tabBarController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kuL-KN-yMJ" sceneMemberID="viewController">
+                <tabBarController id="kuL-KN-yMJ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pek-OH-rjW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -343,8 +343,8 @@
         <!--Home-->
         <scene sceneID="o2w-bJ-bNN">
             <objects>
-                <viewController id="2La-1m-fZP" customClass="HomeViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ezz-Jk-uv7" customClass="Home">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="2La-1m-fZP" customClass="HomeViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ezz-Jk-uv7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
