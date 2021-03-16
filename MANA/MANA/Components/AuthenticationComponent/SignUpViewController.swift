@@ -35,11 +35,12 @@ class SignUpViewController: UIViewController {
             
                     database.collection("users").addDocument(
                         data: [
-                            "firstname": firstName,
-                            "lastname": lastName,
+                            "first_name": firstName,
+                            "last_name": lastName,
                             "best_squat": "0",
                             "best_deadlift": "0",
-                            "best_bench": "0"
+                            "best_bench": "0",
+                            "level": 0
                         ]) { (error) in
                         if error != nil {
                             self.showError(error!.localizedDescription)
