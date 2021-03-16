@@ -772,10 +772,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-aF-xGD">
-                                <rect key="frame" x="72" y="264" width="270" height="380"/>
+                                <rect key="frame" x="72" y="318" width="270" height="475"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="sOq-WF-0l0">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="380"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="sOq-WF-0l0">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="475"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvw-Dy-u6P">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -789,7 +789,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOW-cx-GMx">
-                                                <rect key="frame" x="0.0" y="140" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="125" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="G7q-st-LB5"/>
                                                     <constraint firstAttribute="height" constant="100" id="ZXS-Rk-Q61"/>
@@ -800,7 +800,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esh-Ud-Oc4">
-                                                <rect key="frame" x="0.0" y="280" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="250" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="EQG-Tt-6zm"/>
                                                     <constraint firstAttribute="width" constant="100" id="WXE-7A-zx5"/>
@@ -810,10 +810,17 @@
                                                     <action selector="plate5ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="zP4-RV-ZmB"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DS-Z3-UnH">
+                                                <rect key="frame" x="0.0" y="375" width="100" height="100"/>
+                                                <state key="normal" title="Large Bar"/>
+                                                <connections>
+                                                    <action selector="largeBarButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="DZg-om-IvU"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="67W-W0-ttf">
-                                        <rect key="frame" x="170" y="0.0" width="100" height="380"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="67W-W0-ttf">
+                                        <rect key="frame" x="170" y="0.0" width="100" height="475"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsT-gv-sqj">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -827,7 +834,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTJ-Tt-xYh">
-                                                <rect key="frame" x="0.0" y="140" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="125" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="LZJ-rb-gva"/>
                                                     <constraint firstAttribute="height" constant="100" id="tv7-Fu-gT6"/>
@@ -838,7 +845,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmL-hN-kJK">
-                                                <rect key="frame" x="0.0" y="280" width="100" height="100"/>
+                                                <rect key="frame" x="0.0" y="250" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="ESc-jx-QR7"/>
                                                     <constraint firstAttribute="width" constant="100" id="Uvz-Bk-Sg3"/>
@@ -846,6 +853,13 @@
                                                 <state key="normal" image="2.5lbButton"/>
                                                 <connections>
                                                     <action selector="plate2ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="a3O-Ty-tjO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-M2-kHS">
+                                                <rect key="frame" x="0.0" y="375" width="100" height="100"/>
+                                                <state key="normal" title="Small Bar"/>
+                                                <connections>
+                                                    <action selector="smallBarButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="Jx1-oD-maX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -870,12 +884,14 @@
                         <outlet property="additionButton" destination="Bvc-jQ-6cX" id="9ZE-nf-jfq"/>
                         <outlet property="clearButton" destination="b7n-He-T6I" id="9cU-1n-SCz"/>
                         <outlet property="computationLabel" destination="6tD-7g-45b" id="6f7-JD-Gfw"/>
+                        <outlet property="largeBarButton" destination="6DS-Z3-UnH" id="Fd3-01-QmZ"/>
                         <outlet property="plate10Button" destination="oTJ-Tt-xYh" id="hmF-pU-Vg1"/>
                         <outlet property="plate25Button" destination="KOW-cx-GMx" id="2SQ-m2-lWi"/>
                         <outlet property="plate2Button" destination="hmL-hN-kJK" id="j1t-o4-Vbo"/>
                         <outlet property="plate35Button" destination="HsT-gv-sqj" id="lDs-tr-9gt"/>
                         <outlet property="plate45Button" destination="hvw-Dy-u6P" id="hvG-R3-2Gh"/>
                         <outlet property="plate5Button" destination="Esh-Ud-Oc4" id="ZZy-65-W2S"/>
+                        <outlet property="smallBarButton" destination="DaG-M2-kHS" id="d7V-QZ-8I4"/>
                         <outlet property="subtractionButton" destination="RLY-9K-ikf" id="LMN-UN-KAg"/>
                         <outlet property="undoButton" destination="tVK-mC-WS6" id="vxZ-bK-uKG"/>
                     </connections>

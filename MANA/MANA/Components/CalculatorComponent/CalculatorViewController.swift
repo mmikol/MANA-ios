@@ -30,7 +30,7 @@ class CalculatorViewController: UIViewController {
 
     let numberFormatter = NumberFormatter()
     
-    var currentComputation = 45
+    var currentComputation = 0
     var computationStack = CalculatorStack()
 
     @IBOutlet weak var computationLabel: UILabel!
@@ -40,6 +40,8 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var plate10Button: UIButton!
     @IBOutlet weak var plate5Button: UIButton!
     @IBOutlet weak var plate2Button: UIButton! // Represents 2.5lbs
+    @IBOutlet weak var smallBarButton: UIButton!
+    @IBOutlet weak var largeBarButton: UIButton!
     @IBOutlet weak var additionButton: UIButton!
     @IBOutlet weak var subtractionButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
@@ -61,6 +63,12 @@ class CalculatorViewController: UIViewController {
             if additionButton.isSelected {
                 additionButton.isSelected.toggle()
             }
+            
+            if !smallBarButton.isEnabled || !largeBarButton.isEnabled {
+                smallBarButton.isEnabled = true
+                largeBarButton.isEnabled = true
+            }
+            
             return
         }
     }
@@ -69,14 +77,22 @@ class CalculatorViewController: UIViewController {
         guard computationStack.isEmpty else {
             currentComputation += computationStack.pop() as! Int
             computationLabel.text = "\(currentComputation) lbs"
+            
+            if !smallBarButton.isEnabled || !largeBarButton.isEnabled {
+                smallBarButton.isEnabled = true
+                largeBarButton.isEnabled = true
+            }
+            
             return
         }
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
-        currentComputation = 45
+        currentComputation = 0
         computationStack.clear()
         computationLabel.text = "\(currentComputation) lbs"
+        smallBarButton.isEnabled = true
+        largeBarButton.isEnabled = true
     }
     
     @IBAction func plate45ButtonTapped(_ sender: Any) {
@@ -107,6 +123,20 @@ class CalculatorViewController: UIViewController {
     @IBAction func plate2ButtonTapped(_ sender: Any) {
         let TWO_PLATE_VALUE = 5
         adjustComputation(By: TWO_PLATE_VALUE)
+    }
+    
+    @IBAction func smallBarButtonTapped(_ sender: Any) {
+        let SMALL_BAR_VALUE = 25
+        adjustComputation(By: SMALL_BAR_VALUE)
+        smallBarButton.isEnabled = false
+        largeBarButton.isEnabled = false
+    }
+    
+    @IBAction func largeBarButtonTapped(_ sender: Any) {
+        let LARGE_BAR_VALUE = 45
+        adjustComputation(By: LARGE_BAR_VALUE)
+        smallBarButton.isEnabled = false
+        largeBarButton.isEnabled = false
     }
     
     func adjustComputation(By amount: Int) {
