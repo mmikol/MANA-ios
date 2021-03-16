@@ -20,12 +20,13 @@ class HomeViewController: UIViewController {
         showPersonalBests()
     }
     
-    func showPersonalBests() {
+    // REMOVE HARD CODE AFTER TESTS
+    private func showPersonalBests() {
         if let user = Auth.auth().currentUser {
-            let documentReference = database.collection("users").document(user.uid)
+            let documentReference = database.collection("users").document("K3nMnBjnrMcXndZ5Q5RWjVEVuZo2")
             
             documentReference.getDocument { (document, error) in
-                 if let document = document, document.exists {
+                if let document = document, document.exists {
                     let data = document.data()
                     self.bestBenchLabel.text = data!["best_bench"] as? String ?? ""
                     self.bestSquatLabel.text = data!["best_squat"] as? String ?? ""
@@ -35,9 +36,6 @@ class HomeViewController: UIViewController {
                   }
             }
         }
-
-
-        return
     }
 
     /*

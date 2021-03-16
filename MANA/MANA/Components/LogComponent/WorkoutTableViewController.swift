@@ -31,6 +31,7 @@ class WorkoutTableViewController: UITableViewController {
         
         do {
             try context.save()
+            update(name: data.name, weight: data.weight)
         } catch let error {
             print("\(error)")
         }
@@ -54,28 +55,54 @@ class WorkoutTableViewController: UITableViewController {
         
         do {
             try context.save()
+            update(name: data.name, weight: data.weight)
         } catch let error {
             print("\(error)")
         }
     }
     
     private func delete(workout: Workout) {
+        let name = workout.name!
         context.delete(workout)
-        
+            
         do {
             try context.save()
+            workouts = try context.fetch(Workout.fetchRequest())
+            let logs = workouts.filter { $0.name == name }.map{ Int($0.weight ?? "0") ?? 0 }
+            
+            if logs.count > 0 {
+                
+            }
+            update(name: name, weight:"\(logs.max() ?? 0)")
         } catch let error {
             print("\(error)")
         }
     }
     
     // MARK: Firestore CRUD
-    
+    // REMOVE HARD CODE AFTER TESTS
+
     func update(name: String, weight: String) {
-        let workoutRecordName = (name == "Bench Press" ? "best_bench" :
-                                name == "Squat" ? "best_squat" :
-                                name == "Deadlift" ?  "best_deadlift" : "")
-        
+        if let user = Auth.auth().currentUser {
+            let documentReference = database.collection("users").document("K3nMnBjnrMcXndZ5Q5RWjVEVuZo2")
+            let workoutRecordName = (name == "Bench Press" ? "best_bench" :
+                                    name == "Squat" ? "best_squat" :
+                                    name == "Deadlift" ?  "best_deadlift" : "")
+            var currentBest = 0
+            
+            documentReference.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    currentBest = document.data()![workoutRecordName] as? Int ?? 0
+                } else {
+                     print("Document does not exist")
+                  }
+            }
+            
+            if currentBest < Int(weight) ?? 0 {
+                documentReference.updateData([workoutRecordName : weight])
+            }
+        }
+
         //let documentReference = database.collection("users").document(UID goes here!)
         
 //            documentReference.getDocument { (document, error) in
