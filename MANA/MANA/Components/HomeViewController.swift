@@ -40,7 +40,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
                     let level = data!["level"] as? Int ?? 0
                     let currentXP = data!["xp"] as? String ?? "0"
                     let neededXP = self.computeNeededXP(level: level)
-                    let levelProgress = Float(currentXP) / Float(neededXP)
+                    let levelProgress = (Float(currentXP) ?? 0.0) / Float(neededXP)
                     let bestBench = data!["best_bench"] as? String ?? "0"
                     let bestSquat = data!["best_squat"] as? String ?? "0"
                     let bestDeadlift = data!["best_deadlift"] as? String ?? "0"
