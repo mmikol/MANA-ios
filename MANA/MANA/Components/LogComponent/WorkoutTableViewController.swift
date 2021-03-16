@@ -69,10 +69,6 @@ class WorkoutTableViewController: UITableViewController {
             try context.save()
             workouts = try context.fetch(Workout.fetchRequest())
             let logs = workouts.filter { $0.name == name }.map{ Int($0.weight ?? "0") ?? 0 }
-            
-            if logs.count > 0 {
-                
-            }
             update(name: name, weight:"\(logs.max() ?? 0)")
         } catch let error {
             print("\(error)")
@@ -98,7 +94,7 @@ class WorkoutTableViewController: UITableViewController {
                   }
             }
             
-            if currentBest < Int(weight) ?? 0 {
+            if currentBest <= Int(weight) ?? 0 {
                 documentReference.updateData([workoutRecordName : weight])
             }
         }
