@@ -28,7 +28,8 @@ class CalculatorViewController: UIViewController {
         }
     }
 
-    let numberFormatter = NumberFormatter();
+    let numberFormatter = NumberFormatter()
+    
     var currentComputation = 45
     var computationStack = CalculatorStack()
 
@@ -116,9 +117,7 @@ class CalculatorViewController: UIViewController {
             if newValue >= 0 && newValue < 50000 {
                 currentComputation += increment
                 computationStack.push(-increment)
-
-                let formattedNumber = numberFormatter.string(from: NSNumber(value:currentComputation))
-                
+                let formattedNumber = numberFormatter.string(from: NSNumber(value: currentComputation))
                 computationLabel.text = "\(formattedNumber!) lbs"
             } else if newValue >= 50000 {
                 computationLabel.text = "Godlike MANA"

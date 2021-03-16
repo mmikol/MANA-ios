@@ -10,12 +10,12 @@ import Firebase
 
 class HomeViewController: UIViewController, UITabBarControllerDelegate {
     let database = Firestore.firestore()
-    
+    let numberFormatter = NumberFormatter()
+
     @IBOutlet weak var bestBenchLabel: UILabel!
     @IBOutlet weak var bestSquatLabel: UILabel!
     @IBOutlet weak var bestDeadliftLabel: UILabel!
    
-    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
          let tabBarIndex = tabBarController.selectedIndex
          if tabBarIndex == 0 {
@@ -31,9 +31,15 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
             documentReference.getDocument { (document, error) in
                 if let document = document, document.exists {
                     let data = document.data()
-                    self.bestBenchLabel.text = data!["best_bench"] as? String ?? ""
-                    self.bestSquatLabel.text = data!["best_squat"] as? String ?? ""
-                    self.bestDeadliftLabel.text = data!["best_deadlift"] as? String ?? ""
+                    let bestBench = data!["best_bench"] as? String ?? "0"
+                    let bestSquat = data!["best_squat"] as? String ?? "0"
+                    let bestDeadlift = data!["best_deadlift"] as? String ?? "0"
+                    let bestBenchString = self.numberFormatter.string(from: NSNumber(value: Int(bestBench) ?? 0))
+                    let bestSquatString = self.numberFormatter.string(from: NSNumber(value: Int(bestSquat) ?? 0))
+                    let bestDeadliftString = self.numberFormatter.string(from: NSNumber(value: Int(bestDeadlift) ?? 0))
+                    self.bestBenchLabel.text = "\(bestBenchString!) \nlbs"
+                    self.bestSquatLabel.text = "\(bestSquatString!) \nlbs"
+                    self.bestDeadliftLabel.text = "\(bestDeadliftString!) \nlbs"
                   } else {
                      print("Document does not exist")
                   }
@@ -43,6 +49,8 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        numberFormatter.numberStyle = .decimal
+        showPersonalBests()
         self.tabBarController?.delegate = self
     }
     
