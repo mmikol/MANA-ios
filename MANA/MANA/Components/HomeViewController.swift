@@ -50,7 +50,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
                     
                     self.nameLabel.text = "\(firstName) \(lastName)"
                     self.levelLabel.text = "Level \(String(level))"
-                    self.xpLabel.text = "\(currentXP) / \(neededXP)"
+                    self.xpLabel.text = "XP: \(currentXP) / \(neededXP)"
                     self.bestBenchLabel.text = "\(bestBenchString!) \nlbs"
                     self.bestSquatLabel.text = "\(bestSquatString!) \nlbs"
                     self.bestDeadliftLabel.text = "\(bestDeadliftString!) \nlbs"
