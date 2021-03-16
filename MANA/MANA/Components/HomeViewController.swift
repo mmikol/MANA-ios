@@ -8,18 +8,21 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITabBarControllerDelegate {
     let database = Firestore.firestore()
     
     @IBOutlet weak var bestBenchLabel: UILabel!
     @IBOutlet weak var bestSquatLabel: UILabel!
     @IBOutlet weak var bestDeadliftLabel: UILabel!
    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        showPersonalBests()
-    }
     
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+         let tabBarIndex = tabBarController.selectedIndex
+         if tabBarIndex == 0 {
+            showPersonalBests()
+         }
+    }
+
     // REMOVE HARD CODE AFTER TESTS
     private func showPersonalBests() {
         if let user = Auth.auth().currentUser {
@@ -38,6 +41,11 @@ class HomeViewController: UIViewController {
         }
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tabBarController?.delegate = self
+    }
+    
     /*
     // MARK: - Navigation
 

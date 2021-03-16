@@ -599,10 +599,10 @@
             </objects>
             <point key="canvasLocation" x="5107.2463768115949" y="827.67857142857144"/>
         </scene>
-        <!--CalculatorViewController-->
+        <!--Calculator View Controller-->
         <scene sceneID="qiL-av-yhY">
             <objects>
-                <viewController title="CalculatorViewController" interfaceStyle="dark" id="nhq-nB-JTO" customClass="CalculatorViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="dark" id="nhq-nB-JTO" customClass="CalculatorViewController" customModule="MANA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v8N-q6-atO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
