@@ -15,6 +15,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var levelProgressBar: UIProgressView!
+    @IBOutlet weak var xpLabel: UILabel!
     @IBOutlet weak var bestBenchLabel: UILabel!
     @IBOutlet weak var bestSquatLabel: UILabel!
     @IBOutlet weak var bestDeadliftLabel: UILabel!
@@ -37,17 +38,26 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
                     let firstName = data!["first_name"] as? String ?? "<first_name>"
                     let lastName = data!["last_name"] as? String ?? "<last_name>"
                     let level = data!["level"] as? Int ?? 0
+                    let currentXP = data!["xp"] as? String ?? "0"
+                    let neededXP = self.computeNeededXP(level: level)
+                    let levelProgress = Float(currentXP) / Float(neededXP)
                     let bestBench = data!["best_bench"] as? String ?? "0"
                     let bestSquat = data!["best_squat"] as? String ?? "0"
                     let bestDeadlift = data!["best_deadlift"] as? String ?? "0"
                     let bestBenchString = self.numberFormatter.string(from: NSNumber(value: Int(bestBench) ?? 0))
                     let bestSquatString = self.numberFormatter.string(from: NSNumber(value: Int(bestSquat) ?? 0))
                     let bestDeadliftString = self.numberFormatter.string(from: NSNumber(value: Int(bestDeadlift) ?? 0))
+                    
                     self.nameLabel.text = "\(firstName) \(lastName)"
                     self.levelLabel.text = "Level \(String(level))"
+                    self.xpLabel.text = "\(currentXP) / \(neededXP)"
                     self.bestBenchLabel.text = "\(bestBenchString!) \nlbs"
                     self.bestSquatLabel.text = "\(bestSquatString!) \nlbs"
                     self.bestDeadliftLabel.text = "\(bestDeadliftString!) \nlbs"
+                    
+                    self.levelProgressBar.setProgress(levelProgress,
+                            animated: true)
+
                   } else {
                      print("Document does not exist")
                   }
@@ -55,6 +65,17 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
         }
     }
 
+    private func computeCurrentXP(level: Int) -> Int {
+        let threshold = 50
+        return (level^^2 - level) * threshold / 2
+    }
+    
+    private func computeNeededXP(level: Int) -> Int {
+        let threshold = 50
+        return level * threshold
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         numberFormatter.numberStyle = .decimal

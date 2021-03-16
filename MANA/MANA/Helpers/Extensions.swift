@@ -9,6 +9,7 @@
 
 import UIKit
 
+// Done button from https://stackoverflow.com/questions/28338981/how-to-add-done-button-to-numpad-in-ios-using-swift
 extension UITextField{
     @IBInspectable var doneAccessory: Bool{
         get{
@@ -40,4 +41,11 @@ extension UITextField{
     {
         self.resignFirstResponder()
     }
+}
+
+// Exponentiation from https://stackoverflow.com/questions/24196689/how-to-get-the-power-of-some-integer-in-swift-language
+precedencegroup PowerPrecedence { higherThan: MultiplicationPrecedence }
+infix operator ^^ : PowerPrecedence
+func ^^ (radix: Int, power: Int) -> Int {
+    return Int(pow(Double(radix), Double(power)))
 }
