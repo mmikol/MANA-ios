@@ -9,11 +9,12 @@ import UIKit
 import Firebase
 import Charts
 
-class HomeViewController: UIViewController, UITabBarControllerDelegate {
+class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartViewDelegate {
     var lineChart = LineChartView()
     
     let database = Firestore.firestore()
     let numberFormatter = NumberFormatter()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -84,16 +85,20 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
         numberFormatter.numberStyle = .decimal
         showUserInformation()
         self.tabBarController?.delegate = self
+        lineChart.delegate = self
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print(context)
+//        lineChart.frame = CGRect(x: 0, y: 0, width: self.view.fame.size, height: self.view.frame.size)
+        lineChart.center = view.center
+        view.addSubview(lineChart)
+        
+        var entries = [ChartDataEntry]()
+        let set = LineChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.joyful()
+        let data = LineChartData(dataSet: set)
+        lineChart.data = data
     }
-    */
-
 }
