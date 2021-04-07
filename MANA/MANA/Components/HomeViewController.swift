@@ -7,10 +7,10 @@
 
 import UIKit
 import Firebase
-import Charts
+//import Charts ChartViewDelegate
 
-class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartViewDelegate {
-    var lineChart = LineChartView()
+class HomeViewController: UIViewController, UITabBarControllerDelegate {
+//    var lineChart = LineChartView()
     
     let database = Firestore.firestore()
     let numberFormatter = NumberFormatter()
@@ -85,7 +85,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         numberFormatter.numberStyle = .decimal
         showUserInformation()
         self.tabBarController?.delegate = self
-        lineChart.delegate = self
+//        lineChart.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
@@ -104,13 +104,13 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
             print(w)
         }
 //        lineChart.frame = CGRect(x: 0, y: 0, width: self.view.fame.size, height: self.view.frame.size)
-        lineChart.center = view.center
-        view.addSubview(lineChart)
-        
-        var entries = [ChartDataEntry]()
-        let set = LineChartDataSet(entries: entries)
-        set.colors = ChartColorTemplates.joyful()
-        let data = LineChartData(dataSet: set)
-        lineChart.data = data
+//        lineChart.center = view.center
+//        view.addSubview(lineChart)
+//
+//        var entries = [ChartDataEntry]()
+//        let set = LineChartDataSet(entries: entries)
+//        set.colors = ChartColorTemplates.joyful()
+//        let data = LineChartData(dataSet: set)
+//        lineChart.data = data
     }
 }
