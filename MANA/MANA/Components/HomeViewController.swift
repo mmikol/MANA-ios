@@ -90,7 +90,19 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print(context)
+        
+        // REFACTOR WITH DUPLICATE CODE IN WORKOUTTABLEVIEWCONTROLLER
+        var workouts = [Workout]()
+        
+        do {
+            workouts = try context.fetch(Workout.fetchRequest())
+        } catch let error {
+            print("\(error)")
+        }
+
+        for w in workouts {
+            print(w)
+        }
 //        lineChart.frame = CGRect(x: 0, y: 0, width: self.view.fame.size, height: self.view.frame.size)
         lineChart.center = view.center
         view.addSubview(lineChart)
