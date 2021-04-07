@@ -11,17 +11,8 @@ target 'MANA' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
-
-  target 'MANATests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'MANAUITests' do
-    # Pods for testing
-  end
-
-
+  pod 'Charts'
+ 
   post_install do |installer|
     installer.pods_project.build_configurations.each do |config|
       config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"

@@ -7,8 +7,11 @@
 
 import UIKit
 import Firebase
+import Charts
 
 class HomeViewController: UIViewController, UITabBarControllerDelegate {
+    var lineChart = LineChartView()
+    
     let database = Firestore.firestore()
     let numberFormatter = NumberFormatter()
 
