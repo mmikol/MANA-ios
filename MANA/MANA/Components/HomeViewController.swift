@@ -13,7 +13,8 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     let database = Firestore.firestore()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let numberFormatter = NumberFormatter()
-    
+
+    var workouts = [Workout]()
     var lineChart = LineChartView()
     
     @IBOutlet weak var benchChartButton: UIButton!
@@ -30,7 +31,6 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBAction func benchChartButtonTapped(_ sender: Any) {
         guard benchChartButton.isSelected else {
             benchChartButton.isSelected.toggle()
-            generateChart()
             if squatChartButton.isSelected {
                 squatChartButton.isSelected.toggle()
             } else if deadliftChartButton.isSelected {
@@ -43,7 +43,6 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBAction func squatChartButtonTapped(_ sender: Any) {
         guard squatChartButton.isSelected else {
             squatChartButton.isSelected.toggle()
-            generateChart()
             if benchChartButton.isSelected {
                 benchChartButton.isSelected.toggle()
             } else if deadliftChartButton.isSelected {
@@ -56,7 +55,6 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBAction func deadliftChartButtonTapped(_ sender: Any) {
         guard deadliftChartButton.isSelected else {
             deadliftChartButton.isSelected.toggle()
-            generateChart()
             if benchChartButton.isSelected {
                 benchChartButton.isSelected.toggle()
             } else if squatChartButton.isSelected {
@@ -125,6 +123,12 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         showUserInformation()
         self.tabBarController?.delegate = self
         lineChart.delegate = self
+        
+        do {
+            workouts = try context.fetch(Workout.fetchRequest())
+        } catch let error {
+            print("\(error)")
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -132,46 +136,33 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         lineChart.noDataText = "No Chart data found. Time to lift!"
         lineChart.frame = CGRect(x: 0, y: view.center.y - 250, width: self.view.frame.size.width, height: 300)
         view.addSubview(lineChart)
-        generateChart()
+//        generateChart()
     }
     
     private func generateChart() {
-        var workouts: [Workout]
         var entries = [ChartDataEntry]()
-
-        do {
-            workouts = try context.fetch(Workout.fetchRequest())
-            
-            if benchChartButton.isSelected {
-                workouts.filter { workout in
-                            workout.name == "Bench Press"
-                        }
-                        .enumerated()
-                        .forEach { (count, workout) in
-                            entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(count)))
-                        }
-            } else if squatChartButton.isSelected {
-                workouts.filter { workout in
-                            workout.name == "Squat"
-                        }
-                        .enumerated()
-                        .forEach { (count, workout) in
-                            entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(count)))
-                        }
-            } else if deadliftChartButton.isSelected {
-                workouts.filter { workout in
-                            workout.name == "Deadlift"
-                        }
-                        .enumerated()
-                        .forEach { (count, workout) in
-                            entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(count)))
-                        }
+        
+        if benchChartButton.isSelected {
+            for workout in workouts {
+                if (workout.name == "Bench Press") {
+                    entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(workout.weight!) ?? 0))
+                }
             }
-        } catch let error {
-            print("\(error)")
+        } else if squatChartButton.isSelected {
+            for workout in workouts {
+                if (workout.name == "Squat") {
+                    entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(workout.weight!) ?? 0))
+                }
+            }
+        } else if deadliftChartButton.isSelected {
+            for workout in workouts {
+                if (workout.name == "Deadlift") {
+                    entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(workout.weight!) ?? 0))
+                }
+            }
         }
         
-        let set = LineChartDataSet(entries: entries)
+        let set = LineChartDataSet(entries: entries.isEmpty ? [ChartDataEntry]() : entries)
         set.colors = ChartColorTemplates.joyful()
         let data = LineChartData(dataSet: set)
         lineChart.data = data
