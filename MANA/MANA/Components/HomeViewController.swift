@@ -33,6 +33,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBAction func benchChartButtonTapped(_ sender: Any) {
         guard benchChartButton.isSelected else {
             benchChartButton.isSelected.toggle()
+            generateChart()
             if squatChartButton.isSelected {
                 squatChartButton.isSelected.toggle()
             } else if deadliftChartButton.isSelected {
@@ -45,6 +46,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBAction func squatChartButtonTapped(_ sender: Any) {
         guard squatChartButton.isSelected else {
             squatChartButton.isSelected.toggle()
+            generateChart()
             if benchChartButton.isSelected {
                 benchChartButton.isSelected.toggle()
             } else if deadliftChartButton.isSelected {
@@ -57,6 +59,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBAction func deadliftChartButtonTapped(_ sender: Any) {
         guard deadliftChartButton.isSelected else {
             deadliftChartButton.isSelected.toggle()
+            generateChart()
             if benchChartButton.isSelected {
                 benchChartButton.isSelected.toggle()
             } else if squatChartButton.isSelected {
@@ -138,7 +141,10 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         lineChart.frame = CGRect(x: 0, y: 50, width: 350, height: 250)
         lineChart.center = view.center
         view.addSubview(lineChart)
-
+        generateChart()
+    }
+    
+    private func generateChart() {
         var workouts = [Workout]()
 
         do {
