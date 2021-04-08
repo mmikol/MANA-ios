@@ -135,27 +135,43 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         super.viewDidLayoutSubviews()
         
         // REFACTOR WITH DUPLICATE CODE IN WORKOUTTABLEVIEWCONTROLLER
-//        lineChart.frame = CGRect(x: 0, y: 50, width: 350, height: 250)
-//        lineChart.center = view.center
-//        view.addSubview(lineChart)
-//
-//        var workouts = [Workout]()
-//
-//        do {
-//            workouts = try context.fetch(Workout.fetchRequest())
-//        } catch let error {
-//            print("\(error)")
-//        }
-//
-//        var entries = [ChartDataEntry]()
-//
-//        for x in 1...20 {
-//            entries.append(ChartDataEntry(x: Double(x), y: Double(x)))
-//        }
-//
-//        let set = LineChartDataSet(entries: entries)
-//        set.colors = ChartColorTemplates.joyful()
-//        let data = LineChartData(dataSet: set)
-//        lineChart.data = data
+        lineChart.frame = CGRect(x: 0, y: 50, width: 350, height: 250)
+        lineChart.center = view.center
+        view.addSubview(lineChart)
+
+        var workouts = [Workout]()
+
+        do {
+            workouts = try context.fetch(Workout.fetchRequest())
+        } catch let error {
+            print("\(error)")
+        }
+
+        var entries = [ChartDataEntry]()
+
+        if benchChartButton.isSelected {
+            workouts.enumerated()
+                    .filter { $1.name == "Bench Press" }
+                    .forEach { (count, workout) in
+                        entries.append(ChartDataEntry(x: Double(workout.weight), y: Double(count)))
+                    }
+        } else if squatChartButton.isSelected {
+            workouts.enumerated()
+                    .filter { $1.name == "Squat" }
+                    .forEach { (count, workout) in
+                        entries.append(ChartDataEntry(x: Double(workout.weight), y: Double(count)))
+                    }
+        } else if deadliftChartButton.isSelected {
+            workouts.enumerated()
+                    .filter { $1.name == "Deadlift" }
+                    .forEach { (count, workout) in
+                        entries.append(ChartDataEntry(x: Double(workout.weight), y: Double(count)))
+                    }
+        }
+        
+        let set = LineChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.joyful()
+        let data = LineChartData(dataSet: set)
+        lineChart.data = data
     }
 }
