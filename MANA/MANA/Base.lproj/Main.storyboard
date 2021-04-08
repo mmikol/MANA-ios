@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kuL-KN-yMJ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BUD-7I-xXe">
-                                <rect key="frame" x="57" y="394" width="300" height="256.5"/>
+                                <rect key="frame" x="57" y="394" width="300" height="256.33333333333326"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hZH-Yd-2Ee">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="34"/>
@@ -133,7 +133,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJ3-5d-wnb">
-                                        <rect key="frame" x="0.0" y="236" width="300" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="236" width="300" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -236,7 +236,7 @@
                                 <rect key="frame" x="56" y="412" width="300" height="198"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qkH-Dq-0fQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="33.666666666666664"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33.5" id="j7s-Jb-7Rn"/>
                                         </constraints>
@@ -244,12 +244,12 @@
                                         <textInputTraits key="textInputTraits" textContentType="tel"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZtU-Xi-lE1">
-                                        <rect key="frame" x="0.0" y="53.5" width="300" height="34"/>
+                                        <rect key="frame" x="0.0" y="53.666666666666686" width="300" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw3-r4-cfU">
-                                        <rect key="frame" x="0.0" y="107.5" width="300" height="50"/>
+                                        <rect key="frame" x="0.0" y="107.66666666666663" width="300" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="NHk-TY-Z5l"/>
                                             <constraint firstAttribute="height" constant="50" id="T5d-VL-ALp">
@@ -272,7 +272,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvI-Vy-lti">
-                                        <rect key="frame" x="0.0" y="177.5" width="300" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="177.66666666666663" width="300" height="20.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20.5" id="lKc-CW-eYS"/>
                                         </constraints>
@@ -355,13 +355,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PersonalBestCircle" translatesAutoresizingMaskIntoConstraints="NO" id="xbQ-uZ-AKJ">
-                                <rect key="frame" x="124" y="600" width="170" height="170"/>
+                                <rect key="frame" x="124.00000000000001" y="465" width="164.33333333333337" height="440"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PersonalBestCircle" translatesAutoresizingMaskIntoConstraints="NO" id="gao-n3-NRJ">
-                                <rect key="frame" x="259" y="600" width="170" height="170"/>
+                                <rect key="frame" x="253.33333333333337" y="465" width="175.66666666666663" height="440"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DPR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llj-A2-Sgz">
-                                <rect key="frame" x="294" y="635" width="100" height="100"/>
+                                <rect key="frame" x="288.33333333333331" y="635" width="105.66666666666669" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -386,30 +386,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bench Press" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="799-3U-rqB">
-                                <rect key="frame" x="5" y="762" width="129" height="21"/>
+                                <rect key="frame" x="5" y="762" width="134.66666666666666" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzm-cB-GO8">
-                                <rect key="frame" x="179" y="762" width="56" height="21"/>
+                                <rect key="frame" x="184.66666666666666" y="762" width="44.666666666666657" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadlift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDe-kF-JlF">
-                                <rect key="frame" x="294" y="757" width="100" height="31"/>
+                                <rect key="frame" x="288.33333333333331" y="757" width="105.66666666666669" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kX-8I-ocG">
-                                <rect key="frame" x="157" y="635" width="100" height="100"/>
+                                <rect key="frame" x="162.66666666666666" y="635" width="88.666666666666657" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Records" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sav-wd-DRm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Personal Records" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sav-wd-DRm">
                                 <rect key="frame" x="134" y="580" width="143" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -424,35 +424,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThY-vQ-wYd">
-                                <rect key="frame" x="36" y="523" width="44" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="o5t-uo-GVs"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4do-23-wte">
+                                <rect key="frame" x="50" y="490" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Bench"/>
                                 <connections>
-                                    <action selector="benchChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="lPi-mN-wTw"/>
+                                    <action selector="benchChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="eTx-3D-CIg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccl-zh-S9a">
-                                <rect key="frame" x="145" y="523" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeH-wH-USI">
+                                <rect key="frame" x="112" y="490" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Squat"/>
+                                <connections>
+                                    <action selector="squatChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="3Ki-Jn-aQu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5K2-Jk-4Dx">
+                                <rect key="frame" x="175" y="490" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Deadlift"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-yX-ZoC">
+                                <rect key="frame" x="175" y="490" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Deadlift"/>
                                 <connections>
-                                    <action selector="deadliftChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="Zfs-NK-xag"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZQ-rb-WkQ">
-                                <rect key="frame" x="93" y="523" width="41" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="41" id="HdB-z6-iAC"/>
-                                </constraints>
-                                <state key="normal" title="Squat"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be4-OT-CA2">
-                                <rect key="frame" x="93" y="523" width="41" height="30"/>
-                                <state key="normal" title="Squat"/>
-                                <connections>
-                                    <action selector="squatChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="o6A-K2-FqR"/>
+                                    <action selector="deadliftChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="B8O-VG-z9k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -461,8 +459,6 @@
                         <constraints>
                             <constraint firstItem="xbQ-uZ-AKJ" firstAttribute="leading" secondItem="x4N-pj-Hrf" secondAttribute="trailing" constant="3" id="2hF-Nz-ouc"/>
                             <constraint firstItem="FvA-Ae-kFC" firstAttribute="leading" secondItem="OFA-jl-9xZ" secondAttribute="leading" constant="21" id="4NO-JW-8OD"/>
-                            <constraint firstItem="ccl-zh-S9a" firstAttribute="leading" secondItem="be4-OT-CA2" secondAttribute="trailing" constant="11" id="5d1-yp-urf"/>
-                            <constraint firstItem="iVp-Xr-PLb" firstAttribute="top" secondItem="ThY-vQ-wYd" secondAttribute="bottom" constant="47" id="5pr-zT-D82"/>
                             <constraint firstItem="5kX-8I-ocG" firstAttribute="leading" secondItem="iVp-Xr-PLb" secondAttribute="trailing" constant="3" id="6Jf-ik-mhv"/>
                             <constraint firstItem="8B2-nd-H01" firstAttribute="leading" secondItem="OFA-jl-9xZ" secondAttribute="leading" constant="96" id="6Oo-dv-Hm2"/>
                             <constraint firstItem="D6l-p4-fnF" firstAttribute="trailing" secondItem="Llj-A2-Sgz" secondAttribute="trailing" id="6Vj-Eb-2pG"/>
@@ -473,36 +469,27 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gao-n3-NRJ" secondAttribute="trailing" constant="-35" id="BeA-5x-xnF"/>
                             <constraint firstItem="799-3U-rqB" firstAttribute="leading" secondItem="OFA-jl-9xZ" secondAttribute="leading" constant="5" id="C5Z-z5-bEy"/>
                             <constraint firstItem="FvA-Ae-kFC" firstAttribute="top" secondItem="D6l-p4-fnF" secondAttribute="bottom" constant="8" id="D9R-x1-VpZ"/>
-                            <constraint firstItem="be4-OT-CA2" firstAttribute="leading" secondItem="ThY-vQ-wYd" secondAttribute="trailing" constant="13" id="Dtx-zq-tWF"/>
-                            <constraint firstItem="ThY-vQ-wYd" firstAttribute="baseline" secondItem="be4-OT-CA2" secondAttribute="baseline" id="ETg-gd-0ge"/>
                             <constraint firstItem="5kX-8I-ocG" firstAttribute="firstBaseline" secondItem="Llj-A2-Sgz" secondAttribute="firstBaseline" id="FiN-Bc-Lv1"/>
                             <constraint firstItem="D6l-p4-fnF" firstAttribute="centerX" secondItem="5kX-8I-ocG" secondAttribute="centerX" id="Fld-pR-tIY"/>
                             <constraint firstItem="Llj-A2-Sgz" firstAttribute="leading" secondItem="xbQ-uZ-AKJ" secondAttribute="trailing" id="GDA-wd-Ktw"/>
                             <constraint firstItem="5kX-8I-ocG" firstAttribute="baseline" secondItem="Llj-A2-Sgz" secondAttribute="baseline" id="GIh-Lb-Mwg"/>
                             <constraint firstItem="xbQ-uZ-AKJ" firstAttribute="top" secondItem="gao-n3-NRJ" secondAttribute="top" id="HAG-u1-Zpv"/>
-                            <constraint firstItem="ThY-vQ-wYd" firstAttribute="leading" secondItem="OFA-jl-9xZ" secondAttribute="leading" constant="36" id="KVo-Eh-Azo"/>
                             <constraint firstItem="OFA-jl-9xZ" firstAttribute="trailing" secondItem="PVA-TZ-8T3" secondAttribute="trailing" constant="79" id="Nav-ve-7Q8"/>
-                            <constraint firstItem="be4-OT-CA2" firstAttribute="trailing" secondItem="799-3U-rqB" secondAttribute="trailing" id="P3j-Si-bVR"/>
                             <constraint firstItem="799-3U-rqB" firstAttribute="top" secondItem="x4N-pj-Hrf" secondAttribute="bottom" constant="27" id="QP4-Yb-XxU"/>
                             <constraint firstItem="Llj-A2-Sgz" firstAttribute="leading" secondItem="fDe-kF-JlF" secondAttribute="leading" id="R4N-bX-gqr"/>
                             <constraint firstItem="799-3U-rqB" firstAttribute="firstBaseline" secondItem="Tzm-cB-GO8" secondAttribute="firstBaseline" id="REi-QF-eEA"/>
                             <constraint firstItem="PVA-TZ-8T3" firstAttribute="top" secondItem="D6l-p4-fnF" secondAttribute="bottom" constant="1" id="ROF-k4-GOy"/>
                             <constraint firstItem="iVp-Xr-PLb" firstAttribute="centerX" secondItem="799-3U-rqB" secondAttribute="centerX" id="UbZ-74-zmA"/>
-                            <constraint firstItem="be4-OT-CA2" firstAttribute="trailing" secondItem="mZQ-rb-WkQ" secondAttribute="trailing" id="V4H-4p-3UW"/>
                             <constraint firstItem="5kX-8I-ocG" firstAttribute="centerX" secondItem="Tzm-cB-GO8" secondAttribute="centerX" id="YTN-R9-e3X"/>
                             <constraint firstItem="x4N-pj-Hrf" firstAttribute="firstBaseline" secondItem="5kX-8I-ocG" secondAttribute="firstBaseline" id="YaO-CI-qCC"/>
                             <constraint firstItem="gao-n3-NRJ" firstAttribute="leading" secondItem="5kX-8I-ocG" secondAttribute="trailing" constant="2" id="YdF-Vp-GqU"/>
                             <constraint firstItem="gao-n3-NRJ" firstAttribute="leading" secondItem="Tzm-cB-GO8" secondAttribute="trailing" constant="24" id="bs5-lg-cIR"/>
-                            <constraint firstItem="be4-OT-CA2" firstAttribute="leading" secondItem="mZQ-rb-WkQ" secondAttribute="leading" id="dSF-O3-eW0"/>
                             <constraint firstItem="8B2-nd-H01" firstAttribute="top" secondItem="OFA-jl-9xZ" secondAttribute="top" constant="38" id="gIW-b7-CVc"/>
                             <constraint firstItem="Tzm-cB-GO8" firstAttribute="centerY" secondItem="fDe-kF-JlF" secondAttribute="centerY" id="gR9-mC-0Ed"/>
                             <constraint firstItem="gao-n3-NRJ" firstAttribute="centerX" secondItem="Llj-A2-Sgz" secondAttribute="centerX" id="j9l-cB-uNR"/>
                             <constraint firstItem="D6l-p4-fnF" firstAttribute="trailing" secondItem="Ezz-Jk-uv7" secondAttribute="trailingMargin" id="kB5-sR-szV"/>
                             <constraint firstItem="fDe-kF-JlF" firstAttribute="top" secondItem="Llj-A2-Sgz" secondAttribute="bottom" constant="22" id="nPW-Z7-cW3"/>
-                            <constraint firstItem="sav-wd-DRm" firstAttribute="top" secondItem="ccl-zh-S9a" secondAttribute="bottom" constant="27" id="nRQ-On-5LW"/>
-                            <constraint firstItem="mZQ-rb-WkQ" firstAttribute="baseline" secondItem="ccl-zh-S9a" secondAttribute="baseline" id="pCz-Zu-DJO"/>
                             <constraint firstItem="OFA-jl-9xZ" firstAttribute="trailing" secondItem="8B2-nd-H01" secondAttribute="trailing" constant="36" id="ptK-xR-Tn1"/>
-                            <constraint firstItem="x4N-pj-Hrf" firstAttribute="top" secondItem="ThY-vQ-wYd" secondAttribute="bottom" constant="82" id="q1K-80-gHi"/>
                             <constraint firstItem="Llj-A2-Sgz" firstAttribute="trailing" secondItem="fDe-kF-JlF" secondAttribute="trailing" id="rdk-00-Wxk"/>
                             <constraint firstItem="sav-wd-DRm" firstAttribute="leading" secondItem="OFA-jl-9xZ" secondAttribute="leading" constant="134" id="tvK-HV-xtg"/>
                             <constraint firstItem="xbQ-uZ-AKJ" firstAttribute="bottom" secondItem="gao-n3-NRJ" secondAttribute="bottom" id="v61-Hm-jYD"/>
@@ -512,20 +499,19 @@
                             <constraint firstItem="8B2-nd-H01" firstAttribute="leading" secondItem="PVA-TZ-8T3" secondAttribute="leading" id="xh8-X9-BTV"/>
                             <constraint firstItem="FvA-Ae-kFC" firstAttribute="leading" secondItem="x4N-pj-Hrf" secondAttribute="leading" id="ye8-Nv-GWw"/>
                             <constraint firstItem="iVp-Xr-PLb" firstAttribute="bottom" secondItem="xbQ-uZ-AKJ" secondAttribute="bottom" id="zfA-oQ-Bpp"/>
-                            <constraint firstItem="mZQ-rb-WkQ" firstAttribute="baseline" secondItem="be4-OT-CA2" secondAttribute="baseline" id="zx5-PH-XaW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="a6N-tO-qoR"/>
                     <connections>
-                        <outlet property="benchChartButton" destination="ThY-vQ-wYd" id="Bz4-df-fZt"/>
+                        <outlet property="benchChartButton" destination="4do-23-wte" id="9hK-Vr-D5Q"/>
                         <outlet property="bestBenchLabel" destination="x4N-pj-Hrf" id="UQT-FQ-1i7"/>
                         <outlet property="bestDeadliftLabel" destination="Llj-A2-Sgz" id="PYT-Bx-T1I"/>
                         <outlet property="bestSquatLabel" destination="5kX-8I-ocG" id="0Pr-0T-Rvc"/>
-                        <outlet property="deadliftChartButton" destination="ccl-zh-S9a" id="HcH-05-O62"/>
+                        <outlet property="deadliftChartButton" destination="o0n-yX-ZoC" id="51A-EL-sox"/>
                         <outlet property="levelLabel" destination="FvA-Ae-kFC" id="NWK-i0-zQo"/>
                         <outlet property="levelProgressBar" destination="8B2-nd-H01" id="K97-KM-iDB"/>
                         <outlet property="nameLabel" destination="D6l-p4-fnF" id="JCf-Th-xJn"/>
-                        <outlet property="squatChartButton" destination="be4-OT-CA2" id="BeD-Q1-DxH"/>
+                        <outlet property="squatChartButton" destination="xeH-wH-USI" id="a3X-Us-rpD"/>
                         <outlet property="xpLabel" destination="PVA-TZ-8T3" id="avY-TQ-dnZ"/>
                     </connections>
                 </viewController>
@@ -548,7 +534,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhE-Tc-jjC">
-                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="30"/>
                                                 <state key="normal" title="Bench"/>
                                                 <connections>
                                                     <action selector="benchButton:" destination="ZzW-Y8-miK" eventType="touchUpInside" id="fZl-yG-wgj"/>
@@ -556,14 +542,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Up-gJy">
-                                                <rect key="frame" x="106.5" y="0.0" width="107" height="30"/>
+                                                <rect key="frame" x="106.66666666666666" y="0.0" width="106.66666666666666" height="30"/>
                                                 <state key="normal" title="Squat"/>
                                                 <connections>
                                                     <action selector="squatButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="ZiP-ZM-pJD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-bP-KGf">
-                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="30"/>
+                                                <rect key="frame" x="213.33333333333329" y="0.0" width="106.66666666666666" height="30"/>
                                                 <state key="normal" title="Deadlift"/>
                                                 <connections>
                                                     <action selector="deadliftButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="DI9-UK-nP5"/>

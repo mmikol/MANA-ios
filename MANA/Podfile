@@ -12,7 +12,7 @@ target 'MANA' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
  
-  post_install do |installer|
+  post_install do |installer, installer_representation |
     installer.pods_project.build_configurations.each do |config|
       config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
     end

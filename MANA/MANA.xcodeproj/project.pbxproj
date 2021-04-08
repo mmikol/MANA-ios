@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		722DA0B5758F4CDA592712D5 /* Pods_MANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D39D37E231EBE73D27CE74 /* Pods_MANA.framework */; };
+		60AA444BC7B5DAB38716F088 /* Pods_MANA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ADC5469DAADB89FCEFAAA44 /* Pods_MANA.framework */; };
 		BC18481725D8D98A005D40DE /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */; };
 		BC18481C25D8DB58005D40DE /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */; };
 		BC54A6AE25F0531300CD8800 /* AchievementProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC54A6AD25F0531300CD8800 /* AchievementProperty.swift */; };
@@ -27,7 +27,6 @@
 		BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */; };
 		BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */; };
 		BCEB4C5025BE1AF100A5E39C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB4C4F25BE1AF100A5E39C /* Constants.swift */; };
-		BCEED5ED261E58EE00984157 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = BCEED5EC261E58EE00984157 /* Charts */; };
 		BCFC838B25DF1C400007CBE6 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC838A25DF1C400007CBE6 /* Workout+CoreDataClass.swift */; };
 		BCFC839025DF1C430007CBE6 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC838F25DF1C430007CBE6 /* Workout+CoreDataProperties.swift */; };
 		BCFC839525DF23640007CBE6 /* WorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC839425DF23640007CBE6 /* WorkoutData.swift */; };
@@ -51,7 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B0D39D37E231EBE73D27CE74 /* Pods_MANA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ADC5469DAADB89FCEFAAA44 /* Pods_MANA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MANA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B7FFAA680F5E6038019D3A7 /* Pods-MANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.release.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.release.xcconfig"; sourceTree = "<group>"; };
 		BC18481625D8D98A005D40DE /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		BC18481B25D8DB58005D40DE /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		BC54A6AD25F0531300CD8800 /* AchievementProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementProperty.swift; sourceTree = "<group>"; };
@@ -62,7 +62,6 @@
 		BCAFC8B625D899750095F560 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BCBE339325C75ECA00AE111F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		BCBE339B25C75EDA00AE111F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		BCDD89F7261E56DB00858ABF /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE47AED25BA23BD000B6C7D /* MANA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MANA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE47AF025BA23BD000B6C7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE47AF225BA23BD000B6C7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,8 +78,7 @@
 		BCFC838A25DF1C400007CBE6 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataClass.swift"; path = "/Users/miliano/Documents/GitHub/MANA/MANA/MANA/Workout+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		BCFC838F25DF1C430007CBE6 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataProperties.swift"; path = "/Users/miliano/Documents/GitHub/MANA/MANA/MANA/Workout+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		BCFC839425DF23640007CBE6 /* WorkoutData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutData.swift; sourceTree = "<group>"; };
-		E2301AFDBDC615AA968321C6 /* Pods-MANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.debug.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.debug.xcconfig"; sourceTree = "<group>"; };
-		FC5C2CBC597B760D78BD182D /* Pods-MANA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.release.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.release.xcconfig"; sourceTree = "<group>"; };
+		CA46AFE7AF10468405174BC9 /* Pods-MANA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MANA.debug.xcconfig"; path = "Target Support Files/Pods-MANA/Pods-MANA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCEED5ED261E58EE00984157 /* Charts in Frameworks */,
-				722DA0B5758F4CDA592712D5 /* Pods_MANA.framework in Frameworks */,
+				60AA444BC7B5DAB38716F088 /* Pods_MANA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,11 +107,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		97864983BA787579B872C9A2 /* Frameworks */ = {
+		6A2476212CBEE706837FB5A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BCDD89F7261E56DB00858ABF /* Charts.framework */,
-				B0D39D37E231EBE73D27CE74 /* Pods_MANA.framework */,
+				1ADC5469DAADB89FCEFAAA44 /* Pods_MANA.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,8 +118,8 @@
 		B9D2698E28FE844EEC27FC34 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E2301AFDBDC615AA968321C6 /* Pods-MANA.debug.xcconfig */,
-				FC5C2CBC597B760D78BD182D /* Pods-MANA.release.xcconfig */,
+				CA46AFE7AF10468405174BC9 /* Pods-MANA.debug.xcconfig */,
+				9B7FFAA680F5E6038019D3A7 /* Pods-MANA.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -193,7 +189,7 @@
 				BCE47AEF25BA23BD000B6C7D /* MANA */,
 				BCE47AEE25BA23BD000B6C7D /* Products */,
 				B9D2698E28FE844EEC27FC34 /* Pods */,
-				97864983BA787579B872C9A2 /* Frameworks */,
+				6A2476212CBEE706837FB5A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,20 +229,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCE47B1A25BA23BF000B6C7D /* Build configuration list for PBXNativeTarget "MANA" */;
 			buildPhases = (
-				6161AFAFF832332C08862C09 /* [CP] Check Pods Manifest.lock */,
+				5B95EDC6E0583EFC9D641C58 /* [CP] Check Pods Manifest.lock */,
 				BCE47AE925BA23BD000B6C7D /* Sources */,
 				BCE47AEA25BA23BD000B6C7D /* Frameworks */,
 				BCE47AEB25BA23BD000B6C7D /* Resources */,
-				DB9819A2F7E9BBD05A0D6716 /* [CP] Embed Pods Frameworks */,
+				D265DE4BE991524309076223 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MANA;
-			packageProductDependencies = (
-				BCEED5EC261E58EE00984157 /* Charts */,
-			);
 			productName = MANA;
 			productReference = BCE47AED25BA23BD000B6C7D /* MANA.app */;
 			productType = "com.apple.product-type.application";
@@ -319,7 +312,7 @@
 			);
 			mainGroup = BCE47AE425BA23BD000B6C7D;
 			packageReferences = (
-				BCEED5EB261E58EE00984157 /* XCRemoteSwiftPackageReference "Charts" */,
+				BCEED5EB261E58EE00984157 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = BCE47AEE25BA23BD000B6C7D /* Products */;
 			projectDirPath = "";
@@ -361,7 +354,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6161AFAFF832332C08862C09 /* [CP] Check Pods Manifest.lock */ = {
+		5B95EDC6E0583EFC9D641C58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,7 +376,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB9819A2F7E9BBD05A0D6716 /* [CP] Embed Pods Frameworks */ = {
+		D265DE4BE991524309076223 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -595,7 +588,7 @@
 		};
 		BCE47B1B25BA23BF000B6C7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2301AFDBDC615AA968321C6 /* Pods-MANA.debug.xcconfig */;
+			baseConfigurationReference = CA46AFE7AF10468405174BC9 /* Pods-MANA.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -605,6 +598,7 @@
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = MANA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -619,7 +613,7 @@
 		};
 		BCE47B1C25BA23BF000B6C7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC5C2CBC597B760D78BD182D /* Pods-MANA.release.xcconfig */;
+			baseConfigurationReference = 9B7FFAA680F5E6038019D3A7 /* Pods-MANA.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -629,6 +623,7 @@
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = MANA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -767,7 +762,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BCEED5EB261E58EE00984157 /* XCRemoteSwiftPackageReference "Charts" */ = {
+		BCEED5EB261E58EE00984157 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {
@@ -776,14 +771,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BCEED5EC261E58EE00984157 /* Charts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BCEED5EB261E58EE00984157 /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = Charts;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BCE47AF925BA23BD000B6C7D /* MANA.xcdatamodeld */ = {
