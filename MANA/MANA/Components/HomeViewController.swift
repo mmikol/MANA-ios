@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     let numberFormatter = NumberFormatter()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
+
     @IBOutlet weak var benchChartButton: UIButton!
     @IBOutlet weak var squatChartButton: UIButton!
     @IBOutlet weak var deadliftChartButton: UIButton!
@@ -27,6 +28,8 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBOutlet weak var bestSquatLabel: UILabel!
     @IBOutlet weak var bestDeadliftLabel: UILabel!
    
+
+    
     @IBAction func benchChartButtonTapped(_ sender: Any) {
         guard benchChartButton.isSelected else {
             benchChartButton.isSelected.toggle()
@@ -38,7 +41,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
             return
         }
     }
-
+    
     @IBAction func squatChartButtonTapped(_ sender: Any) {
         guard squatChartButton.isSelected else {
             squatChartButton.isSelected.toggle()
