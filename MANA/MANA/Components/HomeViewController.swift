@@ -7,12 +7,15 @@
 
 import UIKit
 import Firebase
+import Charts
 
 class HomeViewController: UIViewController, UITabBarControllerDelegate {
     let database = Firestore.firestore()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let numberFormatter = NumberFormatter()
-
+    
+    var lineChart = LineChartView()
+    
     @IBOutlet weak var benchChartButton: UIButton!
     @IBOutlet weak var squatChartButton: UIButton!
     @IBOutlet weak var deadliftChartButton: UIButton!
@@ -27,7 +30,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
     @IBAction func benchChartButtonTapped(_ sender: Any) {
         guard benchChartButton.isSelected else {
             benchChartButton.isSelected.toggle()
-//            generateChart()
+            generateChart()
             if squatChartButton.isSelected {
                 squatChartButton.isSelected.toggle()
             } else if deadliftChartButton.isSelected {
@@ -40,7 +43,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
     @IBAction func squatChartButtonTapped(_ sender: Any) {
         guard squatChartButton.isSelected else {
             squatChartButton.isSelected.toggle()
-//            generateChart()
+            generateChart()
             if benchChartButton.isSelected {
                 benchChartButton.isSelected.toggle()
             } else if deadliftChartButton.isSelected {
@@ -50,11 +53,10 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
         }
     }
     
-
     @IBAction func deadliftChartButtonTapped(_ sender: Any) {
         guard deadliftChartButton.isSelected else {
             deadliftChartButton.isSelected.toggle()
-//            generateChart()
+            generateChart()
             if benchChartButton.isSelected {
                 benchChartButton.isSelected.toggle()
             } else if squatChartButton.isSelected {
@@ -64,7 +66,6 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
         }
     }
     
-
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
          let tabBarIndex = tabBarController.selectedIndex
          if tabBarIndex == 0 {
@@ -104,6 +105,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
                     print("Document does not exist")
                 }
             }
+            generateChart()
         }
     }
 
@@ -127,38 +129,51 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        generateChart()
+        lineChart.noDataText = "No Data available for Chart. Time to lift!"
+        lineChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width / 2)
+        lineChart.center = view.center
+        view.addSubview(lineChart)
     }
     
-//    private func generateChart() {
-//        var workouts = [Workout]()
-//
-//        do {
-//            workouts = try context.fetch(Workout.fetchRequest())
-//        } catch let error {
-//            print("\(error)")
-//        }
-//
-//        var entries = [ChartDataEntry]()
-//
-//        if benchChartButton.isSelected {
-//            workouts.enumerated()
-//                    .filter { $1.name == "Bench Press" }
-//                    .forEach { (count, workout) in
-//                        entries.append(ChartDataEntry(x: Double(workout.weight), y: Double(count)))
-//                    }
-//        } else if squatChartButton.isSelected {
-//            workouts.enumerated()
-//                    .filter { $1.name == "Squat" }
-//                    .forEach { (count, workout) in
-//                        entries.append(ChartDataEntry(x: Double(workout.weight), y: Double(count)))
-//                    }
-//        } else if deadliftChartButton.isSelected {
-//            workouts.enumerated()
-//                    .filter { $1.name == "Deadlift" }
-//                    .forEach { (count, workout) in
-//                        entries.append(ChartDataEntry(x: Double(workout.weight), y: Double(count)))
-//                    }
-//        }
-//    }
+    private func generateChart() {
+        var workouts = [Workout]()
+        var entries = [ChartDataEntry]()
+
+        do {
+            workouts = try context.fetch(Workout.fetchRequest())
+            
+            if benchChartButton.isSelected {
+                workouts.filter { workout in
+                            workout.name == "Bench Press"
+                        }
+                        .enumerated()
+                        .forEach { (count, workout) in
+                            entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(count)))
+                        }
+            } else if squatChartButton.isSelected {
+                workouts.filter { workout in
+                            workout.name == "Squat"
+                        }
+                        .enumerated()
+                        .forEach { (count, workout) in
+                            entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(count)))
+                        }
+            } else if deadliftChartButton.isSelected {
+                workouts.filter { workout in
+                            workout.name == "Deadlift"
+                        }
+                        .enumerated()
+                        .forEach { (count, workout) in
+                            entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(count)))
+                        }
+            }
+        } catch let error {
+            print("\(error)")
+        }
+        
+        let set = LineChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.joyful()
+        let data = LineChartData(dataSet: set)
+        lineChart.data = data
+    }
 }

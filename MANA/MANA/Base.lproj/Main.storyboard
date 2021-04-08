@@ -196,12 +196,11 @@
                         <segue destination="8AQ-Iy-i1d" kind="relationship" relationship="viewControllers" id="hQy-yg-C68"/>
                         <segue destination="YPf-R4-NOt" kind="relationship" relationship="viewControllers" id="x7q-Uj-LPZ"/>
                         <segue destination="pTH-hj-78B" kind="relationship" relationship="viewControllers" id="sTa-7L-SVQ"/>
-                        <segue destination="bxY-oc-hjf" kind="relationship" relationship="viewControllers" id="HzT-uS-WlR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6c-mF-w9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5599" y="-745"/>
+            <point key="canvasLocation" x="5109" y="-762"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="T1i-Pg-I48">
@@ -919,22 +918,6 @@
             </objects>
             <point key="canvasLocation" x="6176.811594202899" y="827.67857142857144"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="q9h-Vn-8CZ">
-            <objects>
-                <viewController id="Ua2-3h-GLx" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vJD-7c-5y3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="xdb-1R-Uqj"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Kf2-z8-vCT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fwa-xX-OZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7322" y="828"/>
-        </scene>
         <!--Log-->
         <scene sceneID="Ygn-Uc-cch">
             <objects>
@@ -969,23 +952,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcJ-6s-ijA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6178" y="76"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="wEI-af-sXk">
-            <objects>
-                <navigationController id="bxY-oc-hjf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="zLB-Bv-m1z"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zh3-1F-AJj">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Ua2-3h-GLx" kind="relationship" relationship="rootViewController" id="TuD-5L-hjX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7ft-A9-iI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7323" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YPz-7k-dVU">
@@ -1023,7 +989,6 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="number" catalog="system" width="128" height="124"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1038,9 +1003,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
