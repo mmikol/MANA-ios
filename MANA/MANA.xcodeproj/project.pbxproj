@@ -27,7 +27,7 @@
 		BCE47B3D25BB8B01000B6C7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B3C25BB8B01000B6C7D /* SignUpViewController.swift */; };
 		BCE47B4225BB8B0C000B6C7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE47B4125BB8B0C000B6C7D /* LoginViewController.swift */; };
 		BCEB4C5025BE1AF100A5E39C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEB4C4F25BE1AF100A5E39C /* Constants.swift */; };
-		BCEED5ED261E58EE00984157 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = BCEED5EC261E58EE00984157 /* SwiftPackageProductDependency */; };
+		BCEED5ED261E58EE00984157 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = BCEED5EC261E58EE00984157 /* Charts */; };
 		BCFC838B25DF1C400007CBE6 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC838A25DF1C400007CBE6 /* Workout+CoreDataClass.swift */; };
 		BCFC839025DF1C430007CBE6 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC838F25DF1C430007CBE6 /* Workout+CoreDataProperties.swift */; };
 		BCFC839525DF23640007CBE6 /* WorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC839425DF23640007CBE6 /* WorkoutData.swift */; };
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCEED5ED261E58EE00984157 /* BuildFile in Frameworks */,
+				BCEED5ED261E58EE00984157 /* Charts in Frameworks */,
 				722DA0B5758F4CDA592712D5 /* Pods_MANA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,7 +245,7 @@
 			);
 			name = MANA;
 			packageProductDependencies = (
-				BCEED5EC261E58EE00984157 /* SwiftPackageProductDependency */,
+				BCEED5EC261E58EE00984157 /* Charts */,
 			);
 			productName = MANA;
 			productReference = BCE47AED25BA23BD000B6C7D /* MANA.app */;
@@ -319,7 +319,7 @@
 			);
 			mainGroup = BCE47AE425BA23BD000B6C7D;
 			packageReferences = (
-				BCEED5EB261E58EE00984157 /* RemoteSwiftPackageReference */,
+				BCEED5EB261E58EE00984157 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = BCE47AEE25BA23BD000B6C7D /* Products */;
 			projectDirPath = "";
@@ -597,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2301AFDBDC615AA968321C6 /* Pods-MANA.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -620,6 +621,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC5C2CBC597B760D78BD182D /* Pods-MANA.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -765,7 +767,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BCEED5EB261E58EE00984157 /* RemoteSwiftPackageReference */ = {
+		BCEED5EB261E58EE00984157 /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {
@@ -776,9 +778,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BCEED5EC261E58EE00984157 /* SwiftPackageProductDependency */ = {
+		BCEED5EC261E58EE00984157 /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BCEED5EB261E58EE00984157 /* RemoteSwiftPackageReference */;
+			package = BCEED5EB261E58EE00984157 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -7,15 +7,18 @@
 
 import UIKit
 import Firebase
-//import Charts ChartViewDelegate
+import Charts
 
-class HomeViewController: UIViewController, UITabBarControllerDelegate {
-//    var lineChart = LineChartView()
+class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartViewDelegate {
+    var lineChart = LineChartView()
     
     let database = Firestore.firestore()
     let numberFormatter = NumberFormatter()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
+    @IBOutlet weak var benchChartButton: UIButton!
+    @IBOutlet weak var squatChartButton: UIButton!
+    @IBOutlet weak var deadliftChartButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var levelProgressBar: UIProgressView!
@@ -24,6 +27,42 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
     @IBOutlet weak var bestSquatLabel: UILabel!
     @IBOutlet weak var bestDeadliftLabel: UILabel!
    
+    @IBAction func benchChartButtonTapped(_ sender: Any) {
+        guard benchChartButton.isSelected else {
+            benchChartButton.isSelected.toggle()
+            if squatChartButton.isSelected {
+                squatChartButton.isSelected.toggle()
+            } else if deadliftChartButton.isSelected {
+                deadliftChartButton.isSelected.toggle()
+            }
+            return
+        }
+    }
+
+    @IBAction func squatChartButtonTapped(_ sender: Any) {
+        guard squatChartButton.isSelected else {
+            squatChartButton.isSelected.toggle()
+            if benchChartButton.isSelected {
+                benchChartButton.isSelected.toggle()
+            } else if deadliftChartButton.isSelected {
+                deadliftChartButton.isSelected.toggle()
+            }
+            return
+        }
+    }
+    
+    @IBAction func deadliftChartButtonTapped(_ sender: Any) {
+        guard deadliftChartButton.isSelected else {
+            deadliftChartButton.isSelected.toggle()
+            if benchChartButton.isSelected {
+                benchChartButton.isSelected.toggle()
+            } else if squatChartButton.isSelected {
+                squatChartButton.isSelected.toggle()
+            }
+            return
+        }
+    }
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
          let tabBarIndex = tabBarController.selectedIndex
          if tabBarIndex == 0 {
@@ -82,32 +121,35 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        benchChartButton.isSelected = true
         numberFormatter.numberStyle = .decimal
         showUserInformation()
         self.tabBarController?.delegate = self
-//        lineChart.delegate = self
+        lineChart.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         // REFACTOR WITH DUPLICATE CODE IN WORKOUTTABLEVIEWCONTROLLER
-        var workouts = [Workout]()
-        
-        do {
-            workouts = try context.fetch(Workout.fetchRequest())
-        } catch let error {
-            print("\(error)")
-        }
-
-        for w in workouts {
-            print(w)
-        }
-//        lineChart.frame = CGRect(x: 0, y: 0, width: self.view.fame.size, height: self.view.frame.size)
+//        lineChart.frame = CGRect(x: 0, y: 50, width: 350, height: 250)
 //        lineChart.center = view.center
 //        view.addSubview(lineChart)
 //
+//        var workouts = [Workout]()
+//
+//        do {
+//            workouts = try context.fetch(Workout.fetchRequest())
+//        } catch let error {
+//            print("\(error)")
+//        }
+//
 //        var entries = [ChartDataEntry]()
+//
+//        for x in 1...20 {
+//            entries.append(ChartDataEntry(x: Double(x), y: Double(x)))
+//        }
+//
 //        let set = LineChartDataSet(entries: entries)
 //        set.colors = ChartColorTemplates.joyful()
 //        let data = LineChartData(dataSet: set)
