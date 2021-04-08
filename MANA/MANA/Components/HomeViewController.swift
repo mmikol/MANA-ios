@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import Charts
 
-class HomeViewController: UIViewController, UITabBarControllerDelegate {
+class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartViewDelegate {
     let database = Firestore.firestore()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let numberFormatter = NumberFormatter()
@@ -105,7 +105,6 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
                     print("Document does not exist")
                 }
             }
-            generateChart()
         }
     }
 
@@ -125,18 +124,19 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate {
         numberFormatter.numberStyle = .decimal
         showUserInformation()
         self.tabBarController?.delegate = self
+        lineChart.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        lineChart.noDataText = "No Data available for Chart. Time to lift!"
-        lineChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width / 2)
-        lineChart.center = view.center
+        lineChart.noDataText = "No Chart data found. Time to lift!"
+        lineChart.frame = CGRect(x: 0, y: view.center.y - 250, width: self.view.frame.size.width, height: 300)
         view.addSubview(lineChart)
+        generateChart()
     }
     
     private func generateChart() {
-        var workouts = [Workout]()
+        var workouts: [Workout]
         var entries = [ChartDataEntry]()
 
         do {
