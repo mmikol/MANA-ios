@@ -36,6 +36,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
             } else if deadliftChartButton.isSelected {
                 deadliftChartButton.isSelected.toggle()
             }
+            generateChart()
             return
         }
     }
@@ -48,6 +49,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
             } else if deadliftChartButton.isSelected {
                 deadliftChartButton.isSelected.toggle()
             }
+            generateChart()
             return
         }
     }
@@ -60,6 +62,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
             } else if squatChartButton.isSelected {
                 squatChartButton.isSelected.toggle()
             }
+            generateChart()
             return
         }
     }
@@ -147,6 +150,10 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     }
     
     private func generateChart() {
+        if !lineChart.isEmpty() {
+            lineChart.clear()
+        }
+
         var entries = [ChartDataEntry]()
         var xCoordinate = 0
         
@@ -157,20 +164,22 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
                 }
                 xCoordinate += 1
             }
+        } else if squatChartButton.isSelected {
+            for workout in workouts {
+                if (workout.name == "Squat") {
+                    entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(workout.weight!) ?? 0))
+                }
+                xCoordinate += 1
+            }
+        } else if deadliftChartButton.isSelected {
+            for workout in workouts {
+                if (workout.name == "Deadlift") {
+                    entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(workout.weight!) ?? 0))
+                }
+                xCoordinate += 1
+            }
+            
         }
-//        else if squatChartButton.isSelected {
-//            for workout in workouts {
-//                if (workout.name == "Squat") {
-//                    entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(workout.weight!) ?? 0))
-//                }
-//            }
-//        } else if deadliftChartButton.isSelected {
-//            for workout in workouts {
-//                if (workout.name == "Deadlift") {
-//                    entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(workout.weight!) ?? 0))
-//                }
-//            }
-//        }
         
         let set = LineChartDataSet(entries: entries.isEmpty ? [ChartDataEntry]() : entries)
         set.colors = ChartColorTemplates.material()
