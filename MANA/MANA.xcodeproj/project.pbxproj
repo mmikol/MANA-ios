@@ -124,6 +124,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC078D56262A219500B5E576 /* HomeComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BCBE339B25C75EDA00AE111F /* HomeViewController.swift */,
+			);
+			path = HomeComponent;
+			sourceTree = "<group>";
+		};
 		BC4B03E125D8F4D9008BB531 /* LogComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,14 +160,14 @@
 			path = CalculatorComponent;
 			sourceTree = "<group>";
 		};
-		BC54A6AC25F052EC00CD8800 /* AchievementSystem */ = {
+		BC54A6AC25F052EC00CD8800 /* AchievementSystemComponent */ = {
 			isa = PBXGroup;
 			children = (
 				BC54A6AD25F0531300CD8800 /* AchievementProperty.swift */,
 				BC54A6B725F0561C00CD8800 /* AchievementBlackBox.swift */,
 				BC54A6B225F0540400CD8800 /* Achievement.swift */,
 			);
-			path = AchievementSystem;
+			path = AchievementSystemComponent;
 			sourceTree = "<group>";
 		};
 		BC6670C625BDEAFD009224A1 /* Helpers */ = {
@@ -177,8 +185,8 @@
 				BC4B03E225D8F511008BB531 /* AuthenticationComponent */,
 				BC4B03E125D8F4D9008BB531 /* LogComponent */,
 				BC4B03E325D8F52A008BB531 /* CalculatorComponent */,
-				BCBE339B25C75EDA00AE111F /* HomeViewController.swift */,
-				BC54A6AC25F052EC00CD8800 /* AchievementSystem */,
+				BC078D56262A219500B5E576 /* HomeComponent */,
+				BC54A6AC25F052EC00CD8800 /* AchievementSystemComponent */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -312,7 +320,7 @@
 			);
 			mainGroup = BCE47AE425BA23BD000B6C7D;
 			packageReferences = (
-				BCEED5EB261E58EE00984157 /* RemoteSwiftPackageReference */,
+				BCEED5EB261E58EE00984157 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = BCE47AEE25BA23BD000B6C7D /* Products */;
 			projectDirPath = "";
@@ -762,7 +770,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BCEED5EB261E58EE00984157 /* RemoteSwiftPackageReference */ = {
+		BCEED5EB261E58EE00984157 /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {
