@@ -8,6 +8,6 @@
 import Foundation
 
 struct Constants {
-    static let HOME_VIEW_CONTROLLER = "HomeViewController"
+    static let MAIN_TAB_BAR_VIEW_CONTROLLER = "MainTabBarViewController"
     static let WORKOUT_CELL_IDENTIFIER = "WorkoutTableViewCell"
 }

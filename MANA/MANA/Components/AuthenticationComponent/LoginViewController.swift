@@ -23,8 +23,8 @@ class LoginViewController: UIViewController {
                 self.errorLabel.text = error!.localizedDescription
                 self.errorLabel.alpha = 1
             } else {
-                let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.HOME_VIEW_CONTROLLER) as? HomeViewController
-                self.view.window?.rootViewController = homeViewController
+                let mainTabBarViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.MAIN_TAB_BAR_VIEW_CONTROLLER) as? UITabBarController
+                self.view.window?.rootViewController = mainTabBarViewController
                 self.view.window?.makeKeyAndVisible()
             }
         }
