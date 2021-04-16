@@ -528,40 +528,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-bR-WqD">
-                                <rect key="frame" x="47" y="281" width="320" height="280"/>
+                                <rect key="frame" x="170.33333333333334" y="404" width="73.666666666666657" height="34"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LFL-7O-auk">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhE-Tc-jjC">
-                                                <rect key="frame" x="0.0" y="0.0" width="106.66666666666667" height="30"/>
-                                                <state key="normal" title="Bench"/>
-                                                <connections>
-                                                    <action selector="benchButton:" destination="ZzW-Y8-miK" eventType="touchUpInside" id="fZl-yG-wgj"/>
-                                                    <action selector="benchButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="of5-Q1-64o"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Up-gJy">
-                                                <rect key="frame" x="106.66666666666666" y="0.0" width="106.66666666666666" height="30"/>
-                                                <state key="normal" title="Squat"/>
-                                                <connections>
-                                                    <action selector="squatButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="ZiP-ZM-pJD"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-bP-KGf">
-                                                <rect key="frame" x="213.33333333333329" y="0.0" width="106.66666666666666" height="30"/>
-                                                <state key="normal" title="Deadlift"/>
-                                                <connections>
-                                                    <action selector="deadliftButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="DI9-UK-nP5"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YC5-Tc-DZp">
-                                        <rect key="frame" x="0.0" y="30" width="320" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idt-re-emN">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <userDefinedRuntimeAttributes>
@@ -570,18 +543,46 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-cJ-9r6">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="216"/>
-                                        <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
-                                            <!--2020-01-01 11:00:00 +0000-->
-                                        </date>
-                                        <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
-                                            <!--2037-12-31 11:00:00 +0000-->
-                                        </date>
+                                </subviews>
+                            </stackView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-cJ-9r6">
+                                <rect key="frame" x="43" y="320" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
+                                    <!--2020-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerValueChanged:" destination="4yV-ZS-vma" eventType="valueChanged" id="e49-TT-9vs"/>
+                                </connections>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="LFL-7O-auk">
+                                <rect key="frame" x="48" y="225" width="318" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhE-Tc-jjC">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="30"/>
+                                        <state key="normal" title="Bench"/>
                                         <connections>
-                                            <action selector="datePickerValueChanged:" destination="4yV-ZS-vma" eventType="valueChanged" id="e49-TT-9vs"/>
+                                            <action selector="benchButton:" destination="ZzW-Y8-miK" eventType="touchUpInside" id="fZl-yG-wgj"/>
+                                            <action selector="benchButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="of5-Q1-64o"/>
                                         </connections>
-                                    </datePicker>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Up-gJy">
+                                        <rect key="frame" x="132" y="0.0" width="54" height="30"/>
+                                        <state key="normal" title="Squat"/>
+                                        <connections>
+                                            <action selector="squatButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="ZiP-ZM-pJD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-bP-KGf">
+                                        <rect key="frame" x="264" y="0.0" width="54" height="30"/>
+                                        <state key="normal" title="Deadlift"/>
+                                        <connections>
+                                            <action selector="deadliftButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="DI9-UK-nP5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -616,7 +617,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxD-bw-trK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ZzW-Y8-miK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5599" y="1560"/>
+            <point key="canvasLocation" x="5598.5507246376819" y="1559.5982142857142"/>
         </scene>
         <!--Workout Log-->
         <scene sceneID="8Ba-V6-mXH">
@@ -970,12 +971,12 @@
         <segue reference="m4u-bb-hBz"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="10lbButton" width="500" height="499"/>
-        <image name="2.5lbButton" width="512" height="487"/>
-        <image name="25lbButton" width="496" height="503"/>
-        <image name="35lbButton" width="563" height="443"/>
-        <image name="45lbButton" width="514" height="486"/>
-        <image name="5lbButton" width="496" height="503"/>
+        <image name="10lbButton" width="389" height="340"/>
+        <image name="2.5lbButton" width="348" height="309"/>
+        <image name="25lbButton" width="374" height="330"/>
+        <image name="35lbButton" width="382" height="338"/>
+        <image name="45lbButton" width="382" height="339"/>
+        <image name="5lbButton" width="372" height="329"/>
         <image name="Logo" width="1000" height="1080"/>
         <image name="PersonalBestCircle" width="512" height="440"/>
         <image name="WarriorRed" width="1920" height="1080"/>
