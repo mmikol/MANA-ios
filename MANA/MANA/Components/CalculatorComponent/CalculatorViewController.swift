@@ -32,7 +32,8 @@ class CalculatorViewController: UIViewController {
     
     var currentComputation = 0
     var computationStack = CalculatorStack()
-
+    
+    @IBOutlet weak var backgroundGradientView: UIView!
     @IBOutlet weak var computationLabel: UILabel!
     @IBOutlet weak var plate45Button: UIButton!
     @IBOutlet weak var plate35Button: UIButton!
@@ -156,7 +157,7 @@ class CalculatorViewController: UIViewController {
             return
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         additionButton.isSelected.toggle()

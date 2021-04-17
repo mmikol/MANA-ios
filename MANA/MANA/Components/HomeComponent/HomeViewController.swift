@@ -76,7 +76,8 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
 
     // REMOVE HARD CODE AFTER TESTS
     private func showUserInformation() {
-        if let user = Auth.auth().currentUser {
+        // let user = Auth.auth().currentUser
+        if true {
             let documentReference = database.collection("users").document("K3nMnBjnrMcXndZ5Q5RWjVEVuZo2")
             
             documentReference.getDocument { (document, error) in
@@ -118,7 +119,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         let threshold = 50
         return level * threshold
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         benchChartButton.isSelected = true
