@@ -67,6 +67,10 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func benchButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
+
         guard benchButton.isSelected else {
             benchButton.isSelected = true
             benchButton.setImage(UIImage(named: "benchWithSquare"), for: .normal)
@@ -84,6 +88,10 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func squatButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
+
         guard squatButton.isSelected else {
             squatButton.isSelected = true
             squatButton.setImage(UIImage(named: "squatWithSquare"), for: .normal)
@@ -101,6 +109,10 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func deadliftButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
+
         guard deadliftButton.isSelected else {
             deadliftButton.isSelected = true
             deadliftButton.setImage(UIImage(named: "deadliftWithSquare"), for: .normal)
