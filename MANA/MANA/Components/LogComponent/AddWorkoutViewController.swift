@@ -23,7 +23,6 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         weightTextField.delegate = self
-        datePicker.backgroundColor = .white
 
         // Set up views if editing an existing Workout.
         if let workout = workout {
