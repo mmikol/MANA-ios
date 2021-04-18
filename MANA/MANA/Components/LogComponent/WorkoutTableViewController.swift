@@ -119,11 +119,16 @@ class WorkoutTableViewController: UITableViewController {
         let workout = workouts[indexPath.row]
         
         switch workout.name {
-            case "Deadlift":
-                cell.workoutImage.image = UIImage(named: "deadlift")
-            default:
-                break
+        case "Bench Press":
+            cell.workoutImage.image = UIImage(named: "bench")
+        case "Squat":
+            cell.workoutImage.image = UIImage(named: "squat")
+        case "Deadlift":
+            cell.workoutImage.image = UIImage(named: "deadlift")
+        default:
+            break
         }
+        
         cell.nameLabel.text = workout.name
         cell.weightLabel.text = "\(workout.weight!) lbs"
         cell.dateLabel.text = workout.dateString
