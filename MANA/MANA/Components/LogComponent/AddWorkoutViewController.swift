@@ -102,7 +102,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
                 benchButton.setImage(UIImage(named: "bench"), for: .normal)
             } else if squatButton.isSelected {
                 squatButton.isSelected = false
-                squatButton.setImage(UIImage(named: "bench"), for: .normal)
+                squatButton.setImage(UIImage(named: "squat"), for: .normal)
             }
             updateSaveButtonState()
             return
