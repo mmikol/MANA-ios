@@ -49,10 +49,10 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
             switch(workout.name) {
             case "Bench Press":
                 benchButton.isSelected = true
-                //benchButton.setImage(UIImage(named: "filled-heart"), for: .normal)
+                benchButton.setImage(UIImage(named: "benchWithSquare"), for: .normal)
             case "Squat":
                 squatButton.isSelected = true
-                //squatButton.setImage(UIImage(named: "filled-heart"), for: .normal)
+                squatButton.setImage(UIImage(named: "squatWithSquare"), for: .normal)
             case "Deadlift":
                 deadliftButton.isSelected = true
                 deadliftButton.setImage(UIImage(named: "deadliftWithSquare"), for: .normal)
@@ -80,10 +80,13 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     @IBAction func benchButtonTapped(_ sender: Any) {
         guard benchButton.isSelected else {
             benchButton.isSelected = true
+            benchButton.setImage(UIImage(named: "benchWithSquare"), for: .normal)
             if squatButton.isSelected {
                 squatButton.isSelected = false
+                squatButton.setImage(UIImage(named: "squat"), for: .normal)
             } else if deadliftButton.isSelected {
                 deadliftButton.isSelected = false
+                deadliftButton.setImage(UIImage(named: "deadlift"), for: .normal)
             }
             return
         }
@@ -92,10 +95,13 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     @IBAction func squatButtonTapped(_ sender: Any) {
         guard squatButton.isSelected else {
             squatButton.isSelected = true
+            squatButton.setImage(UIImage(named: "squatWithSquare"), for: .normal)
             if benchButton.isSelected {
                 benchButton.isSelected = false
+                benchButton.setImage(UIImage(named: "bench"), for: .normal)
             } else if deadliftButton.isSelected {
                 deadliftButton.isSelected = false
+                deadliftButton.setImage(UIImage(named: "deadlift"), for: .normal)
             }
             return
         }
@@ -107,8 +113,10 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
             deadliftButton.setImage(UIImage(named: "deadliftWithSquare"), for: .normal)
             if benchButton.isSelected {
                 benchButton.isSelected = false
+                benchButton.setImage(UIImage(named: "bench"), for: .normal)
             } else if squatButton.isSelected {
                 squatButton.isSelected = false
+                squatButton.setImage(UIImage(named: "bench"), for: .normal)
             }
             return
         }
