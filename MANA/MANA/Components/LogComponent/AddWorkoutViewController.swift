@@ -9,6 +9,7 @@ import OSLog
 
 class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var lowerView: UIView!
     @IBOutlet weak var liftTypeLabel: UILabel!
     @IBOutlet weak var benchButton: UIButton!
     @IBOutlet weak var squatButton: UIButton!
@@ -35,15 +36,15 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
             case "Bench Press":
                 benchButton.isSelected = true
                 benchButton.setImage(UIImage(named: "benchWithSquare"), for: .normal)
-                view.backgroundColor = #colorLiteral(red: 0.9883286357, green: 0.7884005904, blue: 0, alpha: 1)
+                lowerView.backgroundColor = #colorLiteral(red: 0.9883286357, green: 0.7884005904, blue: 0, alpha: 1)
             case "Squat":
                 squatButton.isSelected = true
                 squatButton.setImage(UIImage(named: "squatWithSquare"), for: .normal)
-                view.backgroundColor = #colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1)
+                lowerView.backgroundColor = #colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1)
             case "Deadlift":
                 deadliftButton.isSelected = true
                 deadliftButton.setImage(UIImage(named: "deadliftWithSquare"), for: .normal)
-                view.backgroundColor = #colorLiteral(red: 0.9852438569, green: 0, blue: 0, alpha: 1)
+                lowerView.backgroundColor = #colorLiteral(red: 0.9852438569, green: 0, blue: 0, alpha: 1)
             default:
                 break
             }
@@ -69,7 +70,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         guard benchButton.isSelected else {
             benchButton.isSelected = true
             benchButton.setImage(UIImage(named: "benchWithSquare"), for: .normal)
-            view.backgroundColor = #colorLiteral(red: 0.9883286357, green: 0.7884005904, blue: 0, alpha: 1)
+            lowerView.backgroundColor = #colorLiteral(red: 0.9883286357, green: 0.7884005904, blue: 0, alpha: 1)
             if squatButton.isSelected {
                 squatButton.isSelected = false
                 squatButton.setImage(UIImage(named: "squat"), for: .normal)
@@ -86,7 +87,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         guard squatButton.isSelected else {
             squatButton.isSelected = true
             squatButton.setImage(UIImage(named: "squatWithSquare"), for: .normal)
-            view.backgroundColor = #colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1)
+            lowerView.backgroundColor = #colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1)
             if benchButton.isSelected {
                 benchButton.isSelected = false
                 benchButton.setImage(UIImage(named: "bench"), for: .normal)
@@ -103,7 +104,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         guard deadliftButton.isSelected else {
             deadliftButton.isSelected = true
             deadliftButton.setImage(UIImage(named: "deadliftWithSquare"), for: .normal)
-            view.backgroundColor = #colorLiteral(red: 0.9852438569, green: 0, blue: 0, alpha: 1)
+            lowerView.backgroundColor = #colorLiteral(red: 0.9852438569, green: 0, blue: 0, alpha: 1)
             if benchButton.isSelected {
                 benchButton.isSelected = false
                 benchButton.setImage(UIImage(named: "bench"), for: .normal)
