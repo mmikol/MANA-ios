@@ -97,31 +97,49 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func plate45ButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
         let TWO_PLATE_VALUE = 90
         adjustComputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate35ButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
         let TWO_PLATE_VALUE = 70
         adjustComputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate25ButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
         let TWO_PLATE_VALUE = 50
         adjustComputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate10ButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
         let TWO_PLATE_VALUE = 20
         adjustComputation(By: TWO_PLATE_VALUE)
     }
     
     @IBAction func plate5ButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
         let TWO_PLATE_VALUE = 10
         adjustComputation(By: TWO_PLATE_VALUE)
     }
 
     @IBAction func plate2ButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
         let TWO_PLATE_VALUE = 5
         adjustComputation(By: TWO_PLATE_VALUE)
     }
