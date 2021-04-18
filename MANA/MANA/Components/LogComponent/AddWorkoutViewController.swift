@@ -9,7 +9,6 @@ import OSLog
 
 class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var exerciseSelectionView: UIView!
     @IBOutlet weak var benchButton: UIButton!
     @IBOutlet weak var squatButton: UIButton!
     @IBOutlet weak var deadliftButton: UIButton!
@@ -21,19 +20,8 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     var workoutData: WorkoutData?
     var dateInput = Date()
     
-    private func setBackgrounds() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [#colorLiteral(red: 0, green: 0.5725490196, blue: 0.2705882353, alpha: 1).cgColor, UIColor(red: 252/255, green: 238/255, blue: 33/255, alpha: 1).cgColor]
-        gradientLayer.shouldRasterize = true
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
-        exerciseSelectionView.layer.addSublayer(gradientLayer)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackgrounds()
-        
-        // Handle the text field’s user input through delegate callbacks.
         weightTextField.delegate = self
         
         // Set up views if editing an existing Workout.
