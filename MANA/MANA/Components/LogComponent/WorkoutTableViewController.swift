@@ -118,8 +118,6 @@ class WorkoutTableViewController: UITableViewController {
         }
         
         cell.backgroundColor = UIColor.clear
-        cell.layer.borderWidth = 0.25
-        cell.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 
         let workout = workouts[indexPath.row]
         

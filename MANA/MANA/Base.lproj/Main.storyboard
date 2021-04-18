@@ -602,7 +602,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lay-A0-shT">
-                                <rect key="frame" x="0.0" y="495" width="414" height="401"/>
+                                <rect key="frame" x="0.0" y="485" width="414" height="411"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVc-jj-NWc">
                                         <rect key="frame" x="23" y="8" width="120" height="37"/>
@@ -667,7 +667,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="FA6-cJ-9r6" secondAttribute="bottom" constant="112" id="4Qf-7G-IMb"/>
+                                    <constraint firstAttribute="bottom" secondItem="FA6-cJ-9r6" secondAttribute="bottom" constant="122" id="4Qf-7G-IMb"/>
                                     <constraint firstItem="NVc-jj-NWc" firstAttribute="leading" secondItem="lay-A0-shT" secondAttribute="leading" constant="23" id="IUh-X5-fEI"/>
                                     <constraint firstItem="NVc-jj-NWc" firstAttribute="leading" secondItem="xNS-Nq-0kj" secondAttribute="leading" id="MWT-GC-Suv"/>
                                     <constraint firstItem="cQF-JQ-uXh" firstAttribute="top" secondItem="lay-A0-shT" secondAttribute="top" constant="60" id="PBh-GG-iYS"/>
@@ -685,7 +685,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zoa-7o-0tQ" firstAttribute="centerX" secondItem="Pan-kq-jaK" secondAttribute="centerX" id="379-Pc-Vca"/>
-                            <constraint firstItem="lay-A0-shT" firstAttribute="top" secondItem="gjR-tI-BZP" secondAttribute="top" constant="495" id="45T-Yq-6tE"/>
+                            <constraint firstItem="lay-A0-shT" firstAttribute="top" secondItem="gjR-tI-BZP" secondAttribute="top" constant="485" id="45T-Yq-6tE"/>
                             <constraint firstAttribute="trailing" secondItem="lay-A0-shT" secondAttribute="trailing" id="BOg-JG-uBH"/>
                             <constraint firstItem="Pan-kq-jaK" firstAttribute="top" secondItem="zoa-7o-0tQ" secondAttribute="bottom" constant="16.666666666666629" id="DCH-hT-jiB"/>
                             <constraint firstItem="Pan-kq-jaK" firstAttribute="centerX" secondItem="lay-A0-shT" secondAttribute="centerX" id="Rm3-HS-Gws"/>
