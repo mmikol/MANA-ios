@@ -855,7 +855,7 @@
                                                     <constraint firstAttribute="width" constant="110" id="iZ0-1Y-5mI"/>
                                                     <constraint firstAttribute="height" constant="110" id="nS0-0U-A3f"/>
                                                 </constraints>
-                                                <state key="normal" image="45lbButton"/>
+                                                <state key="normal" image="45lbs"/>
                                                 <connections>
                                                     <action selector="plate45ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="oyH-kG-f8U"/>
                                                 </connections>
@@ -866,7 +866,7 @@
                                                     <constraint firstAttribute="width" constant="110" id="G7q-st-LB5"/>
                                                     <constraint firstAttribute="height" constant="110" id="ZXS-Rk-Q61"/>
                                                 </constraints>
-                                                <state key="normal" image="25lbButton"/>
+                                                <state key="normal" image="25lbs"/>
                                                 <connections>
                                                     <action selector="plate25ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="plI-Yt-9vl"/>
                                                 </connections>
@@ -877,7 +877,7 @@
                                                     <constraint firstAttribute="height" constant="110" id="EQG-Tt-6zm"/>
                                                     <constraint firstAttribute="width" constant="110" id="WXE-7A-zx5"/>
                                                 </constraints>
-                                                <state key="normal" image="5lbButton"/>
+                                                <state key="normal" image="5lbs"/>
                                                 <connections>
                                                     <action selector="plate5ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="zP4-RV-ZmB"/>
                                                 </connections>
@@ -893,7 +893,7 @@
                                                     <constraint firstAttribute="width" constant="110" id="GsX-8e-1fj"/>
                                                     <constraint firstAttribute="height" constant="110" id="RZ5-o4-Q0J"/>
                                                 </constraints>
-                                                <state key="normal" image="35lbButton"/>
+                                                <state key="normal" image="35lbs"/>
                                                 <connections>
                                                     <action selector="plate35ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="pln-sQ-z5Q"/>
                                                 </connections>
@@ -904,7 +904,7 @@
                                                     <constraint firstAttribute="width" constant="110" id="LZJ-rb-gva"/>
                                                     <constraint firstAttribute="height" constant="110" id="tv7-Fu-gT6"/>
                                                 </constraints>
-                                                <state key="normal" image="10lbButton"/>
+                                                <state key="normal" image="10lbs"/>
                                                 <connections>
                                                     <action selector="plate10ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="Vph-KQ-1To"/>
                                                 </connections>
@@ -915,7 +915,7 @@
                                                     <constraint firstAttribute="height" constant="110" id="ESc-jx-QR7"/>
                                                     <constraint firstAttribute="width" constant="110" id="Uvz-Bk-Sg3"/>
                                                 </constraints>
-                                                <state key="normal" image="2.5lbButton"/>
+                                                <state key="normal" image="2.5lbs"/>
                                                 <connections>
                                                     <action selector="plate2ButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="a3O-Ty-tjO"/>
                                                 </connections>
@@ -1009,7 +1009,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dYx-jL-2Xl"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cnz-aF-xGD" firstAttribute="bottom" secondItem="0GC-z5-9sx" secondAttribute="bottom" id="7cD-iq-PjW"/>
                             <constraint firstItem="b7n-He-T6I" firstAttribute="top" secondItem="Bvc-jQ-6cX" secondAttribute="top" id="7m6-Ms-FiP"/>
@@ -1121,12 +1121,12 @@
         <segue reference="jOz-nx-Tx2"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="10lbButton" width="389" height="340"/>
-        <image name="2.5lbButton" width="348" height="309"/>
-        <image name="25lbButton" width="374" height="330"/>
-        <image name="35lbButton" width="382" height="338"/>
-        <image name="45lbButton" width="382" height="339"/>
-        <image name="5lbButton" width="372" height="329"/>
+        <image name="10lbs" width="676" height="676"/>
+        <image name="2.5lbs" width="676" height="676"/>
+        <image name="25lbs" width="676" height="676"/>
+        <image name="35lbs" width="676" height="676"/>
+        <image name="45lbs" width="676" height="676"/>
+        <image name="5lbs" width="676" height="676"/>
         <image name="Logo" width="1000" height="1080"/>
         <image name="PersonalBestCircle" width="512" height="440"/>
         <image name="WarriorRed" width="1920" height="1080"/>
