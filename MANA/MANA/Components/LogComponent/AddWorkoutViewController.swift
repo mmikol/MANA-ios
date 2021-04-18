@@ -8,6 +8,7 @@ import UIKit
 import OSLog
 
 class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var backgroundGradientView: UIView!
     @IBOutlet weak var benchButton: UIButton!
     @IBOutlet weak var squatButton: UIButton!
     @IBOutlet weak var deadliftButton: UIButton!
@@ -19,8 +20,22 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     var workoutData: WorkoutData?
     var dateInput = Date()
     
+    private func setBackgrounds() {
+        // Create a gradient layer.
+        let gradientLayer = CAGradientLayer()
+        // Set the size of the layer to be equal to size of the display.
+        // Set an array of Core Graphics colors (.cgColor) to create the gradient.
+        // This example uses a Color Literal and a UIColor from RGB values.
+        gradientLayer.colors = [#colorLiteral(red: 0, green: 0.5725490196, blue: 0.2705882353, alpha: 1).cgColor, UIColor(red: 252/255, green: 238/255, blue: 33/255, alpha: 1).cgColor]
+        // Rasterize this static layer to improve app performance.
+        gradientLayer.shouldRasterize = true
+        // Apply the gradient to the backgroundGradientView.
+        backgroundGradientView.layer.addSublayer(gradientLayer)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBackgrounds()
         
         // Handle the text field’s user input through delegate callbacks.
         weightTextField.delegate = self
@@ -34,15 +49,16 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
             switch(workout.name) {
             case "Bench Press":
                 benchButton.isSelected = true
+                //benchButton.setImage(UIImage(named: "filled-heart"), for: .normal)
             case "Squat":
                 squatButton.isSelected = true
+                //squatButton.setImage(UIImage(named: "filled-heart"), for: .normal)
             case "Deadlift":
                 deadliftButton.isSelected = true
+                deadliftButton.setImage(UIImage(named: "deadliftWithSquare"), for: .normal)
             default:
                 break
             }
-        } else {
-            benchButton.isSelected = true
         }
         
         // Enable the Save button only if inputs are given.
@@ -63,11 +79,11 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func benchButtonTapped(_ sender: Any) {
         guard benchButton.isSelected else {
-            benchButton.isSelected.toggle()
+            benchButton.isSelected = true
             if squatButton.isSelected {
-                squatButton.isSelected.toggle()
+                squatButton.isSelected = false
             } else if deadliftButton.isSelected {
-                deadliftButton.isSelected.toggle()
+                deadliftButton.isSelected = false
             }
             return
         }
@@ -75,11 +91,11 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func squatButtonTapped(_ sender: Any) {
         guard squatButton.isSelected else {
-            squatButton.isSelected.toggle()
+            squatButton.isSelected = true
             if benchButton.isSelected {
-                benchButton.isSelected.toggle()
+                benchButton.isSelected = false
             } else if deadliftButton.isSelected {
-                deadliftButton.isSelected.toggle()
+                deadliftButton.isSelected = false
             }
             return
         }
@@ -87,11 +103,12 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func deadliftButtonTapped(_ sender: Any) {
         guard deadliftButton.isSelected else {
-            deadliftButton.isSelected.toggle()
+            deadliftButton.isSelected = true
+            deadliftButton.setImage(UIImage(named: "deadliftWithSquare"), for: .normal)
             if benchButton.isSelected {
-                benchButton.isSelected.toggle()
+                benchButton.isSelected = false
             } else if squatButton.isSelected {
-                squatButton.isSelected.toggle()
+                squatButton.isSelected = false
             }
             return
         }
@@ -118,7 +135,9 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        saveButton.isEnabled = false
+        if benchButton.isSelected || squatButton.isSelected || deadliftButton.isSelected {
+            saveButton.isEnabled = false
+        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

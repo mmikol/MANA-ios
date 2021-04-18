@@ -530,79 +530,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idt-re-emN">
-                                <rect key="frame" x="48" y="538" width="318" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="qPI-xS-L2K"/>
-                                </constraints>
+                                <rect key="frame" x="48" y="508" width="318" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Up-gJy">
-                                <rect key="frame" x="122" y="333" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="jjd-du-lkq"/>
-                                    <constraint firstAttribute="width" constant="150" id="xSh-Ot-gHp"/>
-                                </constraints>
-                                <state key="normal" title="Squat" image="squat"/>
-                                <connections>
-                                    <action selector="squatButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="ZiP-ZM-pJD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhE-Tc-jjC">
-                                <rect key="frame" x="20" y="165" width="150" height="116"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="28b-WZ-HA8"/>
-                                    <constraint firstAttribute="height" constant="116" id="eTc-RP-MPn"/>
-                                </constraints>
-                                <state key="normal" title="Bench" image="bench"/>
-                                <connections>
-                                    <action selector="benchButton:" destination="ZzW-Y8-miK" eventType="touchUpInside" id="fZl-yG-wgj"/>
-                                    <action selector="benchButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="of5-Q1-64o"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-bP-KGf">
-                                <rect key="frame" x="233" y="131" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="ylc-PG-8sO"/>
-                                    <constraint firstAttribute="height" constant="150" id="zy1-kl-5wS"/>
-                                </constraints>
-                                <state key="normal" title="Deadlift" image="deadlift"/>
-                                <connections>
-                                    <action selector="deadliftButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="DI9-UK-nP5"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select your exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RV-hU-5eK">
-                                <rect key="frame" x="5" y="81" width="215" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bench Press" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hD-nm-Kyc">
-                                <rect key="frame" x="48" y="280" width="95" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadlift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nl9-uR-jUc">
-                                <rect key="frame" x="278" y="280" width="60" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Squat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nD8-Hi-Mvb">
-                                <rect key="frame" x="175" y="488" width="45" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="tce-mN-WzB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-cJ-9r6">
-                                <rect key="frame" x="80" y="612" width="286" height="161"/>
+                                <rect key="frame" x="80" y="557" width="286" height="216"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
                                     <!--2020-01-01 11:00:00 +0000-->
                                 </date>
@@ -613,35 +549,113 @@
                                     <action selector="datePickerValueChanged:" destination="4yV-ZS-vma" eventType="valueChanged" id="e49-TT-9vs"/>
                                 </connections>
                             </datePicker>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHW-my-jyz">
+                                <rect key="frame" x="0.0" y="56" width="414" height="403"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select your exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RV-hU-5eK">
+                                        <rect key="frame" x="8" y="17" width="389" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zoa-7o-0tQ">
+                                        <rect key="frame" x="17" y="55.000000000000014" width="370" height="160.33333333333337"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F9i-gS-mVL">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="160.33333333333334"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-bP-KGf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="140" id="Gqx-z6-qzq"/>
+                                                            <constraint firstAttribute="width" constant="160" id="Qdp-jS-Iy9"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Deadlift" image="deadlift"/>
+                                                        <connections>
+                                                            <action selector="deadliftButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="DI9-UK-nP5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deadlift" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nl9-uR-jUc">
+                                                        <rect key="frame" x="0.0" y="140" width="160" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sqr-iT-MQj">
+                                                <rect key="frame" x="210" y="0.0" width="160" height="160.33333333333334"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Up-gJy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="140"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="160" id="AxS-G0-Ee3"/>
+                                                            <constraint firstAttribute="height" constant="140" id="JO5-91-VWO"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Squat" image="squat"/>
+                                                        <connections>
+                                                            <action selector="squatButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="ZiP-ZM-pJD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nD8-Hi-Mvb">
+                                                        <rect key="frame" x="0.0" y="140" width="160" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pan-kq-jaK">
+                                        <rect key="frame" x="122" y="232" width="170" height="140.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhE-Tc-jjC">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="hTW-I9-WAQ"/>
+                                                    <constraint firstAttribute="width" constant="170" id="qBB-fH-Anl"/>
+                                                </constraints>
+                                                <state key="normal" title="Bench" image="bench"/>
+                                                <connections>
+                                                    <action selector="benchButton:" destination="ZzW-Y8-miK" eventType="touchUpInside" id="fZl-yG-wgj"/>
+                                                    <action selector="benchButtonTapped:" destination="4yV-ZS-vma" eventType="touchUpInside" id="of5-Q1-64o"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bench Press" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hD-nm-Kyc">
+                                                <rect key="frame" x="0.0" y="119.99999999999999" width="170" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="5RV-hU-5eK" firstAttribute="centerX" secondItem="zoa-7o-0tQ" secondAttribute="centerX" id="9cQ-kS-8Va"/>
+                                    <constraint firstItem="5RV-hU-5eK" firstAttribute="leading" secondItem="tHW-my-jyz" secondAttribute="leadingMargin" id="DtU-gI-p5W"/>
+                                    <constraint firstItem="zoa-7o-0tQ" firstAttribute="leading" secondItem="tHW-my-jyz" secondAttribute="leading" constant="17" id="Fku-SX-mhT"/>
+                                    <constraint firstItem="Pan-kq-jaK" firstAttribute="centerX" secondItem="tHW-my-jyz" secondAttribute="centerX" id="Vx2-fz-79s"/>
+                                    <constraint firstItem="5RV-hU-5eK" firstAttribute="top" secondItem="tHW-my-jyz" secondAttribute="top" constant="17" id="Wnz-iC-3NE"/>
+                                    <constraint firstItem="Pan-kq-jaK" firstAttribute="top" secondItem="zoa-7o-0tQ" secondAttribute="bottom" constant="16.666666666666629" id="YRL-El-BJx"/>
+                                    <constraint firstItem="zoa-7o-0tQ" firstAttribute="top" secondItem="5RV-hU-5eK" secondAttribute="bottom" constant="8.0000000000000142" id="qUy-FK-K2i"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dfe-ee-RcE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Idt-re-emN" firstAttribute="top" secondItem="nD8-Hi-Mvb" secondAttribute="bottom" constant="29" id="2CH-De-dEK"/>
-                            <constraint firstItem="5hD-nm-Kyc" firstAttribute="top" secondItem="MhE-Tc-jjC" secondAttribute="bottom" constant="-1" id="5Pi-kr-5v3"/>
-                            <constraint firstItem="cqA-Up-gJy" firstAttribute="centerX" secondItem="nD8-Hi-Mvb" secondAttribute="centerX" id="6NC-8x-2GP"/>
-                            <constraint firstItem="5hD-nm-Kyc" firstAttribute="firstBaseline" secondItem="Nl9-uR-jUc" secondAttribute="firstBaseline" id="7C7-i3-tH8"/>
-                            <constraint firstItem="FA6-cJ-9r6" firstAttribute="top" secondItem="Idt-re-emN" secondAttribute="bottom" constant="40" id="8C1-6v-4Z9"/>
-                            <constraint firstItem="5RV-hU-5eK" firstAttribute="trailing" secondItem="nD8-Hi-Mvb" secondAttribute="trailing" id="BTn-Dv-nJp"/>
-                            <constraint firstItem="5RV-hU-5eK" firstAttribute="top" secondItem="dfe-ee-RcE" secondAttribute="top" constant="25" id="D1w-j9-oIF"/>
-                            <constraint firstItem="MhE-Tc-jjC" firstAttribute="bottom" secondItem="IY8-bP-KGf" secondAttribute="bottom" id="DfA-XL-uKy"/>
-                            <constraint firstItem="Idt-re-emN" firstAttribute="centerX" secondItem="gjR-tI-BZP" secondAttribute="centerX" id="HEh-aL-4iq"/>
-                            <constraint firstItem="nD8-Hi-Mvb" firstAttribute="top" secondItem="cqA-Up-gJy" secondAttribute="bottom" constant="5" id="Ia3-aO-11h"/>
-                            <constraint firstItem="5hD-nm-Kyc" firstAttribute="baseline" secondItem="Nl9-uR-jUc" secondAttribute="baseline" id="JD5-hk-mPd"/>
-                            <constraint firstItem="5RV-hU-5eK" firstAttribute="leading" secondItem="dfe-ee-RcE" secondAttribute="leading" constant="5" id="KVM-Qw-AzP"/>
-                            <constraint firstItem="Idt-re-emN" firstAttribute="leading" secondItem="dfe-ee-RcE" secondAttribute="leading" constant="48" id="Kl0-0H-zcn"/>
-                            <constraint firstItem="IY8-bP-KGf" firstAttribute="centerX" secondItem="Nl9-uR-jUc" secondAttribute="centerX" id="OmR-FC-6q9"/>
-                            <constraint firstItem="Idt-re-emN" firstAttribute="trailing" secondItem="FA6-cJ-9r6" secondAttribute="trailing" id="R54-jd-lk3"/>
-                            <constraint firstItem="nD8-Hi-Mvb" firstAttribute="leading" secondItem="dfe-ee-RcE" secondAttribute="leading" constant="175" id="V7j-kh-sSR"/>
-                            <constraint firstItem="FA6-cJ-9r6" firstAttribute="leading" secondItem="dfe-ee-RcE" secondAttribute="leading" constant="80" id="bC0-5c-2kh"/>
-                            <constraint firstItem="5hD-nm-Kyc" firstAttribute="leading" secondItem="Idt-re-emN" secondAttribute="leading" id="dWh-6d-rHB"/>
-                            <constraint firstItem="MhE-Tc-jjC" firstAttribute="leading" secondItem="gjR-tI-BZP" secondAttribute="leadingMargin" id="duv-bK-ZM0"/>
-                            <constraint firstItem="IY8-bP-KGf" firstAttribute="leading" secondItem="MhE-Tc-jjC" secondAttribute="trailing" constant="63" id="fqa-IP-lfW"/>
-                            <constraint firstItem="MhE-Tc-jjC" firstAttribute="centerX" secondItem="5hD-nm-Kyc" secondAttribute="centerX" id="i2p-br-S3V"/>
-                            <constraint firstItem="IY8-bP-KGf" firstAttribute="top" secondItem="dfe-ee-RcE" secondAttribute="top" constant="75" id="kkN-bs-IF0"/>
-                            <constraint firstItem="dfe-ee-RcE" firstAttribute="bottom" secondItem="FA6-cJ-9r6" secondAttribute="bottom" constant="35" id="ksA-yB-h7a"/>
-                            <constraint firstItem="cqA-Up-gJy" firstAttribute="leading" secondItem="dfe-ee-RcE" secondAttribute="leading" constant="122" id="lTV-ib-9rS"/>
-                            <constraint firstItem="cqA-Up-gJy" firstAttribute="top" secondItem="5hD-nm-Kyc" secondAttribute="bottom" constant="32" id="rh4-Cu-zWl"/>
+                            <constraint firstItem="dfe-ee-RcE" firstAttribute="bottom" secondItem="FA6-cJ-9r6" secondAttribute="bottom" constant="35" id="Db3-TS-8Cl"/>
+                            <constraint firstItem="tHW-my-jyz" firstAttribute="centerX" secondItem="Idt-re-emN" secondAttribute="centerX" id="elr-Ct-aYG"/>
+                            <constraint firstItem="tHW-my-jyz" firstAttribute="top" secondItem="dfe-ee-RcE" secondAttribute="top" id="evE-zB-M93"/>
+                            <constraint firstItem="Idt-re-emN" firstAttribute="top" secondItem="tHW-my-jyz" secondAttribute="bottom" constant="49" id="j70-0S-TVH"/>
+                            <constraint firstAttribute="trailing" secondItem="tHW-my-jyz" secondAttribute="trailing" id="jBi-2q-jJw"/>
+                            <constraint firstItem="Idt-re-emN" firstAttribute="leading" secondItem="dfe-ee-RcE" secondAttribute="leading" constant="48" id="kEm-gP-26R"/>
+                            <constraint firstItem="FA6-cJ-9r6" firstAttribute="top" secondItem="Idt-re-emN" secondAttribute="bottom" constant="15" id="mlT-3y-E9j"/>
+                            <constraint firstItem="tHW-my-jyz" firstAttribute="leading" secondItem="gjR-tI-BZP" secondAttribute="leading" id="tSh-w0-nGj"/>
+                            <constraint firstItem="Idt-re-emN" firstAttribute="trailing" secondItem="FA6-cJ-9r6" secondAttribute="trailing" id="uar-NH-WAw"/>
+                            <constraint firstItem="FA6-cJ-9r6" firstAttribute="leading" secondItem="dfe-ee-RcE" secondAttribute="leading" constant="80" id="vMG-hv-fmO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Workout" id="aE9-gq-dlQ">
@@ -657,6 +671,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backgroundGradientView" destination="tHW-my-jyz" id="8Un-Hk-BsT"/>
                         <outlet property="benchButton" destination="MhE-Tc-jjC" id="ogc-bF-IF7"/>
                         <outlet property="datePicker" destination="FA6-cJ-9r6" id="oi3-gO-bXu"/>
                         <outlet property="deadliftButton" destination="IY8-bP-KGf" id="2c8-ME-cQZ"/>
@@ -1055,12 +1070,12 @@
         <image name="PersonalBestCircle" width="512" height="440"/>
         <image name="WarriorRed" width="1920" height="1080"/>
         <image name="WarriorYellow" width="1920" height="1080"/>
-        <image name="bench" width="852" height="468"/>
-        <image name="deadlift" width="744" height="532"/>
+        <image name="bench" width="674" height="370"/>
+        <image name="deadlift" width="591" height="422"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="number" catalog="system" width="128" height="124"/>
-        <image name="squat" width="638" height="512"/>
+        <image name="squat" width="637" height="512"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
