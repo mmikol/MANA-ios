@@ -28,7 +28,6 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
 
         // Set up views if editing an existing Workout.
         if let workout = workout {
-            navigationItem.title = workout.name!
             weightTextField.text = workout.weight!
             datePicker.date = workout.date!
             
