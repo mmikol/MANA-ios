@@ -116,21 +116,30 @@ class WorkoutTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of WorkoutTableViewCell.")
         }
         
+        if ( indexPath.row % 2 == 0 ) {
+            cell.backgroundColor = #colorLiteral(red: 0.1454608142, green: 0.144603312, blue: 0.1461246014, alpha: 1)
+        } else {
+            cell.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        }
+
         let workout = workouts[indexPath.row]
         
         switch workout.name {
         case "Bench Press":
             cell.workoutImage.image = UIImage(named: "bench")
+            cell.weightLabel.backgroundColor = #colorLiteral(red: 0.9207075238, green: 0.832200706, blue: 0.2110097706, alpha: 1)
         case "Squat":
             cell.workoutImage.image = UIImage(named: "squat")
+            cell.weightLabel.backgroundColor = #colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1)
         case "Deadlift":
             cell.workoutImage.image = UIImage(named: "deadlift")
+            cell.weightLabel.backgroundColor = #colorLiteral(red: 0.9852438569, green: 0, blue: 0, alpha: 1)
         default:
             break
         }
         
-        cell.nameLabel.text = workout.name
-        cell.weightLabel.text = "\(workout.weight!) lbs"
+        cell.nameLabel.text = "\(workout.name!)"
+        cell.weightLabel.text = "  \(workout.weight!) lbs"
         cell.dateLabel.text = workout.dateString
         
         return cell
