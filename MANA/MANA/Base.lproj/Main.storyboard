@@ -787,11 +787,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lift Type" largeTitleDisplayMode="always" id="aE9-gq-dlQ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="go4-Ii-eCr">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cancel:" destination="4yV-ZS-vma" id="twg-3O-ZhB"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="228-Us-lBE">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="ZzW-Y8-miK" kind="unwind" unwindAction="unwindToWorkoutListWithSender:" id="MaZ-fX-TOU"/>
                             </connections>
@@ -1227,6 +1229,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="jOz-nx-Tx2"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="10lbs" width="676" height="676"/>
         <image name="2.5lbs" width="676" height="676"/>
