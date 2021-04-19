@@ -833,17 +833,17 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tD-7g-45b">
                                 <rect key="frame" x="0.0" y="140" width="414" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Qo0-gl-TSb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cm-6b-r4o">
-                                <rect key="frame" x="272" y="229" width="170" height="40"/>
+                                <rect key="frame" x="90" y="248" width="170" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-M2-kHS">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
@@ -871,93 +871,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="NgD-cc-tBm">
-                                <rect key="frame" x="344" y="359" width="70" height="283"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVK-mC-WS6">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="kfi-gd-dlv"/>
-                                            <constraint firstAttribute="width" constant="70" id="kto-VB-4jp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Undo" backgroundImage="WarriorYellow">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="undoButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="Wlq-yU-ahV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7n-He-T6I">
-                                        <rect key="frame" x="0.0" y="71" width="70" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="9cZ-Fi-6Tf"/>
-                                            <constraint firstAttribute="height" constant="70" id="Nyw-Xf-wnK"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Clear" backgroundImage="WarriorYellow">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="clearButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="mD3-uu-RHW"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-jQ-6cX">
-                                        <rect key="frame" x="0.0" y="142" width="70" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="9tT-wW-2ZT"/>
-                                            <constraint firstAttribute="width" constant="70" id="a9H-cS-tU8"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
-                                        <state key="normal" title="+" backgroundImage="WarriorYellow">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="34"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="additionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="YsM-kV-xQ1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLY-9K-ikf">
-                                        <rect key="frame" x="0.0" y="213" width="70" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="Qds-Db-Rsz"/>
-                                            <constraint firstAttribute="width" constant="70" id="SLR-kI-adt"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                        <state key="normal" title="-" backgroundImage="WarriorYellow">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="subtractionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="cXM-2Z-4tA"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-aF-xGD">
-                                <rect key="frame" x="10" y="310" width="313" height="490"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cnz-aF-xGD">
+                                <rect key="frame" x="20" y="303" width="310" height="490"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sOq-WF-0l0">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="490"/>
@@ -998,7 +913,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="67W-W0-ttf">
-                                        <rect key="frame" x="163" y="0.0" width="150" height="490"/>
+                                        <rect key="frame" x="160" y="0.0" width="150" height="490"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsT-gv-sqj">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -1037,19 +952,110 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NgD-cc-tBm">
+                                <rect key="frame" x="338" y="363" width="70" height="370"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVK-mC-WS6">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.90588235859999999" green="0.83529412749999998" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="kfi-gd-dlv"/>
+                                            <constraint firstAttribute="width" constant="70" id="kto-VB-4jp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Undo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="undoButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="Wlq-yU-ahV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7n-He-T6I">
+                                        <rect key="frame" x="0.0" y="100" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.90588235859999999" green="0.83529412749999998" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="9cZ-Fi-6Tf"/>
+                                            <constraint firstAttribute="height" constant="70" id="Nyw-Xf-wnK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="mD3-uu-RHW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-jQ-6cX">
+                                        <rect key="frame" x="0.0" y="200" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.90588235859999999" green="0.83529412749999998" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="9tT-wW-2ZT"/>
+                                            <constraint firstAttribute="width" constant="70" id="a9H-cS-tU8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="34"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="additionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="YsM-kV-xQ1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLY-9K-ikf">
+                                        <rect key="frame" x="0.0" y="300" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.90588235859999999" green="0.83529412749999998" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Qds-Db-Rsz"/>
+                                            <constraint firstAttribute="width" constant="70" id="SLR-kI-adt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="subtractionButtonTapped:" destination="nhq-nB-JTO" eventType="touchUpInside" id="cXM-2Z-4tA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dYx-jL-2Xl"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dYx-jL-2Xl" firstAttribute="bottom" secondItem="NgD-cc-tBm" secondAttribute="bottom" constant="171" id="7nd-BB-ill"/>
-                            <constraint firstItem="8cm-6b-r4o" firstAttribute="top" secondItem="dYx-jL-2Xl" secondAttribute="top" constant="89" id="86U-am-B0O"/>
-                            <constraint firstItem="cnz-aF-xGD" firstAttribute="top" secondItem="8cm-6b-r4o" secondAttribute="bottom" constant="41" id="98J-d1-MY0"/>
+                            <constraint firstItem="dYx-jL-2Xl" firstAttribute="bottom" secondItem="NgD-cc-tBm" secondAttribute="bottom" constant="80" id="7nd-BB-ill"/>
+                            <constraint firstItem="8cm-6b-r4o" firstAttribute="top" secondItem="dYx-jL-2Xl" secondAttribute="top" constant="108" id="86U-am-B0O"/>
+                            <constraint firstItem="cnz-aF-xGD" firstAttribute="top" secondItem="8cm-6b-r4o" secondAttribute="bottom" constant="15" id="98J-d1-MY0"/>
                             <constraint firstItem="6tD-7g-45b" firstAttribute="centerX" secondItem="v8N-q6-atO" secondAttribute="centerX" id="All-Pe-9iE"/>
                             <constraint firstItem="6tD-7g-45b" firstAttribute="top" secondItem="dYx-jL-2Xl" secondAttribute="top" id="MPP-e5-4bP"/>
-                            <constraint firstItem="cnz-aF-xGD" firstAttribute="leading" secondItem="v8N-q6-atO" secondAttribute="leadingMargin" constant="-10" id="Mkd-LQ-7Fu"/>
+                            <constraint firstItem="cnz-aF-xGD" firstAttribute="leading" secondItem="v8N-q6-atO" secondAttribute="leadingMargin" id="Mkd-LQ-7Fu"/>
                             <constraint firstItem="6tD-7g-45b" firstAttribute="leading" secondItem="dYx-jL-2Xl" secondAttribute="leading" id="ld4-jv-d85"/>
-                            <constraint firstItem="8cm-6b-r4o" firstAttribute="leading" secondItem="dYx-jL-2Xl" secondAttribute="leading" constant="272" id="pMM-Qc-g1D"/>
-                            <constraint firstAttribute="trailing" secondItem="NgD-cc-tBm" secondAttribute="trailing" id="xCt-eu-URU"/>
+                            <constraint firstItem="8cm-6b-r4o" firstAttribute="leading" secondItem="dYx-jL-2Xl" secondAttribute="leading" constant="90" id="pMM-Qc-g1D"/>
+                            <constraint firstAttribute="trailing" secondItem="NgD-cc-tBm" secondAttribute="trailing" constant="6" id="xCt-eu-URU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kqO-dd-jZZ"/>

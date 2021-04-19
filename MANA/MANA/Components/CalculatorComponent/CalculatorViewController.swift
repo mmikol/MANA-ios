@@ -49,20 +49,32 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var clearButton: UIButton!
     
     @IBAction func additionButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
+
         guard additionButton.isSelected else {
             additionButton.isSelected.toggle()
+            additionButton.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
             if subtractionButton.isSelected {
                 subtractionButton.isSelected.toggle()
+                subtractionButton.backgroundColor = #colorLiteral(red: 0.9207075238, green: 0.832200706, blue: 0.2110097706, alpha: 1)
             }
             return
         }
     }
     
     @IBAction func subtractionButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
+
         guard subtractionButton.isSelected else {
             subtractionButton.isSelected.toggle()
+            additionButton.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
             if additionButton.isSelected {
                 additionButton.isSelected.toggle()
+                additionButton.backgroundColor = #colorLiteral(red: 0.9207075238, green: 0.832200706, blue: 0.2110097706, alpha: 1)
             }
             
             if !smallBarButton.isEnabled || !largeBarButton.isEnabled {
@@ -75,6 +87,10 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func undoButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
+
         guard computationStack.isEmpty else {
             currentComputation += computationStack.pop() as! Int
             computationLabel.text = "\(currentComputation) lbs"
@@ -89,6 +105,10 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func clearButtonTapped(_ sender: Any) {
+        if let button = (sender as? UIButton){
+            button.showAnimation{}
+        }
+
         currentComputation = 0
         computationStack.clear()
         computationLabel.text = "\(currentComputation) lbs"
@@ -178,7 +198,6 @@ class CalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        additionButton.isSelected.toggle()
         computationLabel.text = "\(currentComputation) lbs"
         numberFormatter.numberStyle = .decimal
     }
