@@ -40,6 +40,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         showUserInformation()
         self.tabBarController?.delegate = self
         lineChart.delegate = self
+        levelProgressBar.transform = levelProgressBar.transform.scaledBy(x: 1, y: 10)
     }
 
     override func viewDidLayoutSubviews() {
@@ -125,7 +126,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
                     
                     self.navigationItem.title = "\(firstName) \(lastName)"
                     self.levelLabel.text = "Level \(String(level))"
-                    self.xpLabel.text = "XP: \(currentXP) / \(neededXP)"
+                    self.xpLabel.text = "\(currentXP) / \(neededXP) XP"
                     self.bestBenchLabel.text = "\(bestBenchString!) \nlbs"
                     self.bestSquatLabel.text = "\(bestSquatString!) \nlbs"
                     self.bestDeadliftLabel.text = "\(bestDeadliftString!) \nlbs"
