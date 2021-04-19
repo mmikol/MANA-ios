@@ -182,5 +182,8 @@ class CalculatorViewController: UIViewController {
         additionButton.backgroundColor = #colorLiteral(red: 1, green: 0.7450906959, blue: 0, alpha: 1)
         computationLabel.text = "\(currentComputation) lbs"
         numberFormatter.numberStyle = .decimal
+        additionButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .selected)
+        subtractionButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .selected)
+
     }
 }
