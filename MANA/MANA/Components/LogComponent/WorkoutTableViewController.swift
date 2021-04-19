@@ -122,23 +122,26 @@ class WorkoutTableViewController: UITableViewController {
         
         cell.selectedBackgroundView = selectionHighlight
         cell.backgroundColor = UIColor.clear
-        
+
         switch workout.name {
         case "Bench Press":
             cell.workoutImage.image = UIImage(named: "bench")
             cell.backgroundColor = #colorLiteral(red: 0.9883286357, green: 0.7884005904, blue: 0, alpha: 1)
             selectionHighlight.backgroundColor = [#colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1), #colorLiteral(red: 0.9852438569, green: 0, blue: 0, alpha: 1)].randomElement()
             cell.selectedBackgroundView = selectionHighlight
+            break
         case "Squat":
             cell.workoutImage.image = UIImage(named: "squat")
             cell.backgroundColor = #colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1)
             selectionHighlight.backgroundColor = [#colorLiteral(red: 0.9883286357, green: 0.7884005904, blue: 0, alpha: 1), #colorLiteral(red: 0.9852438569, green: 0, blue: 0, alpha: 1)].randomElement()
             cell.selectedBackgroundView = selectionHighlight
+            break
         case "Deadlift":
             cell.workoutImage.image = UIImage(named: "deadlift")
             cell.backgroundColor = #colorLiteral(red: 0.9852438569, green: 0, blue: 0, alpha: 1)
             selectionHighlight.backgroundColor = [#colorLiteral(red: 0.9883286357, green: 0.7884005904, blue: 0, alpha: 1), #colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1)].randomElement()
             cell.selectedBackgroundView = selectionHighlight
+            break
         default:
             break
         }
