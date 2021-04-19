@@ -96,7 +96,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
                     let bestSquatString = self.numberFormatter.string(from: NSNumber(value: Int(bestSquat) ?? 0))
                     let bestDeadliftString = self.numberFormatter.string(from: NSNumber(value: Int(bestDeadlift) ?? 0))
                     
-                    self.nameLabel.text = "\(firstName) \(lastName)"
+                    self.navigationItem.title = "\(firstName) \(lastName)"
                     self.levelLabel.text = "Level \(String(level))"
                     self.xpLabel.text = "XP: \(currentXP) / \(neededXP)"
                     self.bestBenchLabel.text = "\(bestBenchString!) \nlbs"
@@ -127,12 +127,6 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         showUserInformation()
         self.tabBarController?.delegate = self
         lineChart.delegate = self
-        
-        do {
-            workouts = try context.fetch(Workout.fetchRequest())
-        } catch let error {
-            print("\(error)")
-        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -142,49 +136,81 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     }
     
     private func setupChart() {
+        lineChart.noDataTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         lineChart.noDataText = "No Chart data found. Time to lift!"
         lineChart.frame = CGRect(x: 0, y: view.center.y - 250, width: self.view.frame.size.width, height: 300)
         view.addSubview(lineChart)
         lineChart.xAxis.drawGridLinesEnabled = false
         lineChart.leftAxis.drawLabelsEnabled = false
+        lineChart.drawBordersEnabled = false
         lineChart.legend.enabled = false
+        lineChart.xAxis.axisLineColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        lineChart.rightAxis.gridColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        lineChart.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
     
     private func generateChart() {
         if !lineChart.isEmpty() {
             lineChart.clear()
         }
+        
+        do {
+            workouts = try context.fetch(Workout.fetchRequest())
+        } catch let error {
+            print("\(error)")
+        }
 
         var entries = [ChartDataEntry]()
-        var xCoordinate = 0
+        var xCoordinate = 0.0
         
         if benchChartButton.isSelected {
             for workout in workouts {
                 if (workout.name == "Bench Press") {
-                    entries.append(ChartDataEntry(x: Double(xCoordinate), y: Double(workout.weight!) ?? 0))
+                    entries.append(ChartDataEntry(x: xCoordinate, y: Double(workout.weight!) ?? 0))
+                    xCoordinate += 1.0
                 }
-                xCoordinate += 1
             }
+            drawChart(with: entries)
         } else if squatChartButton.isSelected {
             for workout in workouts {
                 if (workout.name == "Squat") {
-                    entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(workout.weight!) ?? 0))
+                    entries.append(ChartDataEntry(x: xCoordinate, y: Double(workout.weight!) ?? 0))
+                    xCoordinate += 1.0
                 }
-                xCoordinate += 1
             }
+            drawChart(with: entries)
         } else if deadliftChartButton.isSelected {
             for workout in workouts {
                 if (workout.name == "Deadlift") {
-                    entries.append(ChartDataEntry(x: Double(workout.weight!) ?? 0, y: Double(workout.weight!) ?? 0))
+                    entries.append(ChartDataEntry(x: xCoordinate, y: Double(workout.weight!) ?? 0))
+                    xCoordinate += 1.0
                 }
-                xCoordinate += 1
             }
-            
+            drawChart(with: entries)
+        }
+    }
+    
+    private func drawChart(with entries: [ChartDataEntry]) {
+        let set = LineChartDataSet(entries: entries.isEmpty ? [ChartDataEntry]() : entries)
+
+        let strongGradientColor = (
+            benchChartButton.isSelected ? #colorLiteral(red: 0.9207075238, green: 0.832200706, blue: 0.2110097706, alpha: 1) :
+            squatChartButton.isSelected ? #colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1):
+            deadliftChartButton.isSelected ? #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1) : UIColor.clear.cgColor
+        )
+        let gradientColors = [strongGradientColor, UIColor.clear.cgColor] as CFArray
+        let colorLocations:[CGFloat] = [1.0, 0.0]
+        guard let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) else {
+            print("Gradient error occurred")
+            return
         }
         
-        let set = LineChartDataSet(entries: entries.isEmpty ? [ChartDataEntry]() : entries)
-        set.colors = ChartColorTemplates.material()
-        let data = LineChartData(dataSet: set)
-        lineChart.data = data
+        set.colors = ChartColorTemplates.colorful()
+        set.setCircleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        set.valueTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        set.fill = Fill.fillWithLinearGradient(gradient, angle: 90.0)
+        set.drawFilledEnabled = true
+        lineChart.data = LineChartData(dataSet: set)
+        lineChart.animate(xAxisDuration: CATransaction.animationDuration(), easingOption: .easeInBounce)
     }
 }
