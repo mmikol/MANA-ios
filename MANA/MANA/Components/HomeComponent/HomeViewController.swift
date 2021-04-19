@@ -77,8 +77,8 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     // REMOVE HARD CODE AFTER TESTS
     private func showUserInformation() {
         // let user = Auth.auth().currentUser
-        if true {
-            let documentReference = database.collection("users").document("K3nMnBjnrMcXndZ5Q5RWjVEVuZo2")
+        if let user = Auth.auth().currentUser {
+            let documentReference = database.collection("users").document(user.uid)
             
             documentReference.getDocument { (document, error) in
                 if let document = document, document.exists {

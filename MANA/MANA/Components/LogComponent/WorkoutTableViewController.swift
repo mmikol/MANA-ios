@@ -81,7 +81,7 @@ class WorkoutTableViewController: UITableViewController {
 
     func update(name: String, weight: String) {
         if let user = Auth.auth().currentUser {
-            let documentReference = database.collection("users").document("K3nMnBjnrMcXndZ5Q5RWjVEVuZo2")
+            let documentReference = database.collection("users").document(user.uid)
             let workoutRecordName = (name == "Bench Press" ? "best_bench" :
                                     name == "Squat" ? "best_squat" :
                                     name == "Deadlift" ?  "best_deadlift" : "")
