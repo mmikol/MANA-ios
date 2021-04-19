@@ -34,6 +34,7 @@ class CalculatorViewController: UIViewController {
     var computationStack = CalculatorStack()
     
     @IBOutlet weak var backgroundGradientView: UIView!
+    @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var computationLabel: UILabel!
     @IBOutlet weak var plate45Button: UIButton!
     @IBOutlet weak var plate35Button: UIButton!
@@ -41,8 +42,6 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var plate10Button: UIButton!
     @IBOutlet weak var plate5Button: UIButton!
     @IBOutlet weak var plate2Button: UIButton! // Represents 2.5lbs
-    @IBOutlet weak var smallBarButton: UIButton!
-    @IBOutlet weak var largeBarButton: UIButton!
     @IBOutlet weak var additionButton: UIButton!
     @IBOutlet weak var subtractionButton: UIButton!
     @IBOutlet weak var undoButton: UIButton!
@@ -55,10 +54,10 @@ class CalculatorViewController: UIViewController {
 
         guard additionButton.isSelected else {
             additionButton.isSelected.toggle()
-            additionButton.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+            additionButton.backgroundColor = #colorLiteral(red: 1, green: 0.7450906959, blue: 0, alpha: 1)
             if subtractionButton.isSelected {
                 subtractionButton.isSelected.toggle()
-                subtractionButton.backgroundColor = #colorLiteral(red: 0.9207075238, green: 0.832200706, blue: 0.2110097706, alpha: 1)
+                subtractionButton.backgroundColor = #colorLiteral(red: 1, green: 0.5488162041, blue: 0, alpha: 1)
             }
             return
         }
@@ -71,15 +70,10 @@ class CalculatorViewController: UIViewController {
 
         guard subtractionButton.isSelected else {
             subtractionButton.isSelected.toggle()
-            additionButton.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+            subtractionButton.backgroundColor = #colorLiteral(red: 1, green: 0.7450906959, blue: 0, alpha: 1)
             if additionButton.isSelected {
                 additionButton.isSelected.toggle()
-                additionButton.backgroundColor = #colorLiteral(red: 0.9207075238, green: 0.832200706, blue: 0.2110097706, alpha: 1)
-            }
-            
-            if !smallBarButton.isEnabled || !largeBarButton.isEnabled {
-                smallBarButton.isEnabled = true
-                largeBarButton.isEnabled = true
+                additionButton.backgroundColor = #colorLiteral(red: 1, green: 0.5488162041, blue: 0, alpha: 1)
             }
             
             return
@@ -92,14 +86,13 @@ class CalculatorViewController: UIViewController {
         }
 
         guard computationStack.isEmpty else {
-            currentComputation += computationStack.pop() as! Int
+            let delta = computationStack.pop() as! Int
+            let symbol = delta >= 0 ? "+" : ""
+
+            actionLabel.text = "\(symbol)\(delta)"
+            currentComputation += delta
             computationLabel.text = "\(currentComputation) lbs"
-            
-            if !smallBarButton.isEnabled || !largeBarButton.isEnabled {
-                smallBarButton.isEnabled = true
-                largeBarButton.isEnabled = true
-            }
-            
+
             return
         }
     }
@@ -112,8 +105,7 @@ class CalculatorViewController: UIViewController {
         currentComputation = 0
         computationStack.clear()
         computationLabel.text = "\(currentComputation) lbs"
-        smallBarButton.isEnabled = true
-        largeBarButton.isEnabled = true
+        actionLabel.text = ""
     }
     
     @IBAction func plate45ButtonTapped(_ sender: Any) {
@@ -163,27 +155,15 @@ class CalculatorViewController: UIViewController {
         let TWO_PLATE_VALUE = 5
         adjustComputation(By: TWO_PLATE_VALUE)
     }
-    
-    @IBAction func smallBarButtonTapped(_ sender: Any) {
-        let SMALL_BAR_VALUE = 25
-        adjustComputation(By: SMALL_BAR_VALUE)
-        smallBarButton.isEnabled = false
-        largeBarButton.isEnabled = false
-    }
-    
-    @IBAction func largeBarButtonTapped(_ sender: Any) {
-        let LARGE_BAR_VALUE = 45
-        adjustComputation(By: LARGE_BAR_VALUE)
-        smallBarButton.isEnabled = false
-        largeBarButton.isEnabled = false
-    }
-    
+
     func adjustComputation(By amount: Int) {
         guard currentComputation == 0 && subtractionButton.isSelected else {
             let increment = additionButton.isSelected ? amount : -amount
             let newValue = currentComputation + increment
             
             if newValue >= 0 && newValue < 50000 {
+                let symbol = additionButton.isSelected ? "+" : ""
+                actionLabel.text = "\(symbol)\(increment)"
                 currentComputation += increment
                 computationStack.push(-increment)
                 let formattedNumber = numberFormatter.string(from: NSNumber(value: currentComputation))
@@ -198,6 +178,8 @@ class CalculatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        actionLabel.text = ""
+        additionButton.backgroundColor = #colorLiteral(red: 1, green: 0.7450906959, blue: 0, alpha: 1)
         computationLabel.text = "\(currentComputation) lbs"
         numberFormatter.numberStyle = .decimal
     }
