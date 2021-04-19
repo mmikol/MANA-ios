@@ -150,7 +150,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     private func setupChart() {
         lineChart.noDataTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         lineChart.noDataFont = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium)
-        lineChart.noDataText = "No Chart data found. Start grinding!"
+        lineChart.noDataText = "No chart data found. Start grinding!"
         lineChart.frame = CGRect(x: 0, y: view.center.y - 275, width: self.view.frame.size.width, height: 300)
         view.addSubview(lineChart)
         lineChart.xAxis.drawGridLinesEnabled = false
