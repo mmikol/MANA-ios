@@ -28,13 +28,36 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBOutlet weak var bestSquatLabel: UILabel!
     @IBOutlet weak var bestDeadliftLabel: UILabel!
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        benchChartButton.isSelected = true
+        benchChartButton.backgroundColor = #colorLiteral(red: 0.9883286357, green: 0.7884005904, blue: 0, alpha: 1)
+        benchChartButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .selected)
+        squatChartButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .selected)
+        deadliftChartButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .selected)
+        numberFormatter.numberStyle = .decimal
+        showUserInformation()
+        self.tabBarController?.delegate = self
+        lineChart.delegate = self
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setupChart()
+        generateChart()
+    }
+
     @IBAction func benchChartButtonTapped(_ sender: Any) {
         guard benchChartButton.isSelected else {
             benchChartButton.isSelected.toggle()
+            benchChartButton.backgroundColor = #colorLiteral(red: 0.9883286357, green: 0.7884005904, blue: 0, alpha: 1)
             if squatChartButton.isSelected {
                 squatChartButton.isSelected.toggle()
+                squatChartButton.backgroundColor =  UIColor.clear
             } else if deadliftChartButton.isSelected {
                 deadliftChartButton.isSelected.toggle()
+                deadliftChartButton.backgroundColor = UIColor.clear
             }
             generateChart()
             return
@@ -44,10 +67,13 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBAction func squatChartButtonTapped(_ sender: Any) {
         guard squatChartButton.isSelected else {
             squatChartButton.isSelected.toggle()
+            squatChartButton.backgroundColor =  #colorLiteral(red: 0.08806554228, green: 0.5374518037, blue: 0.789417088, alpha: 1)
             if benchChartButton.isSelected {
                 benchChartButton.isSelected.toggle()
+                benchChartButton.backgroundColor = UIColor.clear
             } else if deadliftChartButton.isSelected {
                 deadliftChartButton.isSelected.toggle()
+                deadliftChartButton.backgroundColor = UIColor.clear
             }
             generateChart()
             return
@@ -57,10 +83,13 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBAction func deadliftChartButtonTapped(_ sender: Any) {
         guard deadliftChartButton.isSelected else {
             deadliftChartButton.isSelected.toggle()
+            deadliftChartButton.backgroundColor = #colorLiteral(red: 0.9852438569, green: 0, blue: 0, alpha: 1)
             if benchChartButton.isSelected {
                 benchChartButton.isSelected.toggle()
+                benchChartButton.backgroundColor = UIColor.clear
             } else if squatChartButton.isSelected {
                 squatChartButton.isSelected.toggle()
+                squatChartButton.backgroundColor =  UIColor.clear
             }
             generateChart()
             return
@@ -74,9 +103,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
          }
     }
 
-    // REMOVE HARD CODE AFTER TESTS
     private func showUserInformation() {
-        // let user = Auth.auth().currentUser
         if let user = Auth.auth().currentUser {
             let documentReference = database.collection("users").document(user.uid)
             
@@ -119,34 +146,21 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         let threshold = 50
         return level * threshold
     }
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        benchChartButton.isSelected = true
-        numberFormatter.numberStyle = .decimal
-        showUserInformation()
-        self.tabBarController?.delegate = self
-        lineChart.delegate = self
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        setupChart()
-        generateChart()
-    }
-    
+
     private func setupChart() {
         lineChart.noDataTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        lineChart.noDataText = "No Chart data found. Time to lift!"
+        lineChart.noDataFont = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium)
+        lineChart.noDataText = "No Chart data found. Start grinding!"
         lineChart.frame = CGRect(x: 0, y: view.center.y - 250, width: self.view.frame.size.width, height: 300)
         view.addSubview(lineChart)
         lineChart.xAxis.drawGridLinesEnabled = false
         lineChart.leftAxis.drawLabelsEnabled = false
+        lineChart.rightAxis.drawLabelsEnabled = false
         lineChart.drawBordersEnabled = false
         lineChart.legend.enabled = false
         lineChart.xAxis.axisLineColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         lineChart.rightAxis.gridColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        lineChart.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        lineChart.borderColor = UIColor.clear
     }
     
     private func generateChart() {
@@ -170,7 +184,9 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
                     xCoordinate += 1.0
                 }
             }
-            drawChart(with: entries)
+            if entries.count > 0 {
+                drawChart(with: entries)
+            }
         } else if squatChartButton.isSelected {
             for workout in workouts {
                 if (workout.name == "Squat") {
@@ -178,7 +194,9 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
                     xCoordinate += 1.0
                 }
             }
-            drawChart(with: entries)
+            if entries.count > 0 {
+                drawChart(with: entries)
+            }
         } else if deadliftChartButton.isSelected {
             for workout in workouts {
                 if (workout.name == "Deadlift") {
@@ -186,7 +204,10 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
                     xCoordinate += 1.0
                 }
             }
-            drawChart(with: entries)
+            
+            if entries.count > 0 {
+                drawChart(with: entries)
+            }
         }
     }
     

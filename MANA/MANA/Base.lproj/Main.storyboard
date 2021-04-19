@@ -343,6 +343,12 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="2La-1m-fZP" kind="relationship" relationship="rootViewController" id="B35-uB-i5i"/>
@@ -363,7 +369,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvA-Ae-kFC">
                                 <rect key="frame" x="20" y="140" width="40" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQn-Qi-0TI">
@@ -375,7 +381,7 @@
                                     <constraint firstAttribute="height" constant="20" id="1Iu-jA-hdx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bestSquatCircle" translatesAutoresizingMaskIntoConstraints="NO" id="xbQ-uZ-AKJ">
@@ -442,42 +448,93 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Records" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sav-wd-DRm">
                                 <rect key="frame" x="134" y="580" width="143" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Afb-cS-QdW">
                                 <rect key="frame" x="0.0" y="168" width="414" height="404"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeH-wH-USI">
+                                        <rect key="frame" x="96" y="341" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="9vi-9P-bWE"/>
+                                            <constraint firstAttribute="width" constant="80" id="MjU-3f-BkS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Squat">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="squatChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="3Ki-Jn-aQu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-yX-ZoC">
+                                        <rect key="frame" x="184" y="341" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="F2c-pS-Yn9"/>
+                                            <constraint firstAttribute="width" constant="80" id="XU6-o3-StM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Deadlift">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deadliftChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="B8O-VG-z9k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4do-23-wte">
+                                        <rect key="frame" x="8" y="341" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="8zg-Cr-My9"/>
+                                            <constraint firstAttribute="height" constant="30" id="qM1-3v-KsQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Bench">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="benchChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="eTx-3D-CIg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xeH-wH-USI" firstAttribute="baseline" secondItem="o0n-yX-ZoC" secondAttribute="baseline" id="9Ww-tW-C9d"/>
+                                    <constraint firstItem="4do-23-wte" firstAttribute="leading" secondItem="Afb-cS-QdW" secondAttribute="leadingMargin" id="Ffe-RQ-tcq"/>
+                                    <constraint firstItem="xeH-wH-USI" firstAttribute="leading" secondItem="4do-23-wte" secondAttribute="trailing" constant="8" id="MtJ-KU-bD6"/>
+                                    <constraint firstItem="4do-23-wte" firstAttribute="baseline" secondItem="xeH-wH-USI" secondAttribute="baseline" id="pzn-aq-d5m"/>
+                                    <constraint firstItem="o0n-yX-ZoC" firstAttribute="leading" secondItem="xeH-wH-USI" secondAttribute="trailing" constant="8" id="raS-Qs-nUi"/>
+                                    <constraint firstItem="4do-23-wte" firstAttribute="bottom" secondItem="Afb-cS-QdW" secondAttribute="bottomMargin" constant="-25" id="tRo-kh-mN8"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4do-23-wte">
-                                <rect key="frame" x="21" y="528" width="44" height="30"/>
-                                <state key="normal" title="Bench"/>
-                                <connections>
-                                    <action selector="benchChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="eTx-3D-CIg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeH-wH-USI">
-                                <rect key="frame" x="83" y="528" width="41" height="30"/>
-                                <state key="normal" title="Squat"/>
-                                <connections>
-                                    <action selector="squatChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="3Ki-Jn-aQu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-yX-ZoC">
-                                <rect key="frame" x="146" y="528" width="54" height="30"/>
-                                <state key="normal" title="Deadlift"/>
-                                <connections>
-                                    <action selector="deadliftChartButtonTapped:" destination="2La-1m-fZP" eventType="touchUpInside" id="B8O-VG-z9k"/>
-                                </connections>
-                            </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8B2-nd-H01">
                                 <rect key="frame" x="137" y="149" width="192" height="2"/>
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OFA-jl-9xZ"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xeH-wH-USI" firstAttribute="leading" secondItem="4do-23-wte" secondAttribute="trailing" constant="18" id="1qP-EV-mET"/>
                             <constraint firstItem="xbQ-uZ-AKJ" firstAttribute="leading" secondItem="x4N-pj-Hrf" secondAttribute="trailing" constant="17" id="2hF-Nz-ouc"/>
                             <constraint firstItem="FvA-Ae-kFC" firstAttribute="leading" secondItem="OFA-jl-9xZ" secondAttribute="leading" constant="20" id="4NO-JW-8OD"/>
                             <constraint firstItem="gao-n3-NRJ" firstAttribute="top" secondItem="sav-wd-DRm" secondAttribute="bottom" constant="12" id="5V0-9n-Rlu"/>
@@ -486,7 +543,6 @@
                             <constraint firstItem="Tzm-cB-GO8" firstAttribute="leading" secondItem="799-3U-rqB" secondAttribute="trailing" constant="41" id="6cJ-PV-p9l"/>
                             <constraint firstItem="iVp-Xr-PLb" firstAttribute="top" secondItem="xbQ-uZ-AKJ" secondAttribute="top" constant="-4" id="6gb-eq-FtI"/>
                             <constraint firstItem="x4N-pj-Hrf" firstAttribute="baseline" secondItem="5kX-8I-ocG" secondAttribute="baseline" id="7iF-oy-rLs"/>
-                            <constraint firstItem="xeH-wH-USI" firstAttribute="baseline" secondItem="o0n-yX-ZoC" secondAttribute="baseline" id="9yq-wZ-Fj1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gao-n3-NRJ" secondAttribute="trailing" constant="-20" id="BeA-5x-xnF"/>
                             <constraint firstItem="799-3U-rqB" firstAttribute="leading" secondItem="OFA-jl-9xZ" secondAttribute="leading" constant="19" id="C5Z-z5-bEy"/>
                             <constraint firstItem="xbQ-uZ-AKJ" firstAttribute="centerX" secondItem="5kX-8I-ocG" secondAttribute="centerX" constant="2" id="C9J-bw-NGN"/>
@@ -509,17 +565,14 @@
                             <constraint firstItem="MQn-Qi-0TI" firstAttribute="centerX" secondItem="xbQ-uZ-AKJ" secondAttribute="centerX" id="bfu-RV-wI8"/>
                             <constraint firstItem="gao-n3-NRJ" firstAttribute="leading" secondItem="Tzm-cB-GO8" secondAttribute="trailing" constant="27" id="bs5-lg-cIR"/>
                             <constraint firstItem="Afb-cS-QdW" firstAttribute="trailing" secondItem="gao-n3-NRJ" secondAttribute="trailing" id="eFg-mT-42b"/>
-                            <constraint firstItem="4do-23-wte" firstAttribute="leading" secondItem="x4N-pj-Hrf" secondAttribute="leading" constant="1" id="fby-Br-6qt"/>
                             <constraint firstItem="8B2-nd-H01" firstAttribute="top" secondItem="OFA-jl-9xZ" secondAttribute="top" constant="9" id="gIW-b7-CVc"/>
                             <constraint firstItem="Tzm-cB-GO8" firstAttribute="centerY" secondItem="fDe-kF-JlF" secondAttribute="centerY" id="gR9-mC-0Ed"/>
                             <constraint firstItem="gao-n3-NRJ" firstAttribute="centerX" secondItem="Llj-A2-Sgz" secondAttribute="centerX" id="j9l-cB-uNR"/>
-                            <constraint firstItem="xeH-wH-USI" firstAttribute="top" secondItem="MQn-Qi-0TI" secondAttribute="bottom" constant="25" id="jls-GX-16D"/>
                             <constraint firstItem="FvA-Ae-kFC" firstAttribute="centerY" secondItem="8B2-nd-H01" secondAttribute="centerY" id="kAD-Au-PNg"/>
                             <constraint firstItem="Afb-cS-QdW" firstAttribute="leading" secondItem="iVp-Xr-PLb" secondAttribute="leading" id="kK9-nb-2eL"/>
-                            <constraint firstItem="sav-wd-DRm" firstAttribute="top" secondItem="o0n-yX-ZoC" secondAttribute="bottom" constant="22" id="kUH-NT-r5U"/>
                             <constraint firstItem="Afb-cS-QdW" firstAttribute="top" secondItem="FvA-Ae-kFC" secondAttribute="bottom" constant="8" id="lcv-mt-Y2I"/>
                             <constraint firstItem="fDe-kF-JlF" firstAttribute="top" secondItem="Llj-A2-Sgz" secondAttribute="bottom" constant="22" id="nPW-Z7-cW3"/>
-                            <constraint firstItem="o0n-yX-ZoC" firstAttribute="leading" secondItem="xeH-wH-USI" secondAttribute="trailing" constant="22" id="ng6-OH-tgg"/>
+                            <constraint firstItem="sav-wd-DRm" firstAttribute="top" secondItem="MQn-Qi-0TI" secondAttribute="bottom" constant="77" id="ntF-rv-yDe"/>
                             <constraint firstItem="MQn-Qi-0TI" firstAttribute="centerY" secondItem="Ezz-Jk-uv7" secondAttribute="centerY" id="o4m-tH-b31"/>
                             <constraint firstItem="MQn-Qi-0TI" firstAttribute="leading" secondItem="OFA-jl-9xZ" secondAttribute="leading" constant="107" id="orS-qy-BK4"/>
                             <constraint firstItem="OFA-jl-9xZ" firstAttribute="trailing" secondItem="8B2-nd-H01" secondAttribute="trailing" constant="85" id="ptK-xR-Tn1"/>
@@ -531,7 +584,6 @@
                             <constraint firstItem="OFA-jl-9xZ" firstAttribute="bottom" secondItem="fDe-kF-JlF" secondAttribute="bottom" constant="16" id="xAS-33-a34"/>
                             <constraint firstItem="8B2-nd-H01" firstAttribute="leading" secondItem="PVA-TZ-8T3" secondAttribute="leading" constant="-200" id="xh8-X9-BTV"/>
                             <constraint firstItem="FvA-Ae-kFC" firstAttribute="leading" secondItem="x4N-pj-Hrf" secondAttribute="leading" id="ye8-Nv-GWw"/>
-                            <constraint firstItem="4do-23-wte" firstAttribute="baseline" secondItem="xeH-wH-USI" secondAttribute="baseline" id="zPB-8K-N0i"/>
                             <constraint firstItem="iVp-Xr-PLb" firstAttribute="bottom" secondItem="xbQ-uZ-AKJ" secondAttribute="bottom" constant="4" id="zfA-oQ-Bpp"/>
                         </constraints>
                     </view>

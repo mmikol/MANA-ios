@@ -54,7 +54,7 @@ class CalculatorViewController: UIViewController {
 
         guard additionButton.isSelected else {
             additionButton.isSelected.toggle()
-            additionButton.backgroundColor = #colorLiteral(red: 1, green: 0.7450906959, blue: 0, alpha: 1)
+            additionButton.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
             if subtractionButton.isSelected {
                 subtractionButton.isSelected.toggle()
                 subtractionButton.backgroundColor = #colorLiteral(red: 1, green: 0.5488162041, blue: 0, alpha: 1)
@@ -70,7 +70,7 @@ class CalculatorViewController: UIViewController {
 
         guard subtractionButton.isSelected else {
             subtractionButton.isSelected.toggle()
-            subtractionButton.backgroundColor = #colorLiteral(red: 1, green: 0.7450906959, blue: 0, alpha: 1)
+            subtractionButton.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
             if additionButton.isSelected {
                 additionButton.isSelected.toggle()
                 additionButton.backgroundColor = #colorLiteral(red: 1, green: 0.5488162041, blue: 0, alpha: 1)
