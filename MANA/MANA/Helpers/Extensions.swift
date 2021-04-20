@@ -4,12 +4,11 @@
 //
 //  Created by Miliano Mikol on 2/14/21.
 //
-//  Credit to https://stackoverflow.com/a/44941563 for implementation of done button
 //
 
 import UIKit
 
-// Done button from https://stackoverflow.com/questions/28338981/how-to-add-done-button-to-numpad-in-ios-using-swift
+// Credit to https://stackoverflow.com/questions/28338981/how-to-add-done-button-to-numpad-in-ios-using-swift
 extension UITextField{
     @IBInspectable var doneAccessory: Bool{
         get{
@@ -43,7 +42,7 @@ extension UITextField{
     }
 }
 
-// Exponentiation from https://stackoverflow.com/questions/24196689/how-to-get-the-power-of-some-integer-in-swift-language
+// Credit to https://stackoverflow.com/questions/24196689/how-to-get-the-power-of-some-integer-in-swift-language
 precedencegroup PowerPrecedence { higherThan: MultiplicationPrecedence }
 infix operator ^^ : PowerPrecedence
 func ^^ (radix: Int, power: Int) -> Int {

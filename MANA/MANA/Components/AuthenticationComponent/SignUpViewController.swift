@@ -17,6 +17,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpElements()
+    }
+
     @IBAction func signUpButtonTapped(_ sender: Any) {
         let error = validateFields()
         
@@ -82,13 +88,9 @@ class SignUpViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpElements()
-    }
-    
     func setUpElements() {
         errorLabel.alpha = 0
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     private func isAcceptedPassword(_ password: String) -> Bool {

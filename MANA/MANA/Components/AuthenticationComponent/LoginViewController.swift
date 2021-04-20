@@ -14,6 +14,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
  
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpElements()
+    }
+
     @IBAction func loginButtonTapped(_ sender: Any) {
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -28,11 +33,6 @@ class LoginViewController: UIViewController {
                 self.view.window?.makeKeyAndVisible()
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpElements()
     }
     
     func setUpElements() {
