@@ -734,7 +734,7 @@
                                         </subviews>
                                     </stackView>
                                     <datePicker contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-cJ-9r6">
-                                        <rect key="frame" x="47" y="178" width="320" height="120"/>
+                                        <rect key="frame" x="47" y="178" width="320" height="109"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
                                             <!--2020-01-01 11:00:00 +0000-->
@@ -749,7 +749,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="FA6-cJ-9r6" secondAttribute="bottom" constant="105" id="4Qf-7G-IMb"/>
+                                    <constraint firstAttribute="bottom" secondItem="FA6-cJ-9r6" secondAttribute="bottom" constant="116" id="4Qf-7G-IMb"/>
                                     <constraint firstItem="cQF-JQ-uXh" firstAttribute="leading" secondItem="lay-A0-shT" secondAttribute="leading" constant="154" id="DZS-6O-kcY"/>
                                     <constraint firstItem="NVc-jj-NWc" firstAttribute="leading" secondItem="lay-A0-shT" secondAttribute="leading" constant="22" id="IUh-X5-fEI"/>
                                     <constraint firstItem="NVc-jj-NWc" firstAttribute="leading" secondItem="xNS-Nq-0kj" secondAttribute="leading" id="MWT-GC-Suv"/>
