@@ -118,6 +118,8 @@ class WorkoutTableViewController: UITableViewController {
         }
         
         let workout = workouts[indexPath.row]
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
         let selectionHighlight = UIView()
         
         cell.selectedBackgroundView = selectionHighlight
@@ -148,8 +150,10 @@ class WorkoutTableViewController: UITableViewController {
             break
         }
         
+        let weightString = numberFormatter.string(from: NSNumber(value: Int(workout.weight!) ?? 0))
+
         cell.nameLabel.text = "\(workout.name!)"
-        cell.weightLabel.text = "  \(workout.weight!) lbs"
+        cell.weightLabel.text = "  \(weightString!) LB"
         cell.dateLabel.text = workout.dateString
         
         return cell

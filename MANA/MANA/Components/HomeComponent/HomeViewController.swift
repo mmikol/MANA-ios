@@ -28,7 +28,6 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
     @IBOutlet weak var bestSquatLabel: UILabel!
     @IBOutlet weak var bestDeadliftLabel: UILabel!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         benchChartButton.isSelected = true
@@ -123,7 +122,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
                     let bestBenchString = self.numberFormatter.string(from: NSNumber(value: Int(bestBench) ?? 0))
                     let bestSquatString = self.numberFormatter.string(from: NSNumber(value: Int(bestSquat) ?? 0))
                     let bestDeadliftString = self.numberFormatter.string(from: NSNumber(value: Int(bestDeadlift) ?? 0))
-                    
+
                     self.navigationItem.title = "\(firstName) \(lastName)"
                     self.levelLabel.text = "Level \(String(level))"
                     self.xpLabel.text = "\(currentXP) / \(neededXP) XP"
