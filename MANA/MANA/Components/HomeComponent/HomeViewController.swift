@@ -221,13 +221,23 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
             deadliftChartButton.isSelected ? #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1) : UIColor.clear.cgColor
         )
         let gradientColors = [strongGradientColor, UIColor.clear.cgColor] as CFArray
-        let colorLocations:[CGFloat] = [1.0, 0.0]
+        let colorLocations: [CGFloat] = [1.0, 0.0]
         guard let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) else {
             print("Gradient error occurred")
             return
         }
-        
-        set.colors = ChartColorTemplates.colorful()
+
+        if benchChartButton.isSelected {
+            let color = ChartColorTemplates.colorFromString("rgb(231, 213, 87)")
+            set.colors = [color]
+        } else if squatChartButton.isSelected {
+            let color = ChartColorTemplates.colorFromString("rgb(64, 135, 196)")
+            set.colors = [color]
+        } else if deadliftChartButton.isSelected {
+            let color = ChartColorTemplates.colorFromString("rgb(235, 51, 35)")
+            set.colors = [color]
+        }
+
         set.setCircleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
         set.valueTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         set.fill = Fill.fillWithLinearGradient(gradient, angle: 90.0)
