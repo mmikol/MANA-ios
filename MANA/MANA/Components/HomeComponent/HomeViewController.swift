@@ -127,9 +127,9 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
                     self.navigationItem.title = "\(firstName) \(lastName)"
                     self.levelLabel.text = "Level \(String(level))"
                     self.xpLabel.text = "\(currentXP) / \(neededXP) XP"
-                    self.bestBenchLabel.text = "\(bestBenchString!) \nlbs"
-                    self.bestSquatLabel.text = "\(bestSquatString!) \nlbs"
-                    self.bestDeadliftLabel.text = "\(bestDeadliftString!) \nlbs"
+                    self.bestBenchLabel.text = "\(bestBenchString!) \nLB"
+                    self.bestSquatLabel.text = "\(bestSquatString!) \nLB"
+                    self.bestDeadliftLabel.text = "\(bestDeadliftString!) \nLB"
                     self.levelProgressBar.setProgress(levelProgress, animated: true)
                 } else {
                     print("Document does not exist")
@@ -152,7 +152,7 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         lineChart.noDataTextColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         lineChart.noDataFont = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.medium)
         lineChart.noDataText = "No chart data found. Start grinding!"
-        lineChart.frame = CGRect(x: 0, y: view.center.y - 275, width: self.view.frame.size.width, height: 300)
+        lineChart.frame = CGRect(x: 0, y: view.center.y - 265, width: self.view.frame.size.width, height: 300)
         view.addSubview(lineChart)
         lineChart.xAxis.drawGridLinesEnabled = false
         lineChart.leftAxis.drawLabelsEnabled = false
@@ -233,6 +233,5 @@ class HomeViewController: UIViewController, UITabBarControllerDelegate, ChartVie
         set.fill = Fill.fillWithLinearGradient(gradient, angle: 90.0)
         set.drawFilledEnabled = true
         lineChart.data = LineChartData(dataSet: set)
-        lineChart.animate(xAxisDuration: CATransaction.animationDuration(), easingOption: .easeInBounce)
     }
 }

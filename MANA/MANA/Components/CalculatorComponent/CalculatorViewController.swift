@@ -91,7 +91,7 @@ class CalculatorViewController: UIViewController {
 
             actionLabel.text = "\(symbol)\(delta)"
             currentComputation += delta
-            computationLabel.text = "\(currentComputation) lbs"
+            computationLabel.text = "\(currentComputation) LB"
 
             return
         }
@@ -104,7 +104,7 @@ class CalculatorViewController: UIViewController {
 
         currentComputation = 0
         computationStack.clear()
-        computationLabel.text = "\(currentComputation) lbs"
+        computationLabel.text = "\(currentComputation) LB"
         actionLabel.text = ""
     }
     
@@ -167,7 +167,7 @@ class CalculatorViewController: UIViewController {
                 currentComputation += increment
                 computationStack.push(-increment)
                 let formattedNumber = numberFormatter.string(from: NSNumber(value: currentComputation))
-                computationLabel.text = "\(formattedNumber!) lbs"
+                computationLabel.text = "\(formattedNumber!) LB"
             } else if newValue >= 50000 {
                 computationLabel.text = "Godlike MANA"
             }
@@ -180,10 +180,9 @@ class CalculatorViewController: UIViewController {
         super.viewDidLoad()
         actionLabel.text = ""
         additionButton.backgroundColor = #colorLiteral(red: 1, green: 0.7450906959, blue: 0, alpha: 1)
-        computationLabel.text = "\(currentComputation) lbs"
+        computationLabel.text = "\(currentComputation) LB"
         numberFormatter.numberStyle = .decimal
         additionButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .selected)
         subtractionButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .selected)
-
     }
 }
