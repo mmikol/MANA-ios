@@ -123,7 +123,7 @@ class WorkoutTableViewController: UITableViewController {
         cell.selectedBackgroundView = selectionHighlight
         cell.backgroundColor = UIColor.clear
         cell.layer.borderWidth = 0.25
-        cell.layer.borderColor = #colorLiteral(red: 0.2431095243, green: 0.2431566715, blue: 0.2431032956, alpha: 1)
+        cell.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
 
         switch workout.name {
         case "Bench Press":
